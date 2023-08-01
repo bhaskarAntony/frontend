@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SET</title>
+</head>
+<body>
+    <center>
+        <h1>Set Constructor</h1>
+    </center>
+    <hr>
+
+    <script>
+        let array = ["A", "B", "C", "D", "A", "B", "A"];
+        document.write(array.indexOf("A"), " is index of A <br>");
+        document.write(array.lastIndexOf("A"),  " is last index of A");
+
+        //----------------------------------------------------------------------
+
+        //constructor method
+        let myset = new Set("HELLOWORLD");
+        console.log(typeof myset); // it is an object
+        console.log("mySet", myset); //displaying alli myset values to console
+
+        //for printing index number for myset object
+        console.log("ENTRIES :", myset.entries()); //displaying all index numbers
+
+        //for display the size of the myset variable
+        console.log("SIZE IS :", myset.size);
+
+        //printing all values of the mySet variable in browser using forOf 
+        for (const iterator of myset) {
+            document.write(`<h3>${iterator}</h3>`)
+        }
+    </script>
+    
+</body>
+</html>

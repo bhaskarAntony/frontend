@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>Javascript Constructor Method</h1>
+        <p>This is the special type of method is used to intilize and create an object.</p>
+    </center>
+    <hr>
+    <h4>Points to Remember</h4>
+    <ul>
+        <li>Constructor key world is used to declare a constructor method</li>
+        <li>the class containe only one constructor method</li>
+        <li>parent class constructor through super keyword.</li>
+    </ul>
+    <hr>
+    <h1>Constructor Method Example1...!</h1>
+    <script>
+        class Employee{
+            constructor(){
+                this.id= 1;
+                this.name = "bhaskar";
+            }
+        }
+        var emp = new Employee();
+        document.write(emp.id + " "+  emp.name);
+        
+    </script>
+    <h3>Constructor Method Example With Super keyword...!</h3>
+    <script>
+
+        //parents class
+        class Company{
+            constructor(){
+                this.companyName = "Google";
+            }
+        }
+
+        //child class
+        class EmployeeCompany extends Company{ //the extends keyword is used to call diffrent class in other class
+            constructor(id, name){
+                super(); // the super keyword is to call that extended class property and values
+                this.id1 = id;
+                this.name1 = name;
+                this.company1 = this.companyName; // here we are calling parent class property
+                
+            }
+        }
+        let employeeCompany = new EmployeeCompany("EMP3901", "Bhaskar");
+        document.write(`<p><b>Employee Id: </b>${employeeCompany.id1}</p>
+                        <p><b>Employee Name:</b>${employeeCompany.name1}</p>
+                        <p><b>Employee Company:</b>${employeeCompany.company1}</p>`)
+    </script>
+    
+</body>
+</html>

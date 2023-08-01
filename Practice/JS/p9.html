@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+          // const depthFirsstPrint2 = (graph2, source2)=>{
+        //     console.log(source2);
+        //     for(let neighbor of graph2[source2]){
+        //         document.write(neighbor);
+        //         depthFirsstPrint2(graph2, neighbor);
+        //     }
+        // };
+        // const graph2 = {
+        //     a:["c", "b"], 
+        //     b:["d"],
+        //     c:["e"],
+        //     d:["f"],
+        //     e:[],
+        //     f:[]
+        // };
+        // depthFirsstPrint2(graph2, "a");//calling a function
+        //letter combination of a phone number
+        const letter = (num) =>{
+            let number=num;
+            let num1 = number.charAt(0);
+            let num2 = number.charAt(1);
+            const ary={
+            "":[],
+            "1":[],
+            "2":["a", "b", "c"],
+            "3":["d", "e", "f"],
+            "4":["g", "h", "i"],
+            "5":["j", "k", "l"],
+            "6":["m", "n", "o"],
+            "7":["p", "q", "r"],
+            "8":["s", "t", "u", "v"],
+            "9":["w", "x", "y", "z"],
+        };
+       let result = [];
+       if(number.length<1){
+       result.push(ary[num1]);
+       return result;
+       }
+       while(number.length>1){
+            for(let  i of ary[num1]){
+                for(let  j of ary[num2]){
+                    result.push(i + j);
+                }
+            }
+            return result;
+        }
+        }
+        console.log(letter("22"));
+    </script>
+</body>
+</html>

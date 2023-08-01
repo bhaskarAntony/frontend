@@ -1,0 +1,139 @@
+{
+  "posts": [
+    {
+      "name": "bhaskar",
+      "email": "bhaskar@gmail.com",
+      "phone": 9606729320,
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijImhl5u_6pdPuieWE1koMZVSnIcv9Ako1mdpcw24RCvEmT9_2cIACBwL98gyP-019IU&usqp=CAU"
+    },
+    {
+      "name": "sathish",
+      "email": "sathish@gmail.com",
+      "phone": 7387872871,
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijImhl5u_6pdPuieWE1koMZVSnIcv9Ako1mdpcw24RCvEmT9_2cIACBwL98gyP-019IU&usqp=CAU"
+    },
+    {
+      "name": "kumar",
+      "email": "kumar@gmail.com",
+      "phone": 8378378372,
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijImhl5u_6pdPuieWE1koMZVSnIcv9Ako1mdpcw24RCvEmT9_2cIACBwL98gyP-019IU&usqp=CAU"
+    },
+    {
+      "name": "bhaskar",
+      "email": "bhaskar@gmail.com",
+      "phone": 9606729320,
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijImhl5u_6pdPuieWE1koMZVSnIcv9Ako1mdpcw24RCvEmT9_2cIACBwL98gyP-019IU&usqp=CAU"
+    },
+    {
+      "name": "sathish",
+      "email": "sathish@gmail.com",
+      "phone": 7387872871,
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijImhl5u_6pdPuieWE1koMZVSnIcv9Ako1mdpcw24RCvEmT9_2cIACBwL98gyP-019IU&usqp=CAU"
+    },
+    {
+      "name": "kumar",
+      "email": "kumar@gmail.com",
+      "phone": 8378378372,
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijImhl5u_6pdPuieWE1koMZVSnIcv9Ako1mdpcw24RCvEmT9_2cIACBwL98gyP-019IU&usqp=CAU"
+    },
+    {
+      "name": "kumar",
+      "email": "kumar@gmail.com",
+      "phone": 8378378372,
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijImhl5u_6pdPuieWE1koMZVSnIcv9Ako1mdpcw24RCvEmT9_2cIACBwL98gyP-019IU&usqp=CAU"
+    },
+    {
+      "name": "bhaskar",
+      "email": "bhaskar@gmail.com",
+      "phone": 9606729320,
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijImhl5u_6pdPuieWE1koMZVSnIcv9Ako1mdpcw24RCvEmT9_2cIACBwL98gyP-019IU&usqp=CAU"
+    },
+    {
+      "name": "sathish",
+      "email": "sathish@gmail.com",
+      "phone": 7387872871,
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijImhl5u_6pdPuieWE1koMZVSnIcv9Ako1mdpcw24RCvEmT9_2cIACBwL98gyP-019IU&usqp=CAU"
+    },
+    {
+      "name": "kumar",
+      "email": "kumar@gmail.com",
+      "phone": 8378378372,
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijImhl5u_6pdPuieWE1koMZVSnIcv9Ako1mdpcw24RCvEmT9_2cIACBwL98gyP-019IU&usqp=CAU"
+    },
+    {
+      "name": "bhaskar",
+      "email": "bhaskar@gmail.com",
+      "phone": 9606729320,
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijImhl5u_6pdPuieWE1koMZVSnIcv9Ako1mdpcw24RCvEmT9_2cIACBwL98gyP-019IU&usqp=CAU"
+    },
+    {
+      "name": "sathish",
+      "email": "sathish@gmail.com",
+      "phone": 7387872871,
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijImhl5u_6pdPuieWE1koMZVSnIcv9Ako1mdpcw24RCvEmT9_2cIACBwL98gyP-019IU&usqp=CAU"
+    },
+    {
+      "name": "kumar",
+      "email": "kumar@gmail.com",
+      "phone": 8378378372,
+      "profile": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQijImhl5u_6pdPuieWE1koMZVSnIcv9Ako1mdpcw24RCvEmT9_2cIACBwL98gyP-019IU&usqp=CAU"
+    }
+  ],
+  "users": [
+    {
+      "username": "john",
+      "email": "john@gmail.com",
+      "id": 1
+    },
+    {
+      "username": "bhaskar",
+      "email": "bhaskar@gmail.com",
+      "id": 2
+    },
+    {
+      "username": "bhaskar",
+      "email": "roopashree.munireddy@clarivate.com",
+      "id": 3
+    },
+    {
+      "username": "dd",
+      "email": "rooparoopa7105@gmail.com",
+      "id": 4
+    },
+    {
+      "username": "bhaskar",
+      "email": "srinivasa.venkataswamy@clarivate.com",
+      "id": 5
+    },
+    {
+      "username": "bhaskar",
+      "email": "rooparoopqqa7105@gmail.com",
+      "id": 6
+    },
+    {
+      "username": "bhaskar",
+      "email": "srinivasa.vensskataswamy@clarivate.com",
+      "id": 7
+    },
+    {
+      "username": "bhaskar",
+      "email": "rooparoopsa7105@gmail.com",
+      "id": 8
+    },
+    {
+      "username": "bhaskar",
+      "email": "rooparoxxxopa7105@gmail.com",
+      "id": 9
+    },
+    {
+      "username": "bhaskar",
+      "email": "Bhasssskar3958@outlook.com",
+      "id": 10
+    },
+    {
+      "username": "bhaskar",
+      "email": "srinssivasa.venkataswamy@clarivate.com",
+      "id": 11
+    }
+  ]
+}

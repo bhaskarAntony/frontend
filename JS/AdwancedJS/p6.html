@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymouse</title>
+    <style>
+        .conatiner{
+            width:100%;
+            height:100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(45deg, #6d14e8, #ee12ee);
+        }
+        h2{
+            padding:30px;
+            background-color: #ffffff3f;
+            color: #fff;
+            border-radius: 50px;
+        }
+
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Anonymouse recursive function</h1>
+    </center>
+    <hr>
+    <div class="conatiner">
+    <h2 id="clock"></h2>
+</div>
+
+    <script>
+        function digitalClock(){
+            let time = new Date().toLocaleTimeString();
+            document.getElementById("clock").innerHTML = time;
+        }
+        (function(){
+            setInterval("digitalClock()", 1000);
+        })();
+    </script>
+    
+</body>
+</html>

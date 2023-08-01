@@ -1,0 +1,18 @@
+.CssUnits>h3:nth-child(1){
+    margin:1.5in;  /*units in inches*/
+}
+.CssUnits>h3:nth-child(2){
+   line-height: 3cm;  /*units in centi meter*/
+}
+.CssUnits>h3:nth-child(3){
+   word-spacing: 4mm;  /*units in mili meter*/
+}
+.CssUnits>h3:nth-child(4){
+   font-size: 12pt; /*points*/
+}
+.CssUnits>h3:nth-child(5){
+   font-size: 1pc;  /*points*/
+}
+.CssUnits>h3:nth-child(6){
+    font-size: 20px;  /*units in pixels*/
+ }

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+    <style>
+        body{
+            background-color: black;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Navigator (Browser Information and OS information)</h1>
+    </center>
+    <hr>
+    <script>
+       document.write(`<h3>Navigator.appName ${ navigator.appName}</h3>`);
+       document.write(`<h3>Navigator.appcodeName ${ navigator.appCodeName}</h3>`);
+       document.write(`<h3>Navigator.appVersion ${ navigator.appVersion}</h3>`);
+       document.write(`<h3>Navigator.cookieEnabled ${ navigator.cookieEnabled}</h3>`);
+       document.write(`<h3>Navigator.useAgent ${ navigator.userAgent}</h3>`);
+       document.write(`<h3>Navigator.language ${ navigator.language}</h3>`);
+       document.write(`<h3>Navigator.platform ${ navigator.platform}</h3>`);
+
+
+       //important for like whtasapp online and offline feauture creating
+       document.write(`<h3>Navigator.online ${ navigator.onLine}</h3>`);
+    </script>
+    
+</body>
+</html>

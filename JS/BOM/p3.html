@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+    <style>
+        button{
+            background: linear-gradient(45deg, #1d47f2, #3649f1);
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            font-size: 1.2em;
+            border-radius: 4px;
+            letter-spacing: 1.2px;
+        }
+    </style>
+</head>
+<body>
+    <script>
+        function loadHomePage(){
+            window.location.assign("https://google.com");
+        }
+    </script>
+    <button type="button" onclick="loadHomePage();">Google</button>
+
+    <script>
+        function loadHomePage1(){
+            window.location.href = "https://www.youtube.com";
+        }
+    </script>
+             <button type="button" onclick="loadHomePage1();" >Youtube</button>
+
+    <script>
+        function forceReload(){
+            window.location.reload();
+        }
+    </script>   
+    
+    <button type="button" onclick="forceReload();">Reload</button>
+    
+</body>
+</html>

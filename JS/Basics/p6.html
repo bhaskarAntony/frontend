@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <link rel="stylesheet" href="assets/css/card.css">
+</style>
+</head>
+<body>
+        <div class="card">
+            <h3>Check Condition</h3>
+        <input type="number" name="firstname" id="firstname" placeholder="Enter First Number"><br>
+        <input type="number" name="secondname" id="secondname" placeholder="Enter Second Number"><br>
+        <input type="number" name="thirdname" id="thirdname" placeholder="Enter Third Number"><br>
+        <p id="result"></p>
+        <button type="button" onclick="testCondition()">Check</button>
+    </div>
+
+    <script>
+         function testCondition(){
+            //convert the string data type to number
+            let firstnumber = parseInt(document.getElementById("firstname").value);
+            let secondnumber = +document.getElementById("secondname").value;
+            let thirdnumber = +document.getElementById("thirdname").value;
+            let first = document.getElementById("firstname");
+            let second = document.getElementById("secondname");
+            let third = document.getElementById("thirdname");
+
+            let result = document.getElementById("result");
+            if(firstnumber==""||secondnumber==""||thirdnumber==""){
+                if(firstnumber==""&& secondnumber==""&&thirdnumber==""){
+                    first.style.border = "1px solid red"
+                    second.style.border = "1px solid red"
+                    third.style.border = "1px solid red"
+                }
+                else if(firstnumber==""){
+                    first.style.border = "1px solid red"
+
+                }
+               else if(secondnumber==""){
+                    second.style.border = "1px solid red"
+
+                }
+                else if(thirdnumber==""){
+                    third.style.border = "1px solid red"
+
+                }
+                else{
+                    third.style.border = "1px solid #77373"
+                }
+                result.innerHTML = "Please fill the required field"
+                result.style.color = "red";
+            }
+           else if(firstnumber>secondnumber && firstnumber>thirdnumber){
+                result.innerHTML = "First number is Big"
+                result.style.color = "#035736";
+            }
+            else if(secondnumber>firstnumber && secondnumber>thirdnumber){
+                result.innerHTML = "second number is Big"
+                result.style.color = "#035736";
+            }
+            else  if(thirdnumber>secondnumber && thirdnumber>firstnumber){
+                result.innerHTML = "third number is Big"
+                result.style.color = "#035736";
+            }
+            else{
+                result.innerHTML = "I think you entered a something wrong thing"
+            }
+         }
+    </script>
+    
+</body>
+</html>

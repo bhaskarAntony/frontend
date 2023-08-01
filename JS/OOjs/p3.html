@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>By Array Litterals</h1>
+    </center>
+    <hr>
+
+    <script>
+        let fruits = ["apple", "orange", "kivi", "banana", "gaps"];
+        document.write(typeof fruits , "<br>");
+        document.write(fruits, "<br>");
+
+        document.write("<hr>");
+        document.write(fruits[0], "<br>");
+        document.write(fruits[1], "<br>")
+        document.write("<hr>");
+        for (let index = 0; index < fruits.length; index++){
+            document.write(fruits[index], "<br>");
+        }
+    </script>
+
+    <center>
+        <h1></h1>
+    </center>
+
+    <script>
+        let employeeName = new Array();
+        console.log(typeof(employeeName) + " " + "empName");
+
+        employeeName[0] = "Bhaskar";
+        employeeName[1] = "babu";
+        employeeName[2] = "cm";
+        employeeName[3] = "antony";
+        employeeName[4] = "sathish";
+        employeeName[5] = "saniya";
+        employeeName[6] = "thabasum";
+        employeeName[7] = "husna";
+
+        for(let index = 0; index<employeeName.length; index++){
+            document.write(employeeName[index] + "<br>");
+        }
+        
+    </script>
+    <hr>
+    <center>
+        <h1>By using an array object constructor (using new keyword)</h1>
+    </center>
+    <hr>
+    <script>
+        let studentInfo = new Array("nike", "adidas", "daji", "drinkle");
+        for(let index = 0; index<studentInfo.length; index++){
+            document.write(studentInfo[index], "<br>");
+        }
+    </script>
+
+    <script>
+        document.write("<hr>");
+        document.write("<h3> array methods...!");
+        document.write("<hr>");  
+        document.write("<h3>Adding new elements to an array</h3>");
+        let colors = ["red", "green", "blue"];
+        document.write(colors, "<br>");
+        
+        document.write("<h4>Adding new elements to an array end</h4>");
+        colors .push("yellow", "orange");
+        document.write(colors, "<br>");
+        document.write(colors.length, "<br>");
+        document.write("<hr>");
+
+        document.write("<h5>Adding new elements to an array fisrt</h5>");
+        colors .unshift("skyblue", "light green");
+        document.write(colors, "<br>");
+        document.write(colors.length, "<br>");
+        document.write("<hr>");
+
+        document.write("<h3>Removing last elements from an array</h3>");
+        let last = colors.pop();
+        document.write(last, "<br>");
+        document.write(colors.length, "<br>");
+
+        document.write("<h3>Removing first elements from an array</h3>");
+        let first = colors.shift();
+        document.write(first, "<br>");
+        document.write(colors.length, "<br>");
+
+        document.write("<h3>Creating string from an array</h3>");
+        document.write(colors.join("-")+"<br>");
+        document.write(colors.join("-")+"<br>");
+
+        document.write("<hr>");
+        document.write("<h3>Merging Two or mOre Array</h3>");
+
+        let pets = ["cat", "dog", "parrot"];
+        let wild = ["tiger", "wolf", "zebra"];
+        let bugs = ["Ant", "Bee"];
+        let animals = pets.concat(wild, bugs);
+        document.write(animals + '<br>');
+        document.write(typeof(animals) + "<br>");
+
+        
+        document.write("<hr>");
+        document.write("<h3>Searching throgh an array</h3>");
+
+        var TamilFruits = ["Apple", "Banana", "Mango", "orange", "Papaya"];
+        document.write(TamilFruits.indexOf("Apple") + "<br>"); //output: 0;true
+        document.write(TamilFruits.indexOf("Orange") + "<br>"); //output: 3; true
+        document.write(TamilFruits.indexOf("Pinapple") + "<br>"); //output: -1; false
+
+        let p = ["pooja", "karo", "pooja", "khush ho jaye"];
+        document.write(p.lastIndexOf("pooja"));
+    </script>
+</body>
+</html>

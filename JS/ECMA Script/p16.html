@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>Javascript inheritance</h1>
+        <p>javascript inheritance is a mechanism that allows us to create new classes on the basis of already existing classes</p>
+        <p>the js <b>Extend</b> keyword is used to create a child class on the basis of parent class</p>
+        <p>it maintains on IS-A relationships</p>
+    </center>
+    <hr>
+
+    <script>
+       class Moment extends Date{
+        constructor(){
+            super();
+        }
+       }
+       let moment = new Moment();
+       document.write(`<b>Current date is : </b>${moment.getDate()}<br>`);
+       document.write(`<b>Current Month is : </b>${moment.getMonth()}<br>`);
+       document.write(`<b>Current Year is : </b>${moment.getFullYear()}<br> <br>`);
+
+       class Bike{
+        constructor(){
+            this.bikename = "YAMAHA";
+        }
+       }
+       class Vehicle extends Bike{
+        constructor(name, price){
+            super();
+            this.name = name;
+            this.price = price;
+        }
+       } 
+
+       let vehicle = new Vehicle("RX100", 15000);
+
+       document.write(`<b>vehicle name is : </b>${vehicle.name} <br>`);
+       document.write(`<b>vehicle price is : </b>${vehicle.price} <br>`);
+       document.write(`<b>Bike name is : </b>${vehicle.bikename} <br>`); //this property is from parent class property we are using in child class using extend keword and using super keyword
+
+    </script>
+    
+</body>
+</html>

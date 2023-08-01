@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <script>
+        function myFunction(){
+            alert("Hello World!");
+        }
+        //setIntervel("myFunction()", 2000);
+        //setTimeOut("myFunction()", 1000)
+    </script>
+
+    <button type="button" onclick="setTimeout(myFunction, 2000)">If you click me i will display result after 2 seconds Soo please wait untill 2seconds</button>
+
+
+    <script>
+        function showTime(){
+            var date = new Date();
+            document.getElementById("clock").innerHTML = date.toLocaleTimeString();
+        }
+        setInterval(showTime, 1000);
+    </script>
+    <p>The current on your Computer is: <span id="clock"></span></p>
+
+    <script>
+        var timeOUT;
+
+        function showAlert(){
+            alert("this is Javascript Alert Box..!");
+        }
+
+        function delayAlert(){
+            timeOUT = setTimeout(showAlert, 2000);
+        }
+
+        function clearTimeOut(){
+            clearTimeOut(timeOUT);
+        }
+    </script>
+
+    <button onclick="delayAlert()">if you click me i will display resu;t after 2 seconds soo please wait</button>
+
+    <button onclick="clearTimeOut()">if click me before the result  i will clear that buttons function and i will not display the result</button>
+    
+</body>
+</html>

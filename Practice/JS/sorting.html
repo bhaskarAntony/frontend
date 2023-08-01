@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table id="table">
+    </table>
+    <button onclick="sorter()">Sort</button>
+
+    <script>
+
+        let ids = document.getElementById("table");
+        let myvalue = [2, 5, 6, 4, 5, 9];
+        let names = ["bhaksar", "antony", "sathish", "mohan"]
+
+      function prnter(){
+        ids.innerHTML +=`
+        <tr>
+            <td>id</td></tr>
+        `
+        names.forEach(element => {
+            ids.innerHTML +=`
+          <tr>
+            <td>${element}</td>
+            <td>${element}</td>
+            </tr>
+            `
+        });
+      }
+    function sorter() {
+        names.sort();
+        ids.innerHTML = " "
+        prnter();
+    }
+    prnter();
+    </script>
+</body>
+</html>

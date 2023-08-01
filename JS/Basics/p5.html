@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/card.css">
+</head>
+<body>
+    <!-- <center>
+        <h1>condition statements...!</h1>
+    </center>
+
+    <hr>
+
+    <ol>
+        <li>Simple If</li>
+        <li>If Else</li>
+        <li>If Else Ladder</li>
+        <li>Switch Case</li>
+    </ol> -->
+    <!-- <hr> -->
+    <div class="card">
+        <h3>Check Condition</h3>
+    <input type="number" name="firstname" id="firstname" placeholder="Enter First Number"><br>
+    <input type="number" name="secondname" id="secondname" placeholder="Enter Second Number"><br>
+    <p id="result"></p>
+    <button type="button" onclick="testCondition()">Check</button>
+</div>
+    <script>
+        function testCondition(){
+            //convert the string data type to number
+
+            let firstnumber = parseInt(document.getElementById("firstname").value);
+            let secondnumber =+document.getElementById("secondname").value;
+
+            let result = document.getElementById("result");
+
+            if (firstnumber==""||secondnumber==""){
+                console.log(firstnumber+secondnumber);
+                result.innerHTML = "please fill the text boxes...!";
+            }
+            else if(firstnumber>secondnumber){
+                result.innerHTML ="first number is big...!";
+            }
+            else if(firstnumber<secondnumber){
+                result.innerHTML ="second number is big...!";
+            }
+            else if (firstnumber==secondnumber){
+                result.innerHTML ="yes the numbers are equal...!";
+                console.log(firstnumber+secondnumber);
+            }
+            else{
+                result.innerHTML = "you enterd entered a wrong thing...!";
+            }
+
+
+            // //ternary operator it is like a if else statement(let message = condition ? true statement:false statement;)
+            // let message = firstnumber>secondnumber ? "condition is true...!" : "condition is not true...!";
+            // alert(message)
+        }
+        //testCondition();
+    </script>
+</body>
+</html>

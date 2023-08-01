@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style-type: none;
+            font-family: 'Poppins', sans-serif;
+        }
+        
+        header{
+            background-color: #652cea;
+            padding: 10px;
+            color: #fff;
+            box-shadow: 0px 0px 10px #808080;
+        }
+        .container{
+            height: 100vh;
+            width:100%;
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+        .comment{
+            background-color: rgb(255, 255, 255);
+            width: 600px;
+            padding: 10px;
+            box-shadow: 0px 0px 30px #d6d5d5;
+            transition: 0.5s;
+            z-index: 100;
+        }
+        .comment img{
+            width:60px;
+            height:60px;
+            border-radius: 100px;
+            border: 4px solid #8965e3;
+            padding: 3px;
+        }
+        .profile{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            line-height: 1.3;
+        }
+        .profile h3{
+            color: #6d36ec;
+        }
+        .profile label{
+            color: #aeafb0;
+        }
+        .comment p{
+            color: #232323;
+            /* font-size: 1.1em;
+            letter-spacing: 1.1px; */
+        }
+        ul{
+            position: relative;
+        }
+        ul::before{
+            content: "";
+            position: absolute;
+            width: 5px;
+            height: 100%;
+            background-color: #652cea;
+            left: -30px;
+        }
+        li{
+            position: relative;
+            margin-bottom: 20px;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        li:hover .comment{
+            transform: scale(1.1);
+        }
+        li::before{
+            content: "";
+            position: absolute;
+            width: 50px;
+            height: 4px;
+            background-color: #652cea;
+            left: -30px;
+            z-index: -10;
+            top:50%;
+        }
+        li::after{
+            content: "";
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: #652cea;
+            left: -42px;
+            top:43%;
+            z-index: -1;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>comments</h1>
+    </header>
+    <div class="container">
+        <ul>
+            <li>
+                <div class="comment">
+                    <div class="profile">
+                    <img src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                    <div>
+                        <h3>John Doe</h3>
+                        <label>JohnDoe@gmail.com</label>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, iusto excepturi. Hic, voluptates dicta at repudiandae eligendi deserunt quis sequi ut reiciendis laboriosam optio inventore error excepturi adipisci libero assumenda!</p>
+                </div>
+            </li>
+            <li>
+                <div class="comment">
+                    <div class="profile">
+                    <img src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                    <div>
+                        <h3>John Doe</h3>
+                        <label>JohnDoe@gmail.com</label>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, iusto excepturi. Hic, voluptates dicta at repudiandae eligendi deserunt quis sequi ut reiciendis laboriosam optio inventore error excepturi adipisci libero assumenda!</p>
+                </div>
+            </li>
+            <li>
+                <div class="comment">
+                    <div class="profile">
+                    <img src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                    <div>
+                        <h3>John Doe</h3>
+                        <label>JohnDoe@gmail.com</label>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, iusto excepturi. Hic, voluptates dicta at repudiandae eligendi deserunt quis sequi ut reiciendis laboriosam optio inventore error excepturi adipisci libero assumenda!</p>
+                </div>
+            </li>
+            <li>
+                <div class="comment">
+                    <div class="profile">
+                    <img src="https://i.pinimg.com/originals/ae/ec/c2/aeecc22a67dac7987a80ac0724658493.jpg" alt="">
+                    <div>
+                        <h3>John Doe</h3>
+                        <label>JohnDoe@gmail.com</label>
+                    </div>
+                </div>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Adipisci, iusto excepturi. Hic, voluptates dicta at repudiandae eligendi deserunt quis sequi ut reiciendis laboriosam optio inventore error excepturi adipisci libero assumenda!</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+</body>
+</html>

@@ -1,0 +1,5 @@
+@media(max-width:526px){
+    .card, .left, .right{
+        max-width: 50%;
+    }
+}

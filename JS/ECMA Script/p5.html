@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>Default Parameters in functions(to avoid NaN)</h1>
+    </center>
+    <hr>
+
+    <script>
+        function SUM(a, b=45){ //it will skip this b value because we will give a and b values after this line code thats why it will skip this b value
+            document.write(`<h3>Sum = ${a + b}</h3>`);
+        }
+        SUM(12, 33);//if we give thease two values a an b this will skip the above we declared b values 
+        SUM(12); //if we give this only one value this will takes first functions parameter values
+    </script>
+</body>
+</html>

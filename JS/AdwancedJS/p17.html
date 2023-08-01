@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Strict (keyword)</title>
+</head>
+<body>
+    <center>
+        <h1>Strict Mode</h1>
+        <p>Strict Mode if you intialize a variable with declaring it using the var keyword.</p>
+    </center>
+    <hr>
+    <script>
+        "use strict";
+
+        sayHello();
+        function sayHello(){
+            "use Strict";
+            let str = "Hello world...!"; // RefferenceError: str is not defined
+            document.write(str, "<br>");
+        }
+
+        function doSomething(){
+            //var msg;
+            msg = "hi, there!"; //RefferenceError: msg is not defined
+            return msg;
+        }
+
+        console.log(doSomething());
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BOM</title>
+</head>
+<body>
+    <script>
+        function getURL(){
+            alert("The url of this page is: " + window.location.href);
+        }
+    </script>
+    <button type="button" onclick="getURL()">Display URL of this page</button> <br>
+
+    <script>
+        //print protocol like http ot Https
+        document.write("<b>protocol is:</b>" + window.location.protocol + "<br>");
+
+          //prints hostname with port like localhost or localhose:3000
+          document.write("<b>host is:</b>" + window.location.host + "<br>");
+
+           //prints hostname with like localhost or www.example.com
+           document.write("<b>hostname is:</b>" + window.location.hostname + "<br>");
+
+            //prints hostname with port like localhost or localhose:3000
+          document.write("<b>Port is:</b>" + window.location.port + "<br>");
+           
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Basics</title>
+    <style>
+
+    </style>
+</head>
+<body>
+    <hr>
+    <center>
+        <p>JS-Variables</p>
+    </center>
+    <pre>
+        DATATYPE
+        1) Primitive dtatypes
+        2) Non-primitive dtatype/ derived data types
+
+        1) PRIMITIVE DATA types
+        - Int (Integer) -> It accsepts only round numbers EX - 0-9
+        - Float -> It accsepts only decimal value Ex- 10.5
+        -Boolean -> Eigther TRUE or FALSE
+        -Char -> It accset only single charrecter Ex: Apple
+        -Void -> Returns Null value
+
+        2) Non-primitive data types/ derived data types
+        -Array
+        -Structure
+        -Union
+        -Enum
+        -Pointer
+        -Function
+    </pre>
+    <hr>
+    <script>
+        document.write("this is the javascript basics class iam printing this text using javascript code");
+        //var, let and const are the keywords , it used for to declare the variable
+        var firstNumber;
+        document.write(firstNumber, "<br>");
+        document.write("<b>Without Value:</b>", firstNumber,"<br> <hr>");
+//assaigning value to our variable
+        firstNumber = "Hello JS";
+        document.write("<b>With Value:</b>", firstNumber,"<br>");
+        document.write("<b>With Value:</b>"+ firstNumber+"<br>");
+        document.write("<b>With Value:", firstNumber,"</b><br>");
+        document.write("<b>With Value:"+ firstNumber+"</b><br>");
+        document.write(`<b>With Value: ${firstNumber}</b><br><hr>`);
+        document.write("<b>the var firstNumber Type is:</b>",typeof(firstNumber),"<br>");
+
+    //checking variable type using typeof()        
+        firstNumber = "B";
+    
+        document.write("<b>With Value:</b>", firstNumber,"<br>");
+        document.write("<b>With Value:</b>"+ firstNumber+"<br>");
+        document.write("<b>With Value:", firstNumber,"</b><br>");
+        document.write("<b>With Value:"+ firstNumber+"</b><br>");
+        document.write(`<b>With Value: ${firstNumber}</b><br><hr>`);
+        document.write("<b>the var firstNumber Type is:</b>",typeof(firstNumber),"<br>");
+
+        //checking variable type using typeof()        
+        firstNumber = 100;
+    
+        document.write("<b>With Value:</b>", firstNumber,"<br>");
+        document.write("<b>With Value:</b>"+ firstNumber+"<br>");
+        document.write("<b>With Value:", firstNumber,"</b><br>");
+        document.write("<b>With Value:"+ firstNumber+"</b><br>");
+        document.write(`<b>With Value: ${firstNumber}</b><br>`);
+        document.write("<b>the var firstNumber Type is:</b>",typeof(firstNumber),"<br> <hr>");
+
+        //checking variable type using typeof()        
+        firstNumber = true;
+    
+        document.write("<b>With Value:</b>", firstNumber,"<br>");
+        document.write("<b>With Value:</b>"+ firstNumber+"<br>");
+        document.write("<b>With Value:", firstNumber,"</b><br>");
+        document.write("<b>With Value:"+ firstNumber+"</b><br>");
+        document.write(`<b>With Value: ${firstNumber}</b><br>`);
+        document.write("<b>the var firstNumber Type is:</b>",typeof(firstNumber),"<br> <hr>");
+    </script>
+</body>
+</html>

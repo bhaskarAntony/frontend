@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>Prototype Object</h1>
+        <p>prototype object to aquire properties and features from one another</p>
+
+        <strong>syntax</strong>
+        <p>className.prototype.methodname</p>
+    </center>
+    <hr>
+    <script>
+        function employee(firstname, lastname){
+            this.firstname1 = firstname;
+            this.lastname1 = lastname;
+        }
+
+        employee.prototype.fullname = function(){
+            return this.firstname1 + " " + this.lastname1;
+        }
+        let emp = new employee("bhaskar", "antony");
+        document.write(`<b>first name is </b>${emp.firstname1} <br>`)
+        document.write(`<b>last name is </b>${emp.lastname1} <br>`)
+        document.write(`<b>fullname is </b>${emp.fullname()} <br> <br>`)
+
+    </script>
+
+    <script>
+        class Admin{
+            constructor(firstname, lastname){
+                this.fn = firstname;
+                this.ln = lastname;
+            }
+        }
+        let admin = new Admin("bhaksar", "Antony");
+
+        document.write(`<b>first name is</b> ${admin.fn} <br>`);
+        document.write(`<b>last name is </b> ${admin.ln} <br>`);
+
+        Admin.prototype.result = function(){
+            return this.fn + " " + this.ln;
+        }
+        document.write(`<b>result of function is</b> ${admin.result()} <br>`)
+    </script>
+    
+</body>
+</html>

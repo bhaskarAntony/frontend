@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1></h1>
+    </center>
+    <hr>
+
+    <script>
+        let user = {
+            "name":"bhaskar",
+            "account":[
+                {
+                    bankId:123,
+                    accNo:232425,
+                    bankName:"SBI",
+                    type:"Saving"
+                },
+                {
+                    bankId:243,
+                    accNo:232009,
+                    bankName:"AXIS",
+                    type:"currect"
+                }
+            ],
+            emp:{
+                company:"xyz pvt limited",
+                salary:20000,
+                designation:"hr"
+            }
+        }
+
+        for(var i=0; i<user.account.length; i++){
+            document.write(`<h3>Bank Id = ${user.account[i].bankId} </h3>`);
+            document.write(`<h3>Bank Accounts = ${user.account[i].accNo} </h3>`);
+            document.write(`<h3>Bank name = ${user.account[i].bankName} </h3>`);
+            document.write(`<h3>Account Type = ${user.account[i].type} </h3>`);
+        };
+        document.write("<hr>");
+        document.write(`<h3>Company = ${user.emp.company}</h3>`);
+        document.write(`<h3>Salary = ${user[`emp`][`salary`]}</h3>`);
+        document.write(`<h3>disignation = ${user[`emp`][`designation`]}</h3>`);
+    </script>
+</body>
+</html>

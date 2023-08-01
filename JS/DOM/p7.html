@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+    <style>
+        *{
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <hr>
+    <ul>
+        <li>Bread</li>
+        <li class="tick">Coffee</li>
+        <li>Pinapple Cake</li>
+    </ul>
+    <ul>
+        <li>Bread</li>
+        <li class="tick">Coffee</li>
+        <li>Pinapple Cake</li>
+    </ul>
+
+
+    <script>
+        var macthes = document.querySelectorAll("li");
+        document.write("<p><b>macthes.length:</b></p>" + macthes.length);
+
+        var macthes = document.querySelectorAll("li.tick");
+        macthes[0].style.textDecoration = "line-through";
+        macthes[1].style.textDecoration = "underline";
+    </script>
+    
+</body>
+</html>

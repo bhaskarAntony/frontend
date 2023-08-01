@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>git users</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Rubik', sans-serif;
+        }
+        .container, .dialog, .card{
+            height: 100vh;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .dialog{
+            background-color: rgba(30, 31, 31, 0.6);
+        }
+        .card{
+            width: 400px;
+            background-color: #fff;
+            padding: 10px;
+            height: 200px;
+            flex-direction: column;
+            position: relative;
+            border-radius: 10px;
+        }
+        input, button{
+            width: 100%;
+            outline: none;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 1.1em;
+            letter-spacing: 1.5px;
+            border: 1px solid #a7a4a4;
+            border-radius: 3px;
+        }
+        label{
+            font-size: 1.1em;
+            color: #9f69eb;
+            letter-spacing: 1.3px;
+            line-height: 2;
+        }
+        button{
+            border: none;
+            background-color: #6c23d4;
+            color: #fff;
+            cursor: pointer;
+        }
+        button:hover{
+            opacity: 0.7;
+        }
+        .card [class*="fa-"]{
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            font-size: 1.7em;
+            background-color: #2e2d2f52;
+            padding: 5px 6px;
+            border-radius: 5px;
+            color: #6c23d4;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="dialog">
+    <div class="card">
+        <form autocomplete="none">
+            <label>Enter your Login ID</label>
+            <input type="text" id="login-id" placeholder="Login Id">
+            <button type="button" id="login">Login</button>
+        </form>
+        <i class="fa fa-close"></i>
+    </div>
+</div>
+</div>
+
+    <script>
+        let values = document.getElementById("login-id").value;
+        let login = document.getElementById("login");
+        login.addEventListener("click", ()=>{
+            fetch(`https://api.github.com/users/${values}`)
+            .then(pending=>pending.json())
+            .then(succsess =>{
+            console.log(succsess);
+
+            succsess.users.forEach(element => {
+                let card = document.createElement("div");
+                document.body.append(card);
+                card.style.background = `linear-gradient(45deg, #0000009d, #0000007e),url(${element.profilepicture}) no-repeat center`
+                card.style.backgroundSize = "cover";
+                let img = document.createElement("img");
+                img.src = element.profilepicture;
+                card.append(img);
+                let h3 = document.createElement("h3");
+                h3.innerHTML = element.name;
+
+                card.append(h3);
+
+               
+        //         setTimeout(remove =>{
+        //     img.remove();
+        // }, 5000)
+            });
+        })
+            // .catch(error=>alert(error.message));
+        })
+    </script>
+</body>
+</html>

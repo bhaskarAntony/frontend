@@ -1,0 +1,27 @@
+.title{
+    background-color: rgb(24, 76, 0);
+    padding:30px;
+    margin:30px;
+    border-radius:10px;
+    text-align: center;
+}
+.title>h1{
+    color:blueviolet;
+    font-size: 1.5em;
+}
+.title>p{
+    color:#fff;
+    font-size:20px;
+}
+.common{
+    background-color: rgb(255, 0, 68);
+    padding:30px;
+    margin:20px;
+    border:4px solid #000000;
+    font-size: 1.5em;
+    color: #fff;
+}
+.outLineclass{
+    outline: 7px solid #0593ba;
+    border-radius:30px;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/card.css">
+</head>
+<body>
+    <center>
+        <h1>Looping Statements</h1>
+    </center>
+    <hr>
+    <ol>
+        <li>While Loop</li>
+        <li>Do While Loop</li>
+        <li>For Loop</li>
+    </ol>
+    <hr>
+    <div class="card">
+    <h1> Do While Loop Exmaple...!</h1>
+    <input type="number" name="number" id="firstnumber" placeholder="Enter number B/W 1-10">
+    <button onclick="whileLoop();">While loop</button>
+</div>
+    <script>
+        function whileLoop(){
+            let firstnumber = +document.getElementById("firstnumber").value;
+           do{
+                document.write(firstnumber, `<section class="hell">hello</section> <hr>`);
+                firstnumber++;
+            } while(firstnumber<10);
+           
+            
+        }
+    </script>
+    
+</body>
+</html>

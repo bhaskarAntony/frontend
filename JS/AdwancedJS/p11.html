@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronus</title>
+</head>
+<body>
+    <center>
+        <h1> Asynchronous Function</h1>
+       <p>External JS function execution using call back(Asynchronous)</p>
+    </center>
+    <hr>
+
+    <p>Asynchronous code allows the program to be executed immidiatly.</p>
+    <p>Asynchronous Programming allows you to perforn multiple requeasts simultaneously and complete more tasks faster.</p>
+    <hr>
+
+
+    <!-- <script src="assets/js/script.js"></script> -->
+    <script>
+    function loadScript(path, callback){
+        let script = document.createElement("script");
+        script.src = path;
+        document.body.append(script);
+        script.onload = () => callback();
+    }
+    setTimeout("loadScript('assets/js/script.js', ()=>{sum(20, 30)});", 2000);
+</script>
+    
+</body>
+</html>

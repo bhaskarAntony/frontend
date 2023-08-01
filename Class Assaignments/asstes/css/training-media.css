@@ -1,0 +1,85 @@
+@media (max-width:768px){
+    header, .home{
+        height: fit-content;
+    }
+    nav ul{
+        display: none;
+        
+    }
+    #bars{
+        display: block;
+    }
+    nav, nav ul li a{
+        background-color: aliceblue;
+        color: black;
+        height: fit-content;
+    }
+    nav ul li a{
+        font-size: 1em;
+        margin-bottom: 10px;
+    }
+    nav, nav ul{
+        flex-direction: column;
+    }
+    .home-text{
+        height: 100vh;
+        padding: 20px;
+    }
+    .program-row{
+        padding: 10px;
+    }
+    .classes{
+        padding: 10px;
+    }
+    .class-cards, .class-detail, .class-cards .card, .class-cards button{
+        width: 100%;
+    }
+    .schedule table td{
+        padding: 10px;
+    }
+    .expert{
+        padding: 10px;
+    }
+    .expert-card{
+        min-width: 100%;
+    }
+    .contact{
+        flex-direction: column;
+    }
+    .map iframe{
+        width: 100%;
+    }
+    .contact-card-container{
+        width: 100%;
+        padding: 10px;
+    }
+    .contact-card input{
+        width: 100%;
+    }
+    .table-nav ul{
+        flex-direction: column;
+    }
+}
+@media (min-width:769px) and (max-width:990px){
+    header, .home{
+        height: fit-content;
+    }
+    .home-text{
+        height: 100vh;
+        padding: 20px;
+    }
+   
+    .program-row{
+        padding: 10px;
+    }
+    .classes{
+        padding: 10px;
+    }
+    .expert{
+        padding: 20px;
+    }
+    .expert-card{
+        min-width: 250px;
+        max-width: 250px;
+    }
+}

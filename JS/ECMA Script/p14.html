@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>Property inside Class</h1>
+    </center>
+    <hr>
+    
+    <ol>
+        <li>constructor method invokes at the time of ref creation</li>
+        <li>construtor will allocates the memory location for properties</li>
+        <li>properties we caan call only w.r.to ref</li>
+    </ol>
+    
+
+    <script>
+        class User{
+            constructor(){
+                this.name = "bhaskar";
+                this.email = "bhaskar@gmail.com";
+                this.mobile = 9002020022;
+                this.account = {  //this property is object type
+                        bank:"SBI",
+                        accountNo:"AC0083635272",
+                        balance:10000
+                }
+            }
+            getUser(){ //this method is like a function
+                return "Hai 👋" + this.name + " Welcome to State Bank Of India";
+            }
+        }
+        let user = new User();
+        document.write(`<h2>${user.getUser()}</h2>`);
+        document.write(`<h3>Account holder name: </h3>${user.name}`);
+        document.write(`<h3>Account holder email: </h3>${user.email}`);
+        document.write(`<h3>Monile Number: </h3>${user.mobile}`);
+        document.write(`<h3>bank: </h3>${user.account.bank}`);
+        document.write(`<h3>Account Number: </h3>${user.account.accountNo}`);
+        document.write(`<h3>Bank Balance: </h3>${user.account.balance}$`);
+    </script>
+</body>
+</html>

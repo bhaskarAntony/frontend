@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>window key word</h1>
+        <p>window keyword is used to declare the global variable inside the function or outside the function or any where in the script</p>
+    </center>
+    <hr>
+
+    <script>
+        let kiran = 100;//global variable or window.kiran
+
+        function whoisThis(){
+            let kiran = 200; //local variable because this variable inside the function
+            let gokul = 500; //-----------------||------------------------------------
+            window.laxmi = 300;
+
+            alert("local variable: " + kiran);
+            alert("local variable: " + gokul);
+            alert("global variable: " + this.kiran);
+            alert("global variable: " + laxmi);
+        }
+        whoisThis();
+
+        function wholaxmi(){
+            document.write("This is whom laxmi fumnction :" + laxmi);
+        }
+        wholaxmi();//we are calling variable from inside the function but it gives output 300 beacuse we are used insde the function window keyword this helps to store the variable to globally;
+    </script>
+</body>
+</html>

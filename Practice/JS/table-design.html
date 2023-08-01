@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        table{
+            border-collapse: collapse;
+            padding: 0;
+            width: 50%;
+            text-align: center;
+        }
+        th{
+            padding: 10px;
+            border: 1px solid #000;
+            position: relative;
+            font-size: 1.2em;
+            letter-spacing: 2px;
+        }
+        td{
+            padding: 10px;
+            border: 1px solid #0000005b;
+            position: relative;
+            font-size: 1.1em;
+            letter-spacing: 2px;
+        }
+        th:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: #6b00b8;
+            top:-38px;
+            left: 0;
+            border-radius: 20px 20px 0px 0px;
+            color: #fff;
+        }
+        th:after{
+            content: "";
+            position: absolute;
+            border: 10px;
+            border-style: solid;
+            border-color: #6b00b8 transparent transparent transparent  ;
+            top: 0;
+            left: 48%;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Details</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Bhaskar</td>
+            <td>chikkaballapur</td>
+            <td>student</td>
+            <td>22</td>
+
+        </tr>
+    </table>
+</body>
+</html>

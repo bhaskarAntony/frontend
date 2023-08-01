@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>album</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        header{
+            padding: 10px;
+            color: #ffffff;
+            background-color: #252424;
+        }
+        .container{
+            width: 100%;
+            display: flex;
+            flex-flow: row wrap;
+            gap: 10px;
+            justify-content: center;
+            padding: 10px;
+            background-color: #ffffff;
+        }
+        img{
+            width:100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            cursor: pointer;
+        }
+        p{
+            width: 100%;
+            height: 50px;
+            z-index: 100;
+            bottom: 0;
+            left: 0;
+            backdrop-filter: blur(60px);
+            background-color: #0909096b;
+            position: absolute;
+            font-size: 1.1em;
+            /* display: none; */
+        }
+        .card{
+            width: 300px;
+            height: 300px;
+            text-align: center;
+            padding: 10px;
+            background-color: #252424;
+            color: #fff;
+            position: relative;
+            transition: 0.3s;
+            border-radius: 10px;
+            overflow: hidden;
+        }
+        .card:hover{
+           transform: scale(0.8);
+        }
+        @media (max-width:768px){
+            .card{
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h2>Album</h2>
+    </header>
+    <div class="container" id="container">
+    </div>
+
+    <script>
+        function hello (getalldata){
+            
+        }
+        fetch(`https://jsonplaceholder.typicode.com/photos`)
+        .then(getalldata=>getalldata.json()
+        )
+        .then(displaydata=>{
+            displaydata.forEach(element => {
+                let container = document.getElementById("container");
+                let card = document.createElement("div");
+                card.classList.add("card");
+                container.append(card);
+
+                let image = document.createElement("img");
+                image.src=element.url;
+                card.append(image);
+
+                let h3 = document.createElement("p");
+                h3.innerHTML=element.title;
+                card.append(h3);    
+            });
+        })
+        .catch(error =>{
+           document.write("Loading....");
+          
+        });
+    </script>
+    
+</body>
+</html>

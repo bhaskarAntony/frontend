@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #name{
+            width:200px;
+            padding: 10px;
+            font-size: 1.2em;
+            position: relative;
+        }
+        #name::before{
+            content: "Name";
+            position: absolute;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Focus and blur</h1>
+    </center>
+    <hr>
+    <form action="">
+        <label for="">Name</label>
+        <input type="text" name="name" id="name" onfocus="focusHandler()" onblur="blurHandler()" placeholder="Enter your name">
+    </form>
+
+    <script>
+        function focusHandler(){
+            document.getElementById("name").style.backgroundColor = "red";
+        }
+        function blurHandler(){
+            document.getElementById("name").style.backgroundColor = "blue";
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <script>
+        const colors = ["yellow", "green", "red", "blue"];
+        console.log("before assaigning new values", colors);
+
+        try {
+            colors.push("white"); //pushing new value to constant type of variable but here we connot get error it correct because we are not assaigning the new valy=ue to constant type of variable just we are pushing new value to same value
+            console.log("after pushing new value", colors);
+            
+        } catch (error) {
+            console.log("ERROR MESSAGE IS", error.message);
+        }
+    </script>
+    
+</body>
+</html>

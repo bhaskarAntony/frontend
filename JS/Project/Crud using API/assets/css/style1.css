@@ -1,0 +1,95 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Noto+Sans:wght@300&family=Poppins:wght@300&family=Rubik&family=Work+Sans:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: 1s;
+    font-family: 'Rubik', sans-serif;
+}
+.header{
+    text-align: center;
+}
+.header h3{
+    font-size: 3em;
+    text-transform: uppercase;
+    color: blueviolet;
+}
+.container{
+    display: flex;
+    padding: 20px;
+    width: 100%;
+    min-height: 88vh;
+    gap: 20px;
+}
+.form{
+    display: flex;
+    flex-direction: column;
+    padding: 20px 40px;
+    width: 350px;
+    height: 100%;
+    margin-right: 20px;
+    min-width: 300px;
+    box-shadow: 0px 0px 30px #c8c8c8;
+}
+.form .form-control{
+    padding: 10px;
+    outline: none;
+    border: 1px solid #c8c8c8;
+    border-radius: 5px;
+    font-size: 1.2em;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.form .form-control::placeholder{
+    color: #b9b4b4;
+    margin-bottom: 5px;
+}
+.form label{
+    color: #6f51f2;
+    letter-spacing: 1.8px;
+}
+.btn{
+    border: none;
+    padding: 10px;
+    width: 49%;
+    margin-top: 20px;
+    font-size: 1.2em;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    letter-spacing: 1.5px;
+}
+.btn-succsess{
+    background: linear-gradient(45deg, #036d03, #62ff46);
+}
+.btn-warning{
+    background: linear-gradient(45deg, #fb0d15, #fb5c61);
+}
+.btn:hover{
+    transform: scale(0.9);
+    opacity: 0.7;
+}
+.clear{
+    width: 100%;
+    background: linear-gradient(45deg, #000000, #2d2b2b);
+    background: rgba(114, 114, 114, 0.415);
+    color: #000;
+}
+table{
+    border-collapse: collapse;
+}
+th{
+    padding: 10px 20px;
+    letter-spacing: 2px;
+    font-size: 1.3em;
+    border: 2px solid #000;
+    background: linear-gradient(45deg, #036d03, #62ff46);
+    color: #fff;
+}
+.container2{
+    width: 100%;
+    min-height: 88vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

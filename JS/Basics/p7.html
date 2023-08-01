@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/card.css">
+       
+  
+    </style>
+</head>
+<body>
+    <center>
+        <h1>Switch Case..!</h1>
+    </center>
+    <div class="card">
+    <label for="label">Enter Number Between 1-7</label>
+    <input type="number" id="number" placeholder="Enter number between 1-7" name="number"><br>
+    <p id="result"></p>
+    <button type="button" onclick="switchCase();">Calucate</button>
+</div>
+<script>
+    function switchCase(){
+        let number = +document.getElementById("number").value;
+        let result = document.getElementById("result");
+        switch(number){
+            case 1 :result.innerHTML = "Today is our Sunday"; result.style.backgroundColor = "#72cd7e"; result.style.color = "#045a0f";
+            break;
+            case 2 :result.innerHTML = "Today is our Monday";result.style.backgroundColor = "#72cd7e"; result.style.color = "#045a0f";
+            break;
+            case 3 :result.innerHTML = "Today is our Teusday";result.style.backgroundColor = "#72cd7e"; result.style.color = "#045a0f";
+            break;
+            case 4 :result.innerHTML = "Today is our Wedday";result.style.backgroundColor = "#72cd7e"; result.style.color = "#045a0f";
+            break;
+            case 5 :result.innerHTML = "Today is our Thursday";result.style.backgroundColor = "#72cd7e"; result.style.color = "#045a0f";
+            break;
+            case 6 :result.innerHTML = "Today is our Friday";result.style.backgroundColor = "#72cd7e"; result.style.color = "#045a0f";
+            break;
+            case 7 :result.innerHTML = "Today is our Saturday";result.style.backgroundColor = "#72cd7e"; result.style.color = "#045a0f";
+            break;
+            default:result.innerHTML = "No inforamation for the day"; result.style.backgroundColor = "#c77d85"; result.style.color = "#d90419";
+            break;
+
+        }
+    }
+</script>
+    
+</body>
+</html>

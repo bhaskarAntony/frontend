@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+        .card{
+            width: 300px;
+            padding:10px;
+            height:200px;
+            background-color: aliceblue;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px #555151;
+            padding-top: 40px;
+        }
+        input{
+            width:95%;
+            padding:10px;
+            font-size: 1.2em;
+            outline: none;
+            border:none;
+            border: 1px solid #555151;
+            border-radius: 10px;
+        }
+        button{
+            border: none;
+            padding:10px;
+            border-radius: 5px;
+            color:#fff;
+            background-color: rgb(25, 25, 192);
+            font-size: 1.2em;
+            width:100%;
+        }
+        button:hover{
+            opacity: 0.5;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="card">
+    <input type="number" name="number" id="firstnumber" placeholder="Enter phone Number"> <br>
+    <input type="number" name="number" id="secondnumber" placeholder="Enter phone Number"> <br>
+    <input type="number" name="number" id="thirdnumber" placeholder="Enter phone Number"> <br>
+    <p id="result"></p>
+    <button type="button" onclick=" check()">Make Call</button>
+</div>
+<script>
+
+
+function check(){
+    let firstnumber=document.getElementById("firstnumber").value;
+    let secondnumber=document.getElementById("secondnumber").value;
+    let thirdnumber=document.getElementById("thirdnumber").value;
+    if(firstnumber==""||secondnumber==""||thirdnumber==""){
+        alert("please fill boxes");
+    }
+    else{
+        alert("thank you are filled all the boxes")
+    }
+}
+
+
+</script>
+    
+</body>
+</html>

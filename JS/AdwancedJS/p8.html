@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generator Function</title>
+</head>
+<body>
+    <center>
+        <h1>Generater Function</h1>
+    </center>
+    <hr>
+
+    <script>
+        //if we want more than one value from the function we have to use * after the function key word(function*)
+
+        function* users(){
+            //yield is kind of like return keyword
+            //return x returns the value of x , but yield x returns a function
+            //yield keyword will returns more than one value from function
+
+            yield "bhaskar";
+            yield "antony";
+            yield "sathish";
+            yield "roopa";
+            yield "pavithra";
+            yield "ruchitha"
+        }
+        console.log("users()", users());
+        console.log("users()",typeof users());
+
+        //now yield contains a more than one value in the form of object for displaying all yield values
+        
+        for (const iterator of users()) {
+            document.write(`<h3>${iterator}</h3>`);
+        }
+    </script>
+    
+</body>
+</html>

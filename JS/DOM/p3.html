@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <h2 id="head"></h2>
+    <input type="text" name="name" id="name" placeholder="Name">
+
+    <script>
+        let textBox = document.getElementById("name");
+        textBox.style.height = "35px";
+        textBox.style.width = "100%";
+        textBox.style.borderRadius = "100px";
+        textBox.style.fontSize = "1.2em";
+        textBox.style.color = "green";
+
+        console.log(textBox.getAttribute("id"));
+        console.log(textBox.getAttribute("style"));
+
+        textBox.setAttribute("name", "setName")// setting new value to name attribute
+        console.log(textBox.getAttribute("name")); 
+        
+        textBox.setAttribute("value", "JAVASCRIPT DOM")// setting new value to value attribute
+        console.log(textBox.getAttribute("value")); 
+
+        function addElement(){
+            let p = document.createElement("p");
+            console.log(p);
+            let data = document.createTextNode("    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus nulla suscipit, explicabo, quidem ea, repellendus reiciendis unde nemo blanditiis molestiae repudiandae. Culpa neque nam dicta sit, quisquam quam incidunt assumenda?");
+            console.log(data);
+            p.appendChild(data);
+            console.log(p);
+            document.body.appendChild(p);
+        }
+        addElement(); //calling above function
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>Spread (...) operator with Math Constructor</h1>
+        <p>An Array into parameter</p>
+    </center>
+    <hr>
+
+    <script>
+        let num = [34, 55, 33, 55, 22,455,77];
+
+        document.write(`<h3>max = ${Math.max(num)}</h3>`)// output : NaN because we adding direct object or arry to math function they dont know what type of this thats why its giving output is NaN.
+
+        document.write(`<h3>max = ${Math.max(...num)}</h3>`)//output: 455 because we saying to math function this is a array type of variable thats why that math function will check all array values and it will gives th maximum number.
+
+        document.write(`<h3>min = ${Math.min(33, 44, 55, 333, 555, 777,99)}</h3>`)// output: 33  because we are not passing any parameter inside tha math function just we directly declaring values thats why here no issues but here dont declare srings or other type of varables it math is only valid for number type of variables
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>user Details</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+
+    <header>
+
+        <nav>
+            <div class="logo">
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSPHRvtFUvNT9Rrpz2HE4gu05hPPg8m7DweCg&usqp=CAU" alt="logo">
+            <h1>LOCK <label class="text-main">ME</label></h1>
+        </div>
+                                
+            <ul>
+                <li  class="active"><a href="index.html">Home</a></li>
+                <li><a href="create.html">Create</a></li>
+            </ul>
+        </nav>
+    </header> 
+    <div class="container" id="container">
+    </div>  
+    <script>
+        fetch("http://localhost:3000/posts")
+        .then(getdata=>getdata.json())
+        .then(displaydata=>{
+        var container = document.getElementById("container");
+            displaydata.forEach(element => {
+            let item = document.createElement("div");
+            item.classList.add("item");
+            container.appendChild(item);
+
+
+            let div = document.createElement("div");
+            item.appendChild(div);
+
+            let image = document.createElement("img");
+            image.src = element.profile; 
+            div.appendChild(image);
+
+            let cardtext = document.createElement("div");
+            cardtext.classList.add("card-text");
+            div.appendChild(cardtext);
+
+            let h2 = document.createElement("h2");
+            h2.innerHTML= element.name; 
+            cardtext.appendChild(h2);
+
+            let p = document.createElement("p");
+            cardtext.appendChild(p);
+
+            let label = document.createElement("label");
+            label.classList.add("text-main2");
+            label.innerHTML = "Email: ";
+            p.appendChild(label);
+            p.innerHTML= element.email; 
+
+            let btns = document.createElement("div");
+            btns.classList.add("btns");
+            cardtext.appendChild(btns);
+
+            let edit = document.createElement("button");
+            edit.innerHTML = `<i class="fa fa-pencil"><i> Edit`;
+            btns.appendChild(edit);
+
+            let delet = document.createElement("button");
+            delet.innerHTML = `<i class="fa fa-remove"><i> Delete`;
+            btns.appendChild(delet);
+            });
+           
+        })
+        .catch()
+    </script>   
+</body>
+</html>

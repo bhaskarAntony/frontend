@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            
+            font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+            padding: 50px 0px;
+        }
+        .container{
+            width:400px;
+            padding: 10px 10px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px #636060;
+            background-color: rgb(251, 251, 251);
+            padding-top: 10px;
+        }
+        input,select{
+            width: 100%;
+            outline: none;
+            border: none;
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 10px;
+            border: 1px solid #7308d7;
+            border-radius: 5px;
+            color: #636060;
+            position: relative;
+        }
+        input::placeholder{
+            color:#797575;
+            font-size: 1em;
+        }
+        /* [class*="fa-"]{
+            font-size: 2em;
+            margin-right: 5px;
+            color: #6e00dc;
+            background-color: #8000ff4c;
+            width: 40px;
+            height:40px;
+            text-align: center;
+            border-radius: 50px;
+            padding-top: 2px;
+        }
+       */
+        .name-error{
+            letter-spacing: 3px;
+        }
+        input[type="radio"]{
+            width: fit-content;
+            width:20px;
+            height:20px;
+            accent-color: #8000ff;
+            vertical-align: middle;
+        }
+        .buttons{
+            display: flex;
+            gap: 10px;
+            margin-top: 20px;
+        }
+        button{
+            flex: 1;
+            padding: 10px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 5px;
+        }
+        label{
+            font-size: 1.2em;
+            color: #290240;
+            margin-right: 10px;
+        }
+        h3{
+            color: #3d3a3f;;
+            letter-spacing: 2px;
+            line-height: 2;
+        }
+        button:first-child{
+            background-color: #ec334b;
+            color: #fff;
+        }
+        button:last-child{
+            background-color: #f200302e;
+            color: #f80029;;
+        }
+        button:hover{
+            opacity: 0.5;
+        }
+        h1{
+            margin-bottom: 10px;
+        }
+        .radios{
+            background-color: #00d0ff30;
+            margin-bottom: 10px;
+            padding: 5px;
+            border-radius: 10px;
+        }
+        p{
+            color: #ffffff;
+            border-radius: 20px;
+            width: fit-content;
+            padding: 0px 5px;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+            letter-spacing: 2px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <form action="">
+            <span>Username</span>
+        </i><input type="text" name="name" id="name" placeholder="Enter Your Name" onkeyup="nameCheck()">
+        <p id="nameerror"></p>
+        <span>Phone Number</span>
+        </i><input type="text" name="number" id="number" placeholder="Enter Phone Number" onkeyup="numberCheck()">
+        <p id="numberError"></p>
+        <span>Email</span>
+        <input type="email" name="email" id="email" placeholder="Enter Email ID" onkeyup="validation()">
+        <p id="output"></p>
+        <span>City</span>
+        <select name="city" id="city" onclick="selector()">
+            <option value="">Choose City Name</option>
+            <option value="Chikkaballapur">Chikkaballapur</option>
+            <option value="Bangalore">Bangalore</option>
+            <option value="Devanahalli">Devanahalli</option>
+            <option value="Mysore">Mysore</option>
+            <option value="Davanagere">Davanagere</option>
+        </select>
+        <p id="cityError">d</p>
+        <div class="radios">
+        <h3>Gender</h3>
+        <input type="radio" name="gender" id="gender" value="male"><label> Male</label>
+        <input type="radio" name="gender" id="gender2" value="male"><label> Female</label><br>
+        <p id="genError"></p>
+    </div>
+    <div class="radios">
+        <h3 for="gender">Languages (optional)</h3>
+        <input type="radio" name="lan" id="lan" value="male"><label> kannada</label>
+        <input type="radio" name="lan" id="lan" value="male"><label> English</label>
+        <input type="radio" name="lan" id="lan" value="male"><label> Telugu</label>
+        <input type="radio" name="lan" id="lan" value="male"><label> Hindi</label>
+        <input type="radio" name="lan" id="lan" value="male"><label> Marati</label>
+        <input type="radio" name="lan" id="lan" value="male"><label> Odisha</label> <br>
+        </div>
+        <div class="buttons">
+        <button type="button" onclick="selector(); rad(); numberCheck(); nameCheck(); validation();">Submit</button>
+        <button type="reset" onclick="reseter()">Reset</button>
+    </form>
+    </div>
+    </div>
+    <script>
+            
+            function nameCheck(){
+            var name = document.getElementById("name").value;
+            var nameError = document.getElementById("nameerror");
+            let number = document.getElementById("number").value;
+            let email = document.getElementById("email").value;
+            let city = document.getElementById("city").value;
+            var letters = /^[A-Za-z]+$/;
+            if(name==""||name.length<6){
+                nameError.innerHTML = "Enter Valid Name it should be above 6 letters";
+                nameError.style.backgroundColor = "#eeaec3"
+                nameError.style.color = "red"
+                nameError.style.display = "block"
+            }
+            else if(letters.test(name)==false){
+                nameError.innerHTML = "Enter only letters";
+                nameError.style.backgroundColor = "#eeaec3"
+                nameError.style.color = "red"
+                nameError.style.display = "block"
+            }
+            else if(letters.test(name)==false){
+                nameError.innerHTML = "perfect";
+                nameError.style.backgroundColor = "#74e5a9";
+                nameError.style.color = "green";
+                console.log(typeof(name))
+                
+            }
+            else{
+                nameError.innerHTML = "perfect";
+                nameError.style.backgroundColor = "#74e5a9";
+                nameError.style.color = "green";
+                console.log(typeof(name))
+                
+            }
+           
+        }
+        function numberCheck(){
+            var number = document.getElementById("number").value;
+            var numberError = document.getElementById("numberError");
+            let numg = /^[0-9]+$/;
+            if(number.length<10||numg.test(number)==false||number.length>10||number.charAt(0)<6){
+                numberError.innerHTML = "Enter Valid Phone number";
+                numberError.style.backgroundColor = "#eeaec3"
+                numberError.style.color = "red"
+                numberError.style.display = "block"
+            }
+            else if(numg.test(number)==true){
+                numberError.innerHTML = "perfect";
+                numberError.style.backgroundColor = "#74e5a9";
+                numberError.style.color = "green";
+            }
+            else{
+                numberError.innerHTML = "perfect";
+                numberError.style.backgroundColor = "#74e5a9";
+                numberError.style.color = "green";
+            }
+        }
+        function selector(){
+            let choose = document.getElementById("city").value;
+            var cityError = document.getElementById("cityError");
+            if(choose==""){
+                cityError.innerHTML = "Please select your city";
+                cityError.style.backgroundColor = "#eeaec3";
+                cityError.style.color = "red";
+                
+            }
+            else{
+                cityError.innerHTML = "perfect";
+                cityError.style.backgroundColor = "#74e5a9";
+                cityError.style.color = "green";
+            }
+        }
+        function rad(){
+            let male = document.getElementById("gender");
+            let female = document.getElementById("gender2");
+            var genError = document.getElementById("genError");
+            if(male.checked==false&&female.checked==false){
+                genError.innerHTML = "Please select your city";
+                genError.style.backgroundColor = "#eeaec3";
+                genError.style.color = "red";
+                genError.style.display = "block";
+            }
+            else{
+                genError.innerHTML = "perfect";
+                genError.style.backgroundColor = "#74e5a9";
+                genError.style.color = "green";
+            }
+        }
+        function validation() {
+            let user = document.getElementById("email").value;
+            let output = document.getElementById("output");
+            let regx = /^\S+@\S+\.\S+$/; //example: admin@gmail.com  and regx(regular expresion)
+            if(email==""){
+                output.innerHTML = "please enter email";
+                output.style.backgroundColor = "#eeaec3";
+                output.style.color = "red";
+            }
+           else{
+            if(regx.test(user) === false){ //to test the expresion
+                output.innerHTML = "Invalid Email-Id";
+                output.style.backgroundColor = "#eeaec3";
+                output.style.color = "red";
+            }
+            else{ //to test the expresion
+                output.innerHTML = "Valid Email-Id";
+                output.style.backgroundColor = "#74e5a9";
+                output.style.color = "green";
+            }
+           }
+        }
+        function reseter(){
+            location.reload();
+        }
+    </script>
+    
+</body>
+</html>

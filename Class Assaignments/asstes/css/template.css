@@ -1,0 +1,327 @@
+@import url('https://fonts.googleapis.com/css2?family=Heebo&family=Mukta:wght@300&family=Rubik&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #000;
+    font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;
+}
+:root{
+    --white:#fff;
+    --blue:#42039a;
+    --dark-blue:#000000d0;
+    --lighter-blue:#25035c6f;
+    --button-dark:#090232;
+    --button-lighter:#2f088c;
+    --card-background:#18151a;
+    --card-border:#3c3a3a;
+    --button-hover-color:#5c3cdc;
+    --gradient-color1:#5c3cdc;
+    --gradient-color2:#b32ae4;
+    --black:#000;
+}
+.home{
+    padding:10px 8%;
+    height: 100vh;
+    background:linear-gradient(45deg, var(--dark-blue) ,var(--lighter-blue)), url("../images/background.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+header,.createNTF,.market-items{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+    padding:10px 15px;
+    background-color:var(--white) ;
+    border-radius: 50px;
+}
+.navBar>ul>li,.market-navBar>ul>li{
+    display: inline-block;
+    padding:10px;
+    border-radius: 50px;
+    transition: all 0.5s ease-in;
+}
+.navBar>ul>li:hover,.market-navBar>ul>li:hover{
+    background-color: var(--blue);
+}
+.navBar>ul>li:hover>a,.market-navBar>ul>li>a,.market-items>h1{
+    color:var(--white);
+}
+.navBar>ul>.active>a,.market-navBar>ul>.active>a,.navBar>ul>.active,.market-navBar>ul>.active{
+    background-color: var(--blue);
+    color: var(--white);
+}
+.navBar>ul>li>a,.market-navBar>ul>li>a{
+    text-decoration: none;
+    margin: 10px;
+    font-size: 1.3em;
+    color: var(--black);
+}
+header>img{
+    margin-right:250px;
+    height:60px;
+    width:60px;
+}
+.home-info{
+    margin-top: 10%;
+    width:50%;
+    color:var(--white);
+    line-height: 1.6;
+    min-height: fit-content;
+}
+.home-info>h1{
+    font-size: 2.5em;
+}
+.home-info>p{
+    font-size: 1em;
+    letter-spacing: 1px;
+}
+.home-button-container>button{
+    border: none;
+    position: relative;
+    padding:15px 20px;
+    font-size: 1.1em;
+    border-radius: 50px;
+    margin: 20px;
+    margin-left: 0;
+    background:linear-gradient(45deg,var(--button-dark) ,var(--button-lighter));
+    color:var(--white);
+    border:2px solid var(--white);
+    box-shadow: 0px 10px 10px var(--black);
+    letter-spacing: 1px;
+    transition: all 0.5s;
+}
+.home-button-container>button:hover{
+    background: transparent;
+    border:2px solid var(--white)
+}
+.categories, .collections, .create-description,.item-card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:20px;
+    padding:20px 10%;
+    background-color: var(--black);
+    flex-flow: row wrap;
+}
+.categories-title{
+    position: relative;
+    text-align: center;
+    color: var(--white);
+    background-color: var(--black);
+    padding:30px;
+    line-height: 3;
+}
+.categories-title label{
+    color: var(--blue);
+}
+.categories-title div{
+    position: absolute;
+    left: 45%;
+    width:120px;
+    height: 5px;
+    background-color: var(--blue);
+}
+.categories>div{
+    min-width: 150px;
+}
+.categories>div, .collections>div,.create-description>div,.item-card-container>.card{
+    flex: 1;
+    text-align: center;
+    height: 150px;
+    background-color: var(--card-background);
+    border-radius: 20px;
+    border: 1px solid var(--card-border);
+    color:var(--white);
+    padding-top: 20px;
+    line-height: 2;
+}
+.categories [class*="fa-"],.create-description [class*="fa-"]{
+    color: var(--blue);
+    background-color: var(--white);
+    border-radius: 50px;
+    padding:17px;
+    width:60px;
+    height: 60px;
+}
+.collections>div{
+    height: fit-content;
+    line-height: 3;
+    text-align: left;
+    padding-bottom: 20px;
+    position: relative;
+    margin-top: 20px;
+  
+}
+.collections>div>h2{
+    font-size: 1.1em;
+    margin-left: 20px;
+}
+.collections>div>img{
+    width:100%;
+    margin-top: -20px;
+    border-radius: 20px 20px 0px 0px;
+}
+.collections>div>hr,.card-text-container>hr{
+    margin: 20px;
+    opacity: 0.2;
+}
+.collections>div>table{
+    width: 100%;
+    line-height: 1.6;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.collections>div>button,.createNTF>button{
+    position: absolute;
+    width: 80%;
+    border: none;
+    font-size: 1em;
+    color: var(--white);
+    padding:15px;
+    background-color: var(--blue);
+    border-radius: 50px;
+    left: 10%;
+    bottom:-23px;
+}
+.collections>div>button:hover,.createNTF>button:hover{
+    background-color: var(--button-hover-color);
+}
+button::after{
+    content: "";
+    position: absolute;
+    width:80%;
+    height: 3px;
+    bottom: 0;
+    left: 23px;
+    background-color: var(--white);
+}
+.createNTF{
+    position: relative;
+    border-radius: 0;
+    background-color: transparent;
+    color: var(--white);
+    width:80%;
+    margin-left: 9%;
+}
+.createNTF>button{
+    width:200px;
+    position: relative;
+    font-size: 1em;
+    text-align: center;
+}
+
+.create, footer{
+    background: linear-gradient(45deg, var(--gradient-color1) ,var(--gradient-color2) );
+    padding:50px  0px;
+    margin-top: 15%;
+}
+.create-description{
+    background-color: transparent;
+}
+.create-description>div>p{
+    letter-spacing: 1px;
+}
+.create-description section{
+    display: block;
+    position: relative;
+    top:-100px;
+    left:5px;
+    color: var(--white);
+}
+.create-description section::after{
+    content: "";
+    position: absolute;
+    height: 230px;
+    left: 2px;
+    top: 20px;
+    width: 2px;
+    background-color: var(--white);
+    opacity: 0.1;
+}
+.createNTF>h1::before,.market-items>h1::before{
+    content: "";
+    position: absolute;
+    width:100px;
+    height: 3px;
+    top: -15px;
+    background-color: var(--white);
+}
+.create-description>div{
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    height: fit-content;
+}
+.item-cards{
+    padding:8% 40px;
+}
+.market-items{
+    background-color: var(--black);
+    position: relative;
+    margin-top: 40px;
+}
+.market-navBar>ul>li>a{
+    color: var(--white);
+    font-size: 1.3em;
+}
+.market-items>h1>label,.card-text-container>div>div>h4,.card-text-container>h4, footer>h3>label{
+    color: var(--blue);
+}
+
+.item-card-container,footer{
+    color: var(--white);
+    text-align: center;
+    margin-top: 0;
+    padding: 30px;
+    justify-content:space-around;
+}
+.item-card-container .card{
+    display: flex;
+    text-align: left;
+    position: relative;
+    height: fit-content;
+    align-items: center;
+    flex:1;
+    letter-spacing: 0.5px;
+    width:fit-content;
+    padding: 20px;
+    gap: 20px;
+}
+.item-card-container>.card>img{
+    height: 300px;
+    border-radius: 25px;
+}
+.item-card-container>.card>.card-text-container>table{
+    width:100%;
+    text-align: right;
+    margin-bottom: 20px;
+}
+.card-text-container{
+    margin-left: 20px;
+}
+.card-text-container>.card>table>tr>th{
+    text-align: left;
+}
+.card-text-container>div{
+    display: flex;
+    align-items: center;
+    line-height: 1.5;
+    gap:10px;
+    margin-top: 15px;
+}
+.card-text-container>div>img{
+    width:55px;
+    height:55px;
+    border-radius: 50px;
+}
+.card-text-container>h1{
+   width: 100%;
+}
+.card-text-container>h4{
+    text-decoration: underline;
+}

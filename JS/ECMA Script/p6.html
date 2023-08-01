@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <center>
+        <h1>REST OPERATOR</h1>
+        <p>Converts parameter into a array => Rest Operator (...)</p>
+    </center>
+
+    <script>
+        //the rest operator accsepts more than one value in the form of an array
+        function SumOfDigits(...num){ //for creating rest operator we use (...parameter)
+            document.write(typeof num); //Output: array type
+
+            let sum =0;
+            for(let iterator of num){
+                sum+=iterator;
+                document.write(`<h2>Sum of Digits = ${sum-iterator} +${iterator}= <h1>${sum}<h1></h2>`);
+            }
+        }
+        SumOfDigits(12, 12, 34, 5,4 ,333, 22,66, 77); //adding more than one values to parameter
+    </script>
+    
+</body>
+</html>

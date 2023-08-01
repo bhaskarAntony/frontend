@@ -1,0 +1,23 @@
+span{
+    width: 200px;
+    font-size:16px;
+    color:rgb(67, 67, 66);
+}
+label{
+    color:red;
+}
+table{
+    width:40%
+}
+hr{
+    width:40%;
+}
+th{
+    background-color: rgb(119, 147, 155);
+}
+.table tr:nth-child(even){
+    background-color: rgb(176, 176, 176);
+}
+#table2>tr>td{
+    width: 200px;
+}

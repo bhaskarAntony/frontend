@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hoisting</title>
+</head>
+<body>
+    <center>
+        <h1>Hoisting</h1>
+    </center>
+    <hr>
+    <h2>Function hoisting</h2>
+
+    <script>
+        // calling function before declaration
+        sayHallo(); //output: say hello function
+
+        function sayHallo(){
+            document.write(`<h1>Say hello Function</h1>`)
+        }
+
+    </script>
+    <h2>variable hoisting</h2>
+
+    <script>
+        str = "Hello World...!";
+        alert(str); //Output: Hello World...!
+        var str;
+
+        alert(str1); //output: Undefined
+        var str1;
+        str1 = "Hello World2...!"
+
+        var x = 5; //decalare and intialize x
+        var y; //only declare y
+        alert(x + "," +y); //output: 5, undefined
+        y=10; //intialize y
+
+        var a = 3; //declare and intialize a
+        b = 6; //intialize b
+        alert(a + "," + b); //output: 3, 6
+        var b; //declare b
+    </script>
+    
+</body>
+</html>

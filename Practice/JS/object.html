@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create object</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <style>
+        header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            padding: 30px 10px;
+            width: 350px;
+            box-shadow: 0px 0px 30px #bd95f1;
+            border-radius: 10px;
+        }
+
+        .card input {
+            width: 93%;
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            border: none;
+            outline: none;
+            border: 1px solid #b6b6b6;
+        }
+
+        .card input:focus {
+            border: 2px solid #0011fc;
+        }
+
+        button {
+            width: 100%;
+            background-color: rgb(8, 23, 233);
+            border: 0;
+            padding: 10px;
+            color: #fff;
+            border-radius: 3px;
+        }
+
+        .card>div,
+        .btn {
+            display: flex;
+            gap: 10px;
+        }
+
+        button:last-child {
+            background-color: #4029f03e;
+            color: #2600ff
+        }
+
+        button:hover {
+            opacity: 0.5;
+        }
+
+        table {
+            width: 100%;
+            text-align: center;
+            letter-spacing: 1.2px;
+            padding: 0;
+        }
+
+        table,
+        th,
+        td {
+            border-collapse: collapse;
+            border: 1px solid #7a2fdb;
+            padding: 5px;
+            color: #313030;
+            font-size: 1em;
+        }
+
+        td img {
+            border-radius: 50px;
+        }
+
+        th {
+            background-color: #e22e46;
+            color: #fff;
+        }
+        h3{
+            display: inline-block;
+            background-color: black;
+            color: #fff;
+            position: relative;
+            padding:10px 30px;
+        }
+        h3::before, h3::after{
+            content: "";
+            position: absolute;
+            border: 20px;
+            border-style: solid;
+            border-color: transparent rgb(255, 255, 255) transparent transparent;
+            z-index: 2;
+            top:0;
+            right:0;
+        }
+        h3::after{
+            border-color: transparent transparent transparent #ffffff;
+            left: 0;
+        }
+
+        table tr:hover {
+            background-color: #b5b3b375;
+        }
+
+        table i:first-child {
+            color: #014a0f;
+            margin-bottom: 10px;
+            padding: 5px;
+            background-color: #a0ebaf;
+            border-radius: 5px;
+            margin-left: 3px;
+            cursor: pointer;
+            transition: 1s;
+        }
+
+        table i:last-child {
+            color: #e61d2b;
+            padding: 5px;
+            background-color: #f2b0b4;
+            border-radius: 5px;
+            transition: 1s;
+            cursor: pointer;
+        }
+
+        table i:hover {
+            border-radius: 50px;
+        }
+        @media (max-width:900px){
+            form{
+                width:100%;
+            }
+            table{
+                width:auto
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="card">
+            <form id="formdata"  onsubmit="employeeAdd()">
+                <div>
+                    <input type="text" name="firstName" id="firstName" placeholder="enter your Firstname" required>
+                    <input type="text" name="lastName" id="lastName" placeholder="enter your Lastname" required>
+                </div>
+                <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" required>
+                <input type="number" name="altPhoneNumber" id="altPhoneNumber" placeholder="Alternate Phone Number"
+                    required>
+                <input type="text" name="lacalAddress" id="lacalAddress" placeholder="Local Address" required>
+                <input type="text" name="permanentAddress" id="permanentAddress" placeholder="Permanent Address"
+                    required>
+                <input type="number" name="pincode" id="pincode" placeholder="Pincode" required>
+                <input type="text" name="profile" id="url" placeholder="profile URL" required>
+                <div class="btn">
+                    <button type="submit">Add</button>
+                    <button type="reset">Reset</button>
+                </div>
+            </form>
+        </div>
+    </header>
+    <div id="result">
+        <center>
+            <h3>Employee DataBase</h3>
+        </center>
+        <table id="data" cellspacing="0" border="0">
+            <tr>
+                <th>ID</th>
+                <th>Type</th>
+                <th>Profile</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Full Name</th>
+                <th>Mobile Number</th>
+                <th>Telephone Number</th>
+                <th>Present Address</th>
+                <th>Permanent Address</th>
+                <th>Pincode</th>
+                <th>Options</th>
+            </tr>
+        </table>
+    </div>
+
+
+</body>
+<script>
+    let employeeDetails = [Object()];
+    employeeDetails.id;
+    employeeDetails.firstName = "";
+    employeeDetails.lastName = "";
+    employeeDetails.fullName;
+    employeeDetails.mobile = [];
+    employeeDetails.pincode;
+    employeeDetails.address = Object();
+    employeeDetails.address.local;
+    employeeDetails.address.permanent;
+
+    var form = document.getElementById("formdata");
+    
+    function employeeAdd(event) {
+        event.preventDefault();
+        let table = document.getElementById("data")
+        let fname = document.getElementById("firstName").value;
+        let lname = document.getElementById("lastName").value;
+        let pNumber = document.getElementById("phoneNumber").value;
+        let apNumber = document.getElementById("altPhoneNumber").value;
+        let localA = document.getElementById("lacalAddress").value;
+        let permanentA = document.getElementById("permanentAddress").value;
+        let pincode = document.getElementById("pincode").value;
+        let file = document.getElementById("url").value;
+        let tr = document.createElement("tr");
+        table.appendChild(tr);
+        employeeDetails.push({
+            "id": employeeDetails.length,
+            "firstName": fname,
+            "lastName": lname,
+            "fullName": function () {
+                return this.firstName + " " + this.lastName;
+            },
+            "mobile": [pNumber, apNumber],
+            "pincode": pincode,
+            "photo": file,
+            "address": {
+                "local": localA,
+                "permanent": permanentA
+            }
+
+        });
+
+        for (let i = 1; i < employeeDetails.length; i++) {
+            if (i == employeeDetails.length - 1) {
+                tr.insertCell().innerHTML =  "<input type ='checkbox'>" + employeeDetails[i].id;
+                tr.insertCell().innerHTML = typeof (employeeDetails);
+                tr.insertCell().innerHTML = "<img width='70' height='70' src=" + employeeDetails[i].photo + ">";
+                tr.insertCell().innerHTML = employeeDetails[i].firstName;
+                tr.insertCell().innerHTML = employeeDetails[i].lastName;
+                tr.insertCell().innerHTML = employeeDetails[i].fullName();
+                tr.insertCell().innerHTML = employeeDetails[i].mobile[0];
+                tr.insertCell().innerHTML = employeeDetails[i].mobile[1];
+                tr.insertCell().innerHTML = employeeDetails[i].pincode;
+                tr.insertCell().innerHTML = employeeDetails[i].address.local;
+                tr.insertCell().innerHTML = employeeDetails[i].address.permanent;
+                tr.insertCell().innerHTML =
+                    "<i class='material-icons'>&#xe254;</i><i class='material-icons'>&#xe872;</i>";
+            }
+        }
+                document.getElementById("data").value = "";
+                document.getElementById("firstName").value = "";
+                document.getElementById("lastName").value = "";
+                document.getElementById("phoneNumber").value = "";
+                document.getElementById("altPhoneNumber").value = "";
+                document.getElementById("lacalAddress").value = "";
+                document.getElementById("permanentAddress").value = "";
+                document.getElementById("pincode").value = "";
+                document.getElementById("url").value = "";
+    }
+    form.addEventListener('submit', employeeAdd);
+</script>
+
+</html>

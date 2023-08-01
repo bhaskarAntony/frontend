@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-BASICS</title>
+</head>
+<body>
+    <center>
+        <h1>Javascript generating output</h1>
+    </center>
+    <p id="result">RESULT:</p>
+    <script>
+        let firstnumber = 10, lastnumber = 20, sum;
+        sum = firstnumber + lastnumber; //sum = 10+20;
+        document.write(`<p><b>documnet.write: ${sum} </b> </p>`);
+        document.writeln(`<p><b>documnet.write: ${sum} </b> </p>`);
+        console.log("consol.log",sum);
+
+        alert("sum of number:"+ sum);
+        confirm("confirm:"+ sum);
+        prompt("prompt:"+ sum);
+
+        document.getElementById("result").innerHTML += `<b>${sum} </b>`;
+    </script>
+</body>
+</html>

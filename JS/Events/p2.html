@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS-Events</title>
+</head>
+<body>
+    <center>
+        <h1>Keyboard Events</h1>
+    </center>
+    <hr>
+
+    <!-- onkeydown, onkeypress => will have one key of delay
+    onkeyup = no delay -->
+
+    <label>Enter Name:</label>
+    <input type="text" name="name" id="name" placeholder="Enter Your Name" onkeypress="print()">
+
+    <p id="result"></p>
+
+    <script>
+        function print(){
+            document.getElementById("result").innerHTML = document.getElementById("name").value; 
+        }
+    </script>
+    
+</body>
+</html>

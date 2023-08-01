@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>create object</title>
+    <style>
+        header {
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .card {
+            padding: 30px 10px;
+            width: 350px;
+            box-shadow: 0px 0px 30px #bd95f1;
+            border-radius: 10px;
+        }
+
+        .card input {
+            width: 93%;
+            padding: 10px;
+            font-size: 1em;
+            margin-bottom: 10px;
+            border-radius: 3px;
+            border: none;
+            outline: none;
+            border: 1px solid #b6b6b6;
+        }
+
+        .card input:focus {
+            border: 2px solid #0011fc;
+        }
+
+        button {
+            width: 100%;
+            background-color: rgb(8, 23, 233);
+            border: 0;
+            padding: 10px;
+            color: #fff;
+            border-radius: 3px;
+        }
+
+        .card>div,
+        .btn {
+            display: flex;
+            gap: 10px;
+        }
+
+        button:last-child {
+            background-color: #4029f03e;
+            color: #2600ff
+        }
+
+        button:hover {
+            opacity: 0.5;
+        }
+        table{
+            width: 100%;
+            text-align: center;
+            letter-spacing: 1.2px;
+        }
+        table, th, td{
+            border-collapse: collapse;
+            border: 1px solid #7a2fdb;
+            padding:5px;
+            color: #313030;
+            font-size: 1em;
+        }
+        td img{
+            border-radius: 50px;
+        }
+        th{
+            background-color: #0800f2;
+            color: #fff;
+        }
+        table tr:hover{
+            background-color: #b5b3b375;
+        }
+        table i:first-child{
+            color: #014a0f;
+            margin-bottom: 10px;
+            padding: 5px;
+            background-color: #a0ebaf;
+            border-radius: 5px;
+            margin-left: 3px;
+            cursor: pointer;
+            transition: 1s;
+        }
+        table i:last-child{
+            color: #e61d2b;
+            padding: 5px;
+            background-color: #f2b0b4;
+            border-radius: 5px;
+            transition: 1s;
+            cursor: pointer;
+        }
+        table i:hover{
+            border-radius: 50px;
+        }
+    </style>
+    <script>
+        let employeeDetails = [Object()];
+        employeeDetails.id;
+        employeeDetails.firstName = "";
+        employeeDetails.lastName = "";
+        employeeDetails.fullName;
+        employeeDetails.mobile = [];
+        employeeDetails.pincode;
+        employeeDetails.address = Object();
+        employeeDetails.address.local;
+        employeeDetails.address.permanent;
+    
+        function employeeAdd() {
+            let result = document.getElementById("result")
+            let fname = document.getElementById("firstName").value;
+            let lname = document.getElementById("lastName").value;
+            let pNumber = document.getElementById("phoneNumber").value;
+            let apNumber = document.getElementById("altPhoneNumber").value;
+            let localA = document.getElementById("lacalAddress").value;
+            let permanentA = document.getElementById("permanentAddress").value;
+            let pincode = document.getElementById("pincode").value;
+            let table = document.createElement("table");
+            let tr = document.createElement("tr");
+            let td = document.createElement("td");
+            result.appendChild(table);
+            document.write("<center><h2>DataBase</h2></center>");
+            document.write(`<table cellspacing="0" cellpadding="3" border="1">`);
+            document.write("<tr>");
+            document.write("<th> id</th>");
+            document.write("<th> emp photo</th>");
+            document.write("<th> Type</th>");
+            document.write("<th> First name</th>");
+            document.write("<th>last name </th>");
+            document.write("<th>full name </th>");
+            document.write("<th>mobile number </th>");
+            document.write("<th>alt mobile number </th>");
+            document.write("<th> pincode</th>");
+            document.write("<th>local address </th>");
+            document.write("<th>permanent address </th>");
+            document.write("<th>options </th>");
+            document.write("</tr>");
+            document.write("<tr>");
+                
+    
+            employeeDetails.push({
+                "id": employeeDetails.length,
+                "firstName": fname,
+                "lastName": lname,
+                "fullName": function () {
+                    return this.firstName + " " + this.lastName;
+                },
+                "mobile": [pNumber, apNumber],
+                "pincode": pincode,
+                "address": {
+                    "local": localA,
+                    "permanent": permanentA
+                }
+    
+            });
+            console.log(employeeDetails);
+            for (let i = 1; i < employeeDetails.length; i++) {
+                document.write("<td>" + employeeDetails[i].id + "</td>");
+                document.write("<td>" + employeeDetails[i].photo + "</td>");
+                document.write("<td>" + typeof(employeeDetails) + "</td>");
+                document.write("<td>" + employeeDetails[i].firstName + "</td>");
+                document.write("<td>" + employeeDetails[i].lastName + "</td>");
+                document.write("<td>" + employeeDetails[i].fullName() + "</td>");
+                document.write("<td>" + employeeDetails[i].mobile[0] + "</td>");
+                document.write("<td>" + employeeDetails[i].mobile[1] + "</td>");
+                document.write("<td>" + employeeDetails[i].pincode + "</td>");
+                document.write("<td>" + employeeDetails[i].address.local + "</td>");
+                document.write("<td>" + employeeDetails[i].address.permanent + "</td>");
+                document.write("<td> <button>EDIT</button><button>REMOVE</button></td>");
+                document.write("</tr>");
+            }
+            document.write("</table>");
+    
+        }
+    </script>
+</head>
+
+<body>
+    <header>
+        <div class="card">
+            <div>
+                <input type="text" name="firstName" id="firstName" placeholder="enter your Firstname" required>
+                <input type="text" name="lastName" id="lastName" placeholder="enter your Lastname" required>
+            </div>
+            <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Phone Number" required>
+            <input type="number" name="altPhoneNumber" id="altPhoneNumber" placeholder="Alternate Phone Number"
+                required>
+            <input type="text" name="lacalAddress" id="lacalAddress" placeholder="Local Address" required>
+            <input type="text" name="permanentAddress" id="permanentAddress" placeholder="Permanent Address" required>
+            <input type="number" name="pincode" id="pincode" placeholder="Pincode" required>
+            <div class="btn">
+                <button type="button" onclick="employeeAdd()">Add</button>
+                <button>Reset</button>
+            </div>
+        </div>
+    </header>
+    <div id="result">
+        <table id="data">
+            td
+        </table>
+       
+    </div>
+
+  
+</body>
+
+
+</html>

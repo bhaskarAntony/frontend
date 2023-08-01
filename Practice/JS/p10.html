@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+
+        //reverse of a string and polindrome of a string
+        const name = (str) =>{
+            let reverse = str.split("");
+            let len = reverse.length;
+            let result = "";
+            for(let i = 0; i<len; i++){
+                result += reverse.pop();
+             }
+             if(str==result){
+                return "the given name is polindrome";
+             }
+             else{
+                return "the given name is not polindrome";
+             }
+            
+        }
+        console.log(name("racecar"));
+    </script>
+    
+</body>
+</html>

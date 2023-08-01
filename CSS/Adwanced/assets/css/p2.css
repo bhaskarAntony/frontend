@@ -1,0 +1,15 @@
+.title{
+    color: rgb(255, 255, 255);
+    background-color: rgb(133, 0, 135);
+    padding:20px;
+    margin:10px;
+    text-align: center;
+}
+.common{
+    background-color: rgb(143, 0, 38);
+    color:#fff;
+    width: fit-content;
+    padding:20px;
+    border-radius: 20px;
+    font-size: 1.6em;
+}

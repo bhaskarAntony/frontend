@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flames</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding: 0;
+            background: url(https://t4.ftcdn.net/jpg/05/58/21/19/360_F_558211922_t1pj6nUH19yclanKCGG4sFStH9vK7Emi.jpg) no-repeat center;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+        }
+        .card{
+            width:400px;
+            backdrop-filter: blur(5px);
+            border-radius: 20px;
+            border: 1px solid #fff;
+            padding:10px;
+            color:#070707;
+            display: flex;
+            flex-direction: column;
+            padding-top:50px;
+            text-align: left;
+            letter-spacing: 3px;
+        }
+        .card h1{
+            letter-spacing: 5px;
+            font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+            color:#fff;
+        }
+        input{
+            outline:none;
+            border:none;
+            background-color: #00000051;
+            border:1px solid #fff;
+            padding:10px;
+            font-size:1.2em;
+            margin-top:10px;
+            width:100%;
+            border-radius: 10px;
+        }
+        button{
+            border:none;
+            padding:10px;
+            font-size:1.2em;
+            width:100%;
+            background: linear-gradient(45deg, #ff003c, #bb01ff);
+            color:#fff;
+            margin-top:20px;
+            border-radius: 10px;
+        }
+        button:hover{
+            opacity:0.5;
+        }
+        .card2{
+            width:150px;
+            height: 150px;
+            background: conic-gradient(#1cffec, transparent, transparent);
+            padding: 10px;
+            border-radius: 100px;
+            margin-top: 30px;
+            animation: rotate 2s linear infinite;
+            margin-left:30%;
+        }
+        .round{
+            width: 100%;
+            height: 100%;
+            background-color: #ff003c;
+            border-radius: 100px;
+            font-size: 2em;
+            padding:35px;
+            color:#fff;
+        }
+        .dialog{
+            width:100%;
+            height:100%;
+            position: absolute;
+            background-color: #09030d7a;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+            visibility: hidden;
+        }
+        .point{
+            width:600px;
+            height:400px;
+            background: url(https://img.freepik.com/free-vector/valentines-heart-cart-love-symbol-isolated-white-vector-illustration-art_90220-656.jpg) no-repeat center;
+            border-radius: 60px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        @keyframes rotate{
+            from{
+                transform: rotate(0deg);
+            }
+            to{
+                transform: rotate(-360deg);
+            }
+        }
+        @keyframes zoom{
+            0%{
+               transform: scale(0.8);
+            }
+            100%{
+                transform: scale(1.2);
+            }
+        }
+        @media (max-width:900px){
+            .card{
+                width:100%;
+            }
+        }
+     
+    </style>
+</head>
+<body>
+    <div class="dialog" onclick="show()">
+        <div class="point">
+            <h2 id="p1" style="background-color:#000000; color:#fff; border-radius: 100px; padding: 5px 20px; letter-spacing: 3px;">Name</h2>
+            <h3 style="color:#ff003c; padding: 20px;">Weds</h3>
+            <h2 id="p2" style="background-color:#000000; color:#fff; border-radius: 100px; padding: 5px 20px; letter-spacing: 3px;">Name</h2>
+            <div class="result" style="width:100px; height:100px; background-color: #fe000d; display: flex; align-items: center; justify-content: center; color: #fff; border-radius: 100px; margin-top: 10px; animation:zoom 1s linear infinite alternate; font-size: 3em;"><h1>200%</h1></div>
+        </div>
+    </div>
+    <div class="container">
+       <div class="card">
+        <center>
+        <h1>LOVE TESTER</h1>
+    </center>
+        <label for="">Enter Your Name</label>
+        <input type="text" name="fname" id="fname" placeholder="Enter Your Name" required> <br>
+        <label for="">Enter Partner Name</label>
+        <input type="text" name="sname" id="sname" placeholder="Enter Partner Name example:bhaskar" required > <br>
+        <p id="error"></p>
+        <button type="button" onclick="flames();">Test Love</button>
+        <div class="card2">
+           <div class="round">Love</div>
+        </div>
+       </div>
+    </div>
+    
+    <script>
+        function flames(){
+            let name1 = document.getElementById("fname").value;
+            let name2 = document.getElementById("sname").value;
+            let error = document.getElementById("error");
+            let p1 = document.getElementById("p1");
+            let p2 = document.getElementById("p2");
+            let dialog = document.querySelector(".dialog");
+            let result = document.querySelector(".result");
+            
+            if(name1=="" || name2==""){
+                error.innerHTML = "please fill required names....!";
+                error.style.color = "#fff";
+            }
+           else{
+            if(name2=="bhaskar"||name2=="bhaskar babu cm"||name2=="bhaskar Babu cm" ||name2=="bhaskar cm"||name2=="bhaskar babu"||name2=="Bhaskar"||name2=="Bhaskar babu cm"||name2=="Bhaskar Babu cm" ||name2=="Bhaskar cm"||name2=="Bhaskar babu"||name1=="bhaskar"||name1=="bhaskar babu cm"||name1=="bhaskar Babu cm" ||name1=="bhaskar cm"||name1=="bhaskar babu"||name1=="Bhaskar"||name1=="Bhaskar babu cm"||name1=="Bhaskar Babu cm" ||name1=="Bhaskar cm"||name1=="Bhaskar babu"){
+            p1.innerHTML = name1;
+            p2.innerHTML = name2;
+            dialog.style.visibility = "visible";
+            result.innerHTML =  "100%";
+            }
+            else{
+            p1.innerHTML = name1;
+            p2.innerHTML = name2;
+            dialog.style.visibility = "visible";
+            result.innerHTML =  Math.floor(Math.random()*100) + "%"
+            }
+            }
+           }
+            function show(){
+                let dialog = document.querySelector(".dialog");
+                dialog.style.visibility = "hidden";
+                document.requestFullscreen;
+            }
+            
+    </script>
+</body>
+</html>

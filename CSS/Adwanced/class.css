@@ -1,0 +1,128 @@
+.cssAttribute>h1{
+    color: blueviolet;
+}
+.cssAttribute>p{
+    color: brown;
+}
+.cssAttribute>[title]{
+    background-color: aqua;
+}
+.cssAttribute>p[title]{
+    padding:20px;
+}
+.cssAttribute>h1[title]{
+    font-style: italic;
+}
+
+.cssAttribute>p>abbr[id]{
+    background-color: blueviolet;
+    color: aliceblue;
+}
+.cssAttribute>form>[type="text"]{
+    border: 3px solid #d6009a;
+    border-radius: 20px;
+}
+.cssPseudoClass>h1{
+    color: #d6009a;
+}
+.cssPseudoClass>h1:hover{
+    color: brown;
+}
+.cssPseudoClass>a:link{
+    color:crimson;
+}
+.cssPseudoClass>a:hover{
+    color: darkorange;
+}
+.cssPseudoClass>a:active{
+    color: darkgreen;
+}
+.cssPseudoClass>a:visited{
+    color: darkcyan;
+}
+.cssPseudoElement>section:first-child::first-line, .cssPseudoElement>section:nth-child(2)::first-letter{
+    font-size: 30px;
+    font-weight: bold;
+
+}
+.cssPseudoElement>section:last-child>h1::before{
+    content:"before h1";
+    background-color: #d6009a;
+    color: aliceblue;
+}
+.cssPseudoElement>section:last-child>h1::after{
+    content:"before h1";
+    background-color: #004b0d;
+    color: aliceblue;
+}
+.cssPosition>h1:first-child{
+    background-color: #004b0d;
+}
+.cssPosition>h1:nth-child(2){
+    background-color: #d6009a;
+}
+.cssPosition>h1:nth-child(3){
+    background-color: blue;
+}
+.cssPosition>h1:nth-child(1){
+    position: relative;
+    top: 0;
+    left:0;
+}
+.cssPosition>h1:nth-child(2){
+    position: relative;
+    top: 0;
+    left:0;
+}
+.cssPosition>div>h1:nth-child(1){
+    position: absolute;
+    top: 0;
+    left:0;
+}
+.cssAttribute>div{
+    position: relative;
+}
+.cssPosition>div>h1:nth-child(2){
+    position: absolute;
+    background-color: black;
+    color:#fff;
+    padding:30px;
+    bottom: 0;
+    left:0;
+}
+.cssPosition>div>h1:nth-child(3){
+    position: absolute;
+    background-color: black;
+    padding:30px;
+    color:#fff;
+    top: 0;
+    right:0;
+}
+.cssPosition>.seven{
+    background-color: #004b0d;
+    color:#fff;
+    padding: 20px;
+}
+.cssPosition>.eight{
+    background-color: rgb(192, 8, 8);
+    position: sticky;
+    top: 0;
+    color:#fff;
+    padding:20px;
+}
+.cssPosition>.nine{
+    background-color: #7000d8;
+    position: fixed;
+    bottom:20px;
+    right:0;
+    border:3px solid #000;
+    border-radius: 50%;
+    padding:40px 20px;
+    color:#fff;
+    transition: 1s;
+    letter-spacing: 3px;
+}
+.cssPosition>.nine:hover{
+  border-radius: 10px;
+
+}

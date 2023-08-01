@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+    <div class="main-wrapper">
+        <center>
+            <h1>simple CRUD operation using JS-Local Storage</h1>
+        </center>
+
+        <div class="container">
+            <div class="left-pannel">
+                <div class="cardbox">
+                    <p><b>Insert / Update Data</b></p>
+                    <span>Enter Key and a value to add  or Update records</span>
+                    <div class="input-wrapper">
+                        <input type="text" id="inputKey" placeholder="Enter Key">
+                        <input type="text" id="inputValue" placeholder="Enter value">
+                    </div>
+                    <button type="button" id="btnInsert">Insert Data</button>
+                </div>
+                <div class="cardbox">
+                    <p><b>Read Data</b></p>
+                    <span>Enter Key and value for the Record</span>
+                    <div class="input-wrapper">
+                        <input type="text" id="inputReadDataKey" placeholder="Enter Key">
+                        <button type="button" id="btnReadData">Read Data</button>
+                    </div>
+                    <div class="output">
+                        <label id="readKeyName"></label>
+                        <p id="readedDataHere"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="right-pannel">
+                <div class="cardbox">
+                    <p><b>Local Storage</b></p>
+                    <span id="avialRecords"></span>
+                    <p id="autoFill">s</p>
+                    <div id="lsOutput">
+                        <label id="head"></label>
+                        <p id="child"></p>
+                    </div>
+                    <div id="deletAllBtn" class="delete-all">
+                        <button type="button" id="btnAllDelete">Delete All Data</button>
+                    </div>
+                </div>
+                <div class="cardbox">
+                    <p><b>Delete perticular Key Data </b></p>
+                    <span id="deleteInfo">Enter Key to delete the record associated with that key</span>
+                    <p id="autoFill2"></p>
+                    <div class="input-wrapper" id="deletKey">
+                        <input type="text" id="inputDeleteKey" placeholder="Enter Key Name">
+                        <button type="button" id="btnDeletKey">Delete Data</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/script.js"></script>
+</body>
+</html>

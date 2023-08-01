@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>operator</title>
+    <style>
+        *{
+            margin: 0;
+            padding:0;
+            box-sizing: border-box;
+        }
+        body{
+            margin: 0;
+            padding:0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height:100vh;
+            background: radial-gradient( #e4dbe9, #0ce7ad);
+        }
+        .card{
+            width:300px;
+            background-color: #ffffff;
+            padding:30px  10px;
+            border-radius: 20px;
+            text-align: center;
+        }
+        button{
+            border: none;
+            font-size: 3em;
+            text-align: center;
+            width:135px;
+            margin-top: 10px;
+            background-color: #550aa1;
+            backdrop-filter: blur(60px);
+            border-radius: 0px;
+            color:#e8e8e8;
+        }
+        button:hover{
+            opacity: 0.5;
+        }
+        input{
+            width:100%;
+            padding: 10px;
+            font-size: 1.2em;
+            margin-top: 10px;
+            border: none;
+            outline: none;
+            background-color: transparent;
+            border: 1px solid #00e0f5;
+            border-radius: 10px;
+        }
+        .dialog{
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: #6d696971;
+            visibility: hidden;
+        }
+        .dialog div{
+            width:500px;
+            height:300px;
+            background-color: #00ffb3;
+            text-align: center;
+            padding:10px;
+            border-radius: 10px;
+            letter-spacing: 3px;
+            margin: 20px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+        }
+        .dialog div h2{
+            font-size: 5em;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <input type="number" name="number1" id="number1" placeholder="Enter First number"><br>
+        <input type="number" name="number2" id="number2" placeholder="Enter second number"><br>
+       <button type="button" onclick="add()">+</button>
+       <button type="button" onclick="minus()">-</button>
+       <button type="button" onclick="multi()">*</button>
+       <button type="button" onclick="sub()">/</button>
+    </div>
+    <div class="dialog"  onclick="gone()">
+        <div>
+            <h1>Result</h1>
+            <h2 id="output"></h2>
+        </div>
+    </div>
+
+    <script>
+        var dialog = document.querySelector(".dialog");
+        function gone(){
+            dialog.style.visibility = "hidden";
+        }
+        
+        function add(){
+            const num1 = +document.getElementById("number1").value;
+            const num2 = +document.getElementById("number2").value;
+            const output = document.getElementById("output");
+            let result = num1 + num2;
+            output.innerHTML  = result;
+            dialog.style.visibility = "visible";
+        }
+
+        function minus(){
+            const num1 = +document.getElementById("number1").value;
+            const num2 = +document.getElementById("number2").value;
+            const output = document.getElementById("output");
+            let result = num1 - num2;
+            output.innerHTML  = result;
+            dialog.style.visibility = "visible";
+        }
+
+        function multi(){
+            const num1 = +document.getElementById("number1").value;
+            const num2 = +document.getElementById("number2").value;
+            const output = document.getElementById("output");
+            let result = num1 * num2;
+            output.innerHTML  = result;
+            dialog.style.visibility = "visible";
+        }
+
+        function sub(){
+            const num1 = +document.getElementById("number1").value;
+            const num2 = +document.getElementById("number2").value;
+            const output = document.getElementById("output");
+            let result = num1 / num2;
+            output.innerHTML  = result;
+            dialog.style.visibility = "visible";
+        }
+    </script>
+</body>
+</html>

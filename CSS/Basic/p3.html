@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css basics</title>
+    <style>
+        .combination{
+            background-color: darkgreen;
+            color:#fff;
+            padding:10px;
+        }
+        /*only for child elements not for grand child elements*/
+        .combination > h3{
+            color: #000000;
+            background-color: chartreuse;
+        }
+        .combination > p{
+            color: #000000;
+            background-color: rgb(6, 245, 217);
+        }
+          /*only for grand child elements*/
+        .combination>div > h3{
+            color: #fff;
+            background-color: rgb(255, 0, 81);
+        }
+        .combination>div > p{
+            color: #fff;
+            background-color: rgb(76, 0, 123);
+        }
+    </style>
+</head>
+<body>
+     <center>There are 4 diffrent combination of css</center>
+    <hr>
+    <ol>
+        <li>Decendents elector( Using space)</li>
+        <li>child selector(using> symbol))</li>
+        <li>adjecent sibling selector( Using + symbol)</li>
+        <li>general sunling selector( Using symbol)</li>
+    </ol>
+    <hr>
+    <h1>child selector using > symbol</h1>
+    <hr>
+    <section class="combination">
+        <h3>First h3 tag...!(child element)</h3>
+        <p>First paragraph ....!!(child element)</p>
+        <h3>second h3 tag...!(child element)</h3>
+        <p>second  paragraph ....!!(child element)</p>
+        <h3>third h3 tag...!(child element)</h3>
+        <p>third paragraph ....!!(child element)</p>
+        <div>
+            <h3>fourth h3 tag...!(grandchild element)</h3>
+            <p>fourth paragraph ....!!(grandchild element)</p>
+
+        </div>
+        <h3>fifth h3 tag...!(child element)</h3>
+        <p>fifth paragraph ....!!(child element)</p>
+
+    </section>
+    
+    
+</body>
+</html>

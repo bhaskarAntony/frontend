@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listners</title>
+</head>
+<body>
+    <center>
+        <h1>EVENT LISTENERS</h1>
+    </center>
+    <hr>
+
+    <button type="button" id="myBtn">Click Me</button>
+    <script>
+        //selecting button element from html
+        let btn = document.getElementById("myBtn");
+        //defining custom functions
+        function sayHello(){
+            alert("this is click event to button");
+        }
+            //sayHello();
+        function setHovertoBtn(){
+            btn.style.backgroundColor = "blue";
+            btn.style.color = "#fff";
+            btn.style.padding = "10px";
+            btn.style.border = "none"
+            btn.style.borderRadius = "20px";
+        }
+
+        function setnormalColortoBtn(){
+            btn.style.backgroundColor="";
+            btn.style.color = "";
+            btn.style.padding = "0px";
+            btn.style.border = ""
+            btn.style.borderRadius = "";
+        }
+        //here we are adding 3 events to same button this is the use of add event listeners
+        btn.addEventListener("click", sayHello);
+        btn.addEventListener("mouseover", setHovertoBtn);
+        btn.addEventListener("mouseleave", setnormalColortoBtn);
+    </script>
+    
+</body>
+</html>

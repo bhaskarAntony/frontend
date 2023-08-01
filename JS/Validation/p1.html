@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #status{
+            padding: 5px;
+            color: #fff;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-radius: 20px;
+        }
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            flex-direction: column;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            background-color: aliceblue;
+            box-shadow: 0px 0px 10px #5c5959;
+            padding: 10px;
+            border-radius: 10px;
+            justify-content: center;
+
+        }
+
+        input {
+            outline: none;
+            border: none;
+            padding: 10px;
+            font-size: 1.2em;
+            border: 1px solid #777373;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h1>User Name Validation</h1>
+    </center>
+    <hr>
+
+    <div class="card">
+
+        <form autocomplete="off">
+            <label for="user">User Name</label>
+            <input type="text" name="user" id="user" placeholder="User Name" onkeyup="validation()"> <br>
+            <strong id="status"></strong>
+        </form>
+    </div>
+
+    <script>
+        function validation() {
+            let user = document.getElementById("user").value;
+            let output = document.getElementById("status");
+            if (user.length == 0) {
+                output.innerHTML = "enter user name";
+                output.style.backgroundColor = "red";
+            } else if (user.length <= 5) {
+                output.innerHTML = "user name must be 5 or more charrecters";
+                output.style.backgroundColor = "blue";
+            } else if (user.length > 5) {
+                output.innerHTML = "You entered valid username";
+                output.style.backgroundColor = "green";
+            }
+        }
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <h3>class Syntax contains two components</h3>
+    <ul>
+        <li>class Declarations</li>
+        <li>Class Expressions</li>
+    </ul>
+    <hr>
+    <script>
+        document.write(`<h1>Class declarations Example</h1>`);
+
+        class Test{
+            constructor(){
+                document.write(`<h3>Welcome to Test class</h3>`);
+            }
+        }
+        let test = new Test();
+
+        class Student1{
+            constructor(){}
+                getData(){
+                    let fname = "Bhaskar";
+                    document.write(`the student name is ${fname}`);
+                }
+            }
+        let student1 = new Student1();
+        student1.getData();
+    </script>
+
+    <script>
+         class Student2{
+            constructor(id, name){
+                this.id1= id;
+                this.name1 = name;
+            }
+            getDisplay(){
+                document.write(`<h2>Student details</h2>`)
+                    document.write(`<b>Student ID: </b> ${this.id1} <br> <b>Student NAME: </b> ${this.name1}<hr>`);
+                }
+            }
+        let student2 = new Student2("BP00457", "Bhaskar");
+        student2.getDisplay();
+    </script>
+    <script>
+        document.write(`<h1>Class Expression Example</h1>`);
+        let Employee = class{
+            constructor(empId, empName){
+                this.empId1 = empId;
+                this.empName1 = empName;
+            }
+            getDisplay(){
+                document.write(`<h2>Employee Details</h2>`)
+                    document.write(`<b>Employee ID: </b> ${this.empId1} <br> <b>Employee NAME: </b> ${this.empName1} <hr>`);
+            }
+        }
+
+        let employee = new Employee("EMP00827", "Antony");
+        employee.getDisplay();
+    </script>
+    
+</body>
+</html>

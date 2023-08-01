@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object</title>
+    <style>
+        img {
+            border-radius: 100px;
+            border: 1px solid #e02b2b;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        td,
+        th {
+            border: 1px solid #bab8b8;
+            color: #343131;
+        }
+
+        table tr:nth-child(even) {
+            background-color: rgb(250, 245, 245);
+        }
+
+        td {
+            font-size: 1.2em;
+        }
+
+        th {
+            background-color: rgb(212, 101, 109);
+            color: #fff;
+            padding: 0px;
+        }
+
+        h2 {
+            letter-spacing: 3px;
+            color: #ce7b7b;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        button {
+            border: none;
+            padding: 10px;
+            margin-right: 10px;
+            margin-left: 10px;
+            color: #fff;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            opacity: 0.5;
+        }
+
+        button:nth-child(1){
+            background-color: #0a7616;
+        }
+
+        button:last-child {
+            background-color: #e02b2b;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>JAVASCRIPT OBJECTS</h1>
+    <pre>
+        1.By Object literal
+        2.By craeting instance of object directly (using new keyword)
+        3.By using an object constructor(using new keyword)
+    </pre>
+    <hr>
+    <h3>By object Literals</h3>
+    <p><strong>SYNTAX:</strong></p>
+    <pre>
+        let litteralObjectName = {
+            "property1" : "value1",
+            "property2" : "value2",
+            "property3" : "value3",
+            "propertyN" : "valueN",
+        };
+        console.log(literalObjectName);
+        console.log(typeOf(literalObjectName));
+        console.log(literalObjectName.property);
+    </pre>
+    <hr>
+    <pre>
+        class A{
+            int a, b, c;
+            psvm(String args[]){
+                function HTML(){
+
+                }
+            }
+            int b =new B();
+    </pre>
+
+    <!-- <script>
+        let employeeDetails = {
+            "id": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10],
+            "firstName": ["bhaskar", "sathish", "akhil", "sai", "madhu", "husna", "saniya", "roopa", "pavithra",
+                "ruchitha"
+            ],
+            "lastName": ["antony", "kumar", "goud", "pramodh", "sudan", "firdoes", "thabasum", "shree", "reddy",
+                "reddy"
+            ],
+            "fullName": function (first, last) {
+                return first + " " + last;
+            },
+            "mobile": [
+                [9606729320, 7022101531],
+                [7839928882, 8398238822],
+                [9485610533, 8376736767],
+                [8374736710, 7140583918],
+                [7784631014, 8667676488],
+                [9606729320, 7022101531],
+                [7839928152, 8398238822],
+                [9635656533, 8376736767],
+                [6376736767, 7809447014],
+                [7784787874, 8667676488]
+            ],
+            "pincode": [
+                [610173],
+                [838073],
+                [903983],
+                [980787],
+                [980353],
+                [637603],
+                [890373],
+                [903983],
+                [980787],
+                [987053]
+            ],
+            "address": {
+                "local": ["bangalore", "thamilunadu", "odisha", "gujarath", "channai", "kerala", "thelangana",
+                    "andrapradesh", "mumbai", "pune"
+                ],
+                "permanent": ["chikkaballapur", "selvam", "mumbai", "davanagere", "raichur", "bombe", "hydrabad",
+                    "guntur", "pune", "bangalore"
+                ]
+            },
+            "photo": [
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1CoZHb7d_hb9TPoHw1Y8SbFmIzK8Cr8o-WUIeNLLsELC81YxIEHFGoEpMzH23_jLBmYY&usqp=CAU",
+
+                "https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/profile-photos-4.jpg",
+
+                "https://image.shutterstock.com/mosaic_250/2780032/1667439913/stock-photo-headshot-portrait-of-smiling-millennial-male-employee-talk-on-video-call-or-web-conference-in-1667439913.jpg",
+
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQEqQuP58-k5VGKezL1cw09-8fk0TSG0mZKymCn_dcC2yaF7v_EZaPhaPj-3hIXc2IIAFk&usqp=CAU",
+
+                "https://images.unsplash.com/photo-1575936123452-b67c3203c357?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8aW1hZ2V8ZW58MHx8MHx8&w=1000&q=80",
+
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCrX6aiTRqebzmiP6Qq86vCIz6e1hlG3-siUe41sQeYs1Ho9t2W-sdpfDnLFaXUCrbhCo&usqp=CAU",
+
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS4rTZQtYuv-8nlbcVxhj3ptBBgp9d1OW8MOgN_CJhUsYkz8eb-Wu2v7dW58Z2a20G9J9I&usqp=CAU",
+
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8AdCUmXgqJ4-4Qz59fcFfIe7E6TYGrhkk4HY0SYPlmyp1KdJmB8YkpKCwWdZ30KQ4iwI&usqp=CAU",
+
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQzQBQuIz76W8hvZt8qxOvgCCt0mzKMd0wdzp8w9Jpr0wi1Yx3tbbj49uajKcoGZlfsrgc&usqp=CAU",
+
+                "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSO9OhdmCJ9LFWQqfk7792M6c_2ZK-w_SrEqbPmMDfQV1bPenBsRZO-4xVLiWWPRwH3hz0&usqp=CAU"
+            ],
+        }
+        // console.log(typeof employeeDetails);
+        // console.log(employeeDetails.firstName);
+        // console.log(employeeDetails.lastName);
+        // console.log(employeeDetails.fullName());
+        // console.log(employeeDetails.mobile[0]);
+        // console.log(employeeDetails.mobile[1]);
+        // console.log(employeeDetails.pincode);
+        // console.log(employeeDetails.address.local);
+        // console.log(employeeDetails.address.permanent);
+        // console.log(employeeDetails.photo);
+    </script>
+    <script>
+        document.write("<center><h2>DataBase</h2></center>")
+        document.write(`<table cellspacing="0" cellpadding="3" border="1">`);
+        document.write("<tr>");
+        document.write("<th> id</th>");
+        document.write("<th> emp photo</th>");
+        document.write("<th> Type</th>");
+        document.write("<th> First name</th>");
+        document.write("<th>last name </th>");
+        document.write("<th>full name </th>");
+        document.write("<th>mobile number </th>");
+        document.write("<th>alt mobile number </th>");
+        document.write("<th> pincode</th>");
+        document.write("<th>local address </th>");
+        document.write("<th>permanent address </th>");
+        document.write("<th>options </th>");
+        document.write("</tr>");
+        document.write("<tr>");
+        for (let i = 0; i < employeeDetails.id.length; i++) {
+            document.write("<td>" + employeeDetails.id[i] + "</td>");
+            document.write("<td>" + "<img width='70' height='70' src=" + employeeDetails.photo[i] + ">" + "</td>");
+            document.write("<td>" + typeof employeeDetails + "</td>");
+            document.write("<td>" + employeeDetails.firstName[i] + "</td>");
+            document.write("<td>" + employeeDetails.lastName[i] + "</td>");
+            document.write("<td>" + employeeDetails.fullName(employeeDetails.firstName[i], employeeDetails.lastName[i]) + "</td>");
+            document.write("<td>" + employeeDetails.mobile[i][0] + "</td>");
+            document.write("<td>" + employeeDetails.mobile[i][1] + "</td>");
+            document.write("<td>" + employeeDetails.pincode[i] + "</td>");
+            document.write("<td>" + employeeDetails.address.local[i] + "</td>");
+            document.write("<td>" + employeeDetails.address.permanent[i] + "</td>");
+            document.write("<td> <butt1on>EDIT</butt1on><button>REMOVE</button></td>");
+            document.write("</tr>");
+        }
+        document.write("</table>")
+    </script> -->
+    <script>
+      
+
+        let employeeDetails = [
+             {
+                "id":1,
+                "firstName":"bhaskar",
+                "lastName":"Antony",
+                "fullName":function(){
+                    return this.firstName + " " + this.lastName;
+                },
+                "mobile":[9837364533, 8393374847],
+                "pincode":65423,
+                "address":{
+                    "local":"bangalore",
+                    "permanent":"chikkaballapur"
+                },
+                "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1CoZHb7d_hb9TPoHw1Y8SbFmIzK8Cr8o-WUIeNLLsELC81YxIEHFGoEpMzH23_jLBmYY&usqp=CAU"
+             },
+
+             {
+                "id":2,
+                "firstName":"akhil",
+                "lastName":"goud",
+                "fullName":function(){
+                    return this.firstName + " " + this.lastName;
+                },
+                "mobile":[9010090201, 8919218450],
+                "pincode":65423,
+                "address":{
+                    "local":"bangalore",
+                    "permanent":"jogulamba gadwal"
+                },
+                "photo":"https://expertphotography.b-cdn.net/wp-content/uploads/2020/08/profile-photos-4.jpg"
+             },
+             
+             {
+                "id":3,
+                "firstName":"sathish",
+                "lastName":"kumar",
+                "fullName":function(){
+                    return this.firstName + " " + this.lastName;
+                },
+                "mobile":[9837364533, 8393374847],
+                "pincode":87787,
+                "address":{
+                    "local":"bangalore",
+                    "permanent":"thamilunadu"
+                },
+                "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1CoZHb7d_hb9TPoHw1Y8SbFmIzK8Cr8o-WUIeNLLsELC81YxIEHFGoEpMzH23_jLBmYY&usqp=CAU"
+             },
+             {
+                "id":4,
+                "firstName":"sai",
+                "lastName":"pramodh",
+                "fullName":function(){
+                    return this.firstName + " " + this.lastName;
+                },
+                "mobile":[9837364533, 8393374847],
+                "pincode":76376,
+                "address":{
+                    "local":"bangalore",
+                    "permanent":"thelengana"
+                },
+                "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1CoZHb7d_hb9TPoHw1Y8SbFmIzK8Cr8o-WUIeNLLsELC81YxIEHFGoEpMzH23_jLBmYY&usqp=CAU"
+             },
+             {
+                "id":5,
+                "firstName":"pavithra",
+                "lastName":"reddy",
+                "fullName":function(){
+                    return this.firstName + " " + this.lastName;
+                },
+                "mobile":[9837364533, 8393374847],
+                "pincode":38783,
+                "address":{
+                    "local":"chikkaballapur",
+                    "permanent":"hosakote"
+                },
+                "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1CoZHb7d_hb9TPoHw1Y8SbFmIzK8Cr8o-WUIeNLLsELC81YxIEHFGoEpMzH23_jLBmYY&usqp=CAU"
+             },
+             {
+                "id":6,
+                "firstName":"roopa",
+                "lastName":"shree",
+                "fullName":function(){
+                    return this.firstName + " " + this.lastName;
+                },
+                "mobile":[9837364533, 8393374847],
+                "pincode":65423,
+                "address":{
+                    "local":"bangalore",
+                    "permanent":"chikkaballapur"
+                },
+                "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1CoZHb7d_hb9TPoHw1Y8SbFmIzK8Cr8o-WUIeNLLsELC81YxIEHFGoEpMzH23_jLBmYY&usqp=CAU"
+             },
+             {
+                "id":7,
+                "firstName":"reetha",
+                "lastName":"reddy",
+                "fullName":function(){
+                    return this.firstName + " " + this.lastName;
+                },
+                "mobile":[9837364533, 8393374847],
+                "pincode":65423,
+                "address":{
+                    "local":"mumbai",
+                    "permanent":"chikkaballapur"
+                },
+                "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1CoZHb7d_hb9TPoHw1Y8SbFmIzK8Cr8o-WUIeNLLsELC81YxIEHFGoEpMzH23_jLBmYY&usqp=CAU"
+             },
+             {
+                "id":8,
+                "firstName":"antony",
+                "lastName":"gilla",
+                "fullName":function(){
+                    return this.firstName + " " + this.lastName;
+                },
+                "mobile":[9837364533, 8393374847],
+                "pincode":65423,
+                "address":{
+                    "local":"gadwal",
+                    "permanent":"pune"
+                },
+                "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1CoZHb7d_hb9TPoHw1Y8SbFmIzK8Cr8o-WUIeNLLsELC81YxIEHFGoEpMzH23_jLBmYY&usqp=CAU"
+             },
+             {
+                "id":9,
+                "firstName":"bhaskar",
+                "lastName":"Antony",
+                "fullName":function(){
+                    return this.firstName + " " + this.lastName;
+                },
+                "mobile":[9837364533, 8393374847],
+                "pincode":65423,
+                "address":{
+                    "local":"bangalore",
+                    "permanent":"chikkaballapur"
+                },
+                "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1CoZHb7d_hb9TPoHw1Y8SbFmIzK8Cr8o-WUIeNLLsELC81YxIEHFGoEpMzH23_jLBmYY&usqp=CAU"
+             },
+             {
+                "id":10,
+                "firstName":"ddd",
+                "lastName":"Antony",
+                "fullName":function(){
+                    return this.firstName + " " + this.lastName;
+                },
+                "mobile":[9837364533, 8393374847],
+                "pincode":65423,
+                "address":{
+                    "local":"bangalore",
+                    "permanent":"chikkaballapur"
+                },
+                "photo":"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1CoZHb7d_hb9TPoHw1Y8SbFmIzK8Cr8o-WUIeNLLsELC81YxIEHFGoEpMzH23_jLBmYY&usqp=CAU"
+             }
+    ]
+    document.write("<center><h2>DataBase</h2></center>")
+        document.write(`<table cellspacing="0" cellpadding="3" border="1">`);
+        document.write("<tr>");
+        document.write("<th> id</th>");
+        document.write("<th> emp photo</th>");
+        document.write("<th> Type</th>");
+        document.write("<th> First name</th>");
+        document.write("<th>last name </th>");
+        document.write("<th>full name </th>");
+        document.write("<th>mobile number </th>");
+        document.write("<th>alt mobile number </th>");
+        document.write("<th> pincode</th>");
+        document.write("<th>local address </th>");
+        document.write("<th>permanent address </th>");
+        document.write("<th>options </th>");
+        document.write("</tr>");
+        document.write("<tr>");
+        for (let i = 0; i < employeeDetails.length; i++) {
+            document.write("<td>" + employeeDetails[i].id + "</td>");
+            document.write("<td>" + "<img width='70' height='70' src=" + employeeDetails[i].photo + ">" + "</td>");
+            document.write("<td>" + typeof employeeDetails + "</td>");
+            document.write("<td>" + employeeDetails[i].firstName + "</td>");
+            document.write("<td>" + employeeDetails[i].lastName + "</td>");
+            document.write("<td>" + employeeDetails[i].fullName() + "</td>");
+            document.write("<td>" + employeeDetails[i].mobile[0] + "</td>");
+            document.write("<td>" + employeeDetails[i].mobile[1] + "</td>");
+            document.write("<td>" + employeeDetails[i].pincode + "</td>");
+            document.write("<td>" + employeeDetails[i].address.local + "</td>");
+            document.write("<td>" + employeeDetails[i].address.permanent + "</td>");
+            document.write("<td> <button>EDIT</button><button>REMOVE</button></td>");
+            document.write("</tr>");
+         }
+        document.write("</table>")
+    </script>
+
+</body>
+
+</html>

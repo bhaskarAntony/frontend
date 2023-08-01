@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECMA</title>
+</head>
+<body>
+    <script>
+        const x = 12;
+        console.log("constant x is ", x);
+
+        try {
+            x =222;
+            console.log("constant x is", x)
+            
+        } catch (error) {
+            console.log("ERROR MESSAGE IS", error.message);
+        }
+        //in above wxample we will get the error because the constant tyoe of variable is connot be changed later
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,1298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="asstes/fontawesome-free-6.4.0-web/css/all.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            list-style: none;
+            transition: all 0.5s ease-in;
+            letter-spacing: 1.3px;
+        }
+
+        :root {
+            --white: #fff;
+            --blue: #6610f2;
+            --dark-blue: #000000d0;
+            --lighter-blue: #25035c6f;
+            --button-dark: #090232;
+            --button-lighter: #2f088c;
+            --card-background: #1c1c22;
+            --card-border: #3c3a3a;
+            --button-hover-color: #5c3cdc;
+            --gradient-color1: #5c3cdc;
+            --gradient-color2: #b32ae4;
+            --black: #121014;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            background-color: var(--black);
+        }
+
+        p {
+            font-size: 1em;
+        }
+
+        header,
+        nav>ul {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--white);
+            border-radius: 50px;
+            padding: 5px;
+        }
+
+        .home {
+            padding: 2% 10%;
+            height: 100vh;
+            background: linear-gradient(45deg, #07010e86, transparent), url(https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/banner-bg.jpg) no-repeat center;
+            color: var(--white);
+            background-size: cover;
+            line-height: 1.5;
+        }
+
+        /* logi image */
+        header>.image>img {
+            height: 3em;
+            margin-left: 15px;
+        }
+
+        .menu-icon {
+            display: none;
+        }
+
+        /* nav items */
+        nav>ul>li,
+        header>nav>ul {
+            margin-left: 15px;
+            padding: 0px;
+        }
+
+        nav>ul>li>a {
+            text-decoration: none;
+            font-size: 1em;
+            padding: 7px;
+            color: var(--black);
+            letter-spacing: 1.5px;
+        }
+
+        nav {
+            z-index: 1000;
+        }
+
+        /* nav-items hover and nav active item */
+        nav>ul>li:hover a,
+        nav>ul>li>.active {
+            background-color: var(--blue);
+            color: var(--white);
+            border-radius: 50px;
+        }
+
+        .home-info {
+            display: flex;
+            margin-top: 8%;
+            gap: 20px;
+        }
+
+        .home-info>div>p {
+            font-size: 0.8em;
+        }
+
+        .home-info>img {
+            width: 40%;
+            border-radius: 50px;
+        }
+
+        .home-button-container>button,
+        .home-button-container>button:hover {
+            border: none;
+            padding: 2.3% 3%;
+            margin-top: 25px;
+            background-color: var(--blue);
+            color: var(--white);
+            border-radius: 50px;
+            margin-right: 0px;
+            border: 2px solid var(--blue);
+            position: relative;
+
+        }
+
+        .home-button-container>button:first-child {
+            background-color: transparent;
+        }
+
+        .home-button-container>button:hover {
+            background-color: var(--white);
+            color: var(--blue);
+            border: 2px solid var(--white);
+        }
+
+        .home-button-container>button:hover:first-child {
+            background-color: var(--blue);
+            color: var(--white);
+            border: 2px solid transparent;
+        }
+
+        /* for button bottom line */
+        .home-button-container>button::before {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 3px;
+            background-color: var(--white);
+            bottom: 0;
+        }
+
+        .categorie {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 10%;
+            gap: 20px;
+            flex-flow: row wrap;
+        }
+
+        .categorie>div {
+            flex: 1;
+            min-width: 120px;
+            text-align: center;
+            background-color: var(--card-background);
+            border-radius: 20px;
+            padding: 20px 0px;
+            color: var(--white);
+            border: 1px solid var(--card-border);
+        }
+
+        .categorie>div:hover {
+            background-color: #48474a;
+            transform: translateY(-30px) scale(1.1);
+
+        }
+
+        .categorie [class*="fa-"] {
+            background-color: var(--white);
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border-radius: 50px;
+            color: var(--blue);
+            padding-bottom: 10px;
+        }
+
+        .categories-text {
+            text-align: center;
+            color: var(--white);
+            padding: 3%;
+            padding-top: 8%;
+        }
+
+        .categories-text>h2 {
+            position: relative;
+            letter-spacing: 0.5px;
+        }
+
+        .categories-text>h2>label {
+            color: var(--blue);
+        }
+
+        .categories-text>h2::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 2px;
+            background-color: var(--blue);
+            top: -20px;
+            left: 46%
+        }
+
+        .categories,
+        .collections,
+        .create-description,
+        .item-card-container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px 10%;
+            background-color: var(--black);
+            flex-flow: row wrap;
+        }
+
+        .categories-title {
+            position: relative;
+            text-align: center;
+            color: var(--white);
+            background-color: var(--black);
+            padding: 30px;
+            line-height: 3;
+        }
+
+        .categories-title label {
+            color: var(--blue);
+        }
+
+        .categories-title div {
+            position: absolute;
+            left: 45%;
+            width: 120px;
+            height: 5px;
+            background-color: var(--blue);
+        }
+
+        .categories>div,
+        .collections>div,
+        .create-description>div,
+        .item-card-container>.card {
+            flex: 1;
+            text-align: center;
+            height: 150px;
+            background-color: var(--card-background);
+            border-radius: 20px;
+            border: 1px solid var(--card-border);
+            color: var(--white);
+            padding-top: 20px;
+            line-height: 2;
+        }
+
+        .categories [class*="fa-"] {
+            color: var(--blue);
+            background-color: var(--white);
+            border-radius: 50px;
+            padding: 17px;
+            width: 60px;
+            height: 60px;
+        }
+
+        .collections>div {
+            height: fit-content;
+            max-width: 300px;
+            line-height: 2;
+            text-align: left;
+            padding-bottom: 20px;
+            position: relative;
+            margin-top: 20px;
+            cursor: pointer;
+        }
+
+        .collections>div:hover {
+            opacity: 0.6;
+        }
+
+        .collections>div>div>h2 {
+            font-size: 1.1em;
+        }
+
+        .collections>div>img {
+            width: 100%;
+            margin-top: -20px;
+            border-radius: 20px 20px 0px 0px;
+        }
+
+        .collections>div>div>hr,
+        .card-text-container>hr {
+            margin: 20px;
+            opacity: 0.2;
+        }
+
+        .collections>div>div>table {
+            width: 100%;
+            line-height: 1.6;
+            margin-bottom: 20px;
+            font-size: 1em;
+        }
+
+        .collections>div>div {
+            padding: 10px;
+            overflow: hidden;
+        }
+
+        .collections>div>button,
+        .createNTF>button {
+            position: absolute;
+            width: 80%;
+            border: none;
+            font-size: 1em;
+            color: var(--white);
+            padding: 15px;
+            background-color: var(--blue);
+            border-radius: 50px;
+            left: 10%;
+            bottom: -23px;
+            overflow: hidden;
+        }
+
+        .collections>div>button:hover,
+        .createNTF>button:hover {
+            background-color: var(--button-hover-color);
+        }
+
+        .collections>div>button::after,
+        .createNTF>button::after {
+            content: "";
+            position: absolute;
+            width: 80%;
+            height: 3px;
+            bottom: 0;
+            left: 23px;
+            background-color: var(--white);
+        }
+
+        .create-description>div>p {
+            font-size: 0.7em;
+        }
+
+        .create-description [class*="fa-"] {
+            background-color: var(--white);
+            color: var(--blue);
+            width: 30px;
+            height: 30px;
+            padding: 10px;
+            border-radius: 50px;
+            animation: anim 1s linear;
+        }
+
+        .createNTF {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative;
+            border-radius: 0;
+            background-color: transparent;
+            color: var(--white);
+            width: 100%;
+            padding: 10px 10%;
+        }
+
+        .createNTF>button {
+            width: 200px;
+            position: relative;
+            font-size: 0.8em;
+            text-align: center;
+            margin: 0;
+            padding: 12px 20px;
+            width: fit-content;
+            top: 0;
+        }
+
+        .create,
+        footer {
+            background: linear-gradient(45deg, var(--gradient-color1), var(--gradient-color2));
+            padding: 50px 0px;
+            margin-top: 15%;
+        }
+
+        footer p label {
+            color: var(--button-lighter);
+        }
+
+        .create-description {
+            background-color: transparent;
+        }
+
+        .create-description>div>p {
+            letter-spacing: 1px;
+        }
+
+        .create-description section {
+            display: block;
+            position: relative;
+            top: -100px;
+            left: 5px;
+            color: var(--white);
+        }
+
+        .create-description section::after {
+            content: "";
+            position: absolute;
+            height: 230px;
+            left: 2px;
+            top: 20px;
+            width: 2px;
+            background-color: var(--white);
+            opacity: 0.1;
+        }
+
+        .createNTF>h1::before,
+        .market-items>h1::before {
+            content: "";
+            position: absolute;
+            width: 100px;
+            height: 3px;
+            top: -15px;
+            background-color: var(--white);
+        }
+
+        .create-description>div {
+            border: none;
+            background-color: transparent;
+            text-align: left;
+            height: fit-content;
+        }
+
+        .create-description>div>h2 {
+            font-size: 1.1em;
+        }
+
+        .item-cards {
+            padding: 8% 40px;
+        }
+
+        .market-items {
+            background-color: var(--black);
+            position: relative;
+            margin-top: 40px;
+        }
+
+        .market-navBar>ul>li>a {
+            color: var(--white);
+            font-size: 1.3em;
+        }
+
+        .market-items>h1>label,
+        .card-text-container>div>div>h4,
+        .card-text-container>h4,
+        footer>h3>label {
+            color: var(--blue);
+        }
+
+        .item-card-container,
+        footer {
+            color: var(--white);
+            text-align: center;
+            margin-top: 0;
+            padding: 30px;
+            justify-content: space-around;
+        }
+
+        .item-card-container .card {
+            display: flex;
+            text-align: left;
+            position: relative;
+            height: fit-content;
+            align-items: center;
+            flex: 1;
+            letter-spacing: 0.5px;
+            width: 100%;
+            padding: 20px;
+            gap: 20px;
+            cursor: pointer;
+            animation: anim 1s linear;
+        }
+
+        .item-card-container .card:hover {
+            opacity: 0.5;
+        }
+
+        table {
+            font-size: 1em;
+        }
+
+        .card {
+            max-width: 50%;
+            min-width: fit-content;
+        }
+
+        .item-card-container>.card>img {
+            height: 300px;
+            border-radius: 25px;
+        }
+
+        .item-card-container>.card>.card-text-container>table {
+            width: 100%;
+            text-align: right;
+            margin-bottom: 20px;
+        }
+
+        .card-text-container {
+            margin-left: 10px;
+            font-family: 'Roboto', sans-serif;
+        }
+
+        .card-text-container table td {
+            font-size: 0.9em;
+        }
+
+        .card-text-container table th {
+            font-size: 1em;
+            text-align: left;
+        }
+
+        .card-text-container>div {
+            display: flex;
+            align-items: center;
+            line-height: 1.5;
+            gap: 10px;
+            margin-top: 15px;
+        }
+
+        .card-text-container>div>img {
+            width: 55px;
+            height: 55px;
+            border-radius: 50px;
+        }
+
+        .card-text-container>h1 {
+            width: 100%;
+        }
+
+        .card-text-container>h4 {
+            text-decoration: underline;
+        }
+
+        /* second nav bar  */
+        .market-items {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 4%;
+        }
+
+        .market-navBar>ul>li {
+            display: inline-block;
+            padding: 8px;
+            border-radius: 50px;
+            transition: all 0.5s ease-in;
+        }
+
+        .market-navBar>ul>li:hover {
+            background-color: var(--blue);
+        }
+
+        .market-navBar>ul>li>a,
+        .market-items>h1 {
+            color: var(--white);
+            font-size: 1.5em;
+        }
+
+        .market-navBar>ul>.active>a,
+        .market-navBar>ul>.active {
+            background-color: var(--blue);
+            color: var(--white);
+        }
+
+        .market-navBar>ul>li>a {
+            text-decoration: none;
+            font-size: 1em;
+        }
+
+        @keyframes anim {
+            from {
+                transform: translateY(50px);
+            }
+
+            to {
+                transform: translateY(0px);
+            }
+        }
+
+        @media(max-width:768px) {
+            body {
+                line-height: 1;
+            }
+
+            .home-info {
+                width: 100%;
+                padding: 10px;
+                min-height: fit-content;
+                max-height: 100vh;
+                align-items: center;
+                justify-content: center;
+            }
+
+            .home-info>h1 {
+                font-size: 2em;
+            }
+
+            .home-info>p,
+            .home-button-container>button {
+                font-size: 1.2em;
+            }
+
+            .home-button-container {
+                text-align: center;
+            }
+
+            .collections {
+                flex-flow: row wrap;
+                padding: 40px;
+            }
+
+            .collections>div {
+                min-width: 100%;
+            }
+
+            .categorie div {
+                width: 100%;
+            }
+
+            .collections table td {
+                font-size: 1em;
+            }
+
+            .create {
+                padding: 5px;
+            }
+
+            .createNTF,
+            .item-card-container,
+            .item-card-container .card {
+                margin-left: 40px;
+                text-align: center;
+                flex-direction: column;
+            }
+
+            .createNTF {
+                display: none;
+            }
+
+            .create-description>div {
+                width: 100%;
+                flex-flow: row wrap;
+            }
+
+            .categorie>div {
+                padding: 15px;
+            }
+
+            .market-items {
+                display: none;
+            }
+
+            .create-description {
+                flex-direction: column;
+            }
+
+            .card-text-container {
+                width: 100%;
+            }
+
+            .item-card-container .card {
+                width: 100%;
+                margin: 0;
+                margin-bottom: 20px;
+            }
+
+            .item-card-container {
+                flex-direction: column;
+                margin: 0;
+                justify-content: left;
+            }
+
+            .item-card-container>.card>img {
+                width: 100%;
+                height: 300px;
+            }
+
+            table td,
+            table th {
+                text-align: left;
+            }
+
+            .card-text-container {
+                margin-left: 0px;
+                text-align: left;
+                float: left;
+            }
+
+            .item-cards {
+                padding: 10px;
+            }
+
+            .create-description section {
+                display: block;
+                position: relative;
+                top: 0px;
+                left: -150px;
+                color: var(--white);
+            }
+
+            .card {
+                min-width: 100%;
+            }
+
+            .create-description section::after {
+                content: "";
+                position: absolute;
+                width: 230px;
+                left: 10px;
+                top: 10px;
+                height: 2px;
+                background-color: var(--white);
+                opacity: 0.1;
+            }
+
+            footer {
+                margin-top: 20px;
+                font-size: 12px;
+                line-height: 1.3;
+            }
+
+            h1,
+            h2,
+            h3 {
+                font-size: 1.2em;
+                line-height: 1;
+            }
+
+            td {
+                font-size: 1.2rem;
+            }
+
+            button {
+                font-size: 1em;
+            }
+        }
+
+        @media(min-width:769px) and (max-width:1200px) {
+            .home-info {
+                width: 80%;
+            }
+
+            .collections {
+                padding: 10%;
+            }
+
+            .collections>div {
+                min-width: 48%;
+            }
+
+            .collections img {
+                max-height: 200px;
+            }
+
+            .item-card-container {
+                padding: 10px;
+            }
+
+            .item-card-container .card {
+                min-width: 40%;
+                flex-direction: column;
+                align-items: start;
+            }
+
+            .item-card-container>.card>img {
+                width: 100%;
+                height: 200px;
+            }
+
+            .card-text-container {
+                float: left;
+                width: 100%;
+            }
+
+            .item-card-container .card table tr td {
+                text-align: left;
+            }
+        }
+
+        @media(max-width:500px) {
+            .collections {
+                padding: 10px;
+            }
+        }
+
+        @media (max-width:768px) {
+            .home {
+                height: auto;
+            }
+        }
+
+        @media (max-width:920px) {
+            h2 {
+                font-size: 1em;
+            }
+
+            .home {
+                padding: 10px;
+                height: fit-content;
+            }
+
+            .image {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: 100%;
+                padding: 5px 15px;
+
+            }
+
+            .menu-icon {
+                display: block;
+                color: #000;
+            }
+
+            .home-info {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+            }
+
+            .home-info>img {
+                width: 90%;
+                border-radius: 10px;
+
+            }
+
+            /* nav items */
+            header,
+            nav>ul {
+                flex-direction: column;
+                align-items: start;
+                border-radius: 20px;
+                padding: 0;
+            }
+
+            nav {
+                display: none;
+                position: absolute;
+                top: 12%;
+                width: 95%;
+                left: 0;
+            }
+
+            nav>ul>li {
+                width: 100%;
+                padding: 20px;
+                float: left;
+            }
+
+            nav>ul>li:hover a,
+            nav>ul>li>.active {
+                width: 100%;
+                border-radius: 0;
+            }
+
+            .home-button-container {
+                text-align: center;
+            }
+
+            .categories {
+                flex-flow: row wrap;
+            }
+
+            .categories>div {
+                min-width: 100px;
+            }
+
+            .item-card-container {
+                padding: 0px;
+            }
+
+            .item-cards {
+                padding: 0;
+            }
+        }
+
+        @media (min-width:900px) {
+            .collection>div {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="home">
+        <header>
+            <div class="image">
+                <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/logo.png"
+                    alt="logo">
+                <i class="fa-solid fa-bars fa-2x menu-icon" onclick="sathish(this)"></i>
+            </div>
+            <nav id="nav">
+                <ul>
+                    <li><a href="www.youtube.com" class="active">Home</a></li>
+                    <li><a href="#">Explore</a></li>
+                    <li><a href="#">Item Details</a></li>
+                    <li><a href="#">Author</a></li>
+                    <li><a href="#">Create Yours</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div class="home-info">
+            <div>
+                <h2>Liberty NFT market</h2>
+                <h1>CREATE, SELL & COLLECT TOP NFT'S</h1>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et doloremque voluptates cumque tempore
+                    asperiores excepturi reiciendis ad vitae esse numquam assumenda quae, corporis, minima culpa laborum
+                    hic
+                    eum maiores iure?</p>
+                <div class="home-button-container">
+                    <button type="button">Explore Top NFTs</button>
+                    <button type="button">Watch OurVideos</button>
+                </div>
+            </div>
+            <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/banner-02.png"
+                alt="">
+        </div>
+    </div>
+    <div class="categories-text">
+        <h2>Browse Through Our <label>Categories</label> Here.</h2>
+    </div>
+    <div class="categorie">
+        <div>
+            <i class="fa fa-umbrella fa-2x"></i>
+            <h5>Blockchain</h5>
+        </div>
+        <div>
+            <i class="fa fa-umbrella fa-2x"></i>
+            <h5>Digital Art</h5>
+        </div>
+        <div>
+            <i class="fa fa-umbrella fa-2x"></i>
+            <h5>Music Art</h5>
+        </div>
+        <div>
+            <i class="fa fa-check-square fa-2x"></i>
+            <h5>Virtual World</h5>
+        </div>
+        <div>
+            <i class="fa fa-umbrella fa-2x"></i>
+            <h5>Valuable</h5>
+        </div>
+        <div>
+            <i class="fa fa-umbrella fa-2x"></i>
+            <h5>Triple NFT</h5>
+        </div>
+    </div>
+    <div class="categories-text">
+        <h2>Explore Some Hot <label>Collections</label> In Market.</h2>
+    </div>
+    <!-- collection cards -->
+    <div class="collections">
+        <div>
+            <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/collection-01.jpg"
+                alt="">
+            <div>
+                <h2>Bored Ape Kennel Club</h3>
+                    <hr>
+                    <table>
+                        <tr>
+                            <td>
+                                <p>Items In Collections:</p>
+                                <h4>324/324</h4>
+                            </td>
+                            <td>
+                                <p>Catergory:</p>
+                                <h4>Visual Art</h4>
+                            </td>
+                        </tr>
+                    </table>
+            </div>
+            <button>Explore Bored Ape</button>
+        </div>
+
+        <div>
+            <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/collection-01.jpg"
+                alt="">
+            <div>
+                <h2>Genesis Collective Statue</h2>
+                <hr>
+                <table>
+                    <tr>
+                        <td>
+                            <p>Items In Collections:</p>
+                            <h4>324/324</h4>
+                        </td>
+                        <td>
+                            <p>Catergory:</p>
+                            <h4>Music Art</h4>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <button>Explore Genesis</button>
+        </div>
+        <div>
+            <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/collection-01.jpg"
+                alt="">
+            <div>
+                <h2>Worldwide Artwork Ground</h2>
+                <hr>
+                <table>
+                    <tr>
+                        <td>
+                            <p>Items In Collections:</p>
+                            <h4>324/324</h4>
+                        </td>
+                        <td>
+                            <p>Catergory:</p>
+                            <h4>Blackchain</h4>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <button>Explore Worldwide</button>
+        </div>
+    </div>
+    <div class="create">
+        <div class="createNTF">
+            <h3>Create Your NTF & Put It On The Marker.</h3>
+            <button>Create Your NTF Now</button>
+        </div>
+
+        <div class="create-description">
+            <div>
+                <i class="fa fa-tasks fa-2x"></i>
+                <h2>Set Up Your Wallet</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis labore ipsum aspernatur adipisci fuga
+                    tempore repellendus excepturi reiciendis.</p>
+            </div>
+            <section>1</section>
+            <div>
+                <i class="fa fa-dollar"></i>
+                <h2>Add Your Digital NFT</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis labore ipsum aspernatur adipisci fuga
+                    tempore repellendus excepturi reiciendis.</p>
+            </div>
+            <section>2</section>
+            <div>
+                <i class="fa fa-tasks fa-2x"></i>
+                <h2>Sell Your NFT & Make Profit</h2>
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis labore ipsum aspernatur adipisci fuga
+                    tempore repellendus excepturi reiciendis.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="item-cards">
+        <div class="market-items">
+            <h1><label>Items </label>Currently In The Market.</h1>
+            <div class="market-navBar">
+                <ul>
+                    <li class="active"><a href="#">All items</a></li>
+                    <li><a href="#">Muisc Art</a></li>
+                    <li><a href="#">Digital Art</a></li>
+                    <li><a href="#">Blockchain</a></li>
+                    <li><a href="#">Vartual</a></li>
+                </ul>
+            </div>
+        </div>
+        <!-- cards -->
+        <div class="item-card-container">
+            <div class="card">
+                <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/market-01.jpg"
+                    alt="">
+                <div class="card-text-container">
+                    <h3>Music Art Super Item</h3>
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/author.jpg"
+                            alt="">
+                        <div>
+                            <p>Liberty Artist</p>
+                            <h4>@libertyart</h4>
+                        </div>
+                    </div>
+                    <hr>
+                    <table>
+                        <tr>
+                            <td>Current Bid</td>
+                            <td>Ends In</td>
+                        </tr>
+                        <tr>
+                            <th>2.03 ETH</th>
+                            <th id="nuber">4D 08H 15M 42S</th>
+                        </tr>
+                        <tr>
+                            <td>($8,240.50)</td>
+                            <td>April 11th, 2023</td>
+                        </tr>
+                    </table>
+                    <h4>View Item Details</h4>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/market-01.jpg"
+                    alt="">
+                <div class="card-text-container">
+                    <h3>Digital Crypto Art Work</h3>
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/author.jpg"
+                            alt="">
+                        <div>
+                            <p>Liberty Artist</p>
+                            <h4>@libertyart</h4>
+                        </div>
+                    </div>
+                    <hr>
+                    <table>
+                        <tr>
+                            <td>Current Bid</td>
+                            <td>Ends In</td>
+                        </tr>
+                        <tr>
+                            <th>2.03 ETH</th>
+                            <th id="nmber">4D 08H 15M 42S</th>
+                        </tr>
+                        <tr>
+                            <td>($8,240.50)</td>
+                            <td>April 11th, 2023</td>
+                        </tr>
+                    </table>
+                    <h4>View Item Details</h4>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/market-01.jpg"
+                    alt="">
+                <div class="card-text-container">
+                    <h3>Blackchain Item One Art</h3>
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/author.jpg"
+                            alt="">
+                        <div>
+                            <p>Liberty Artist</p>
+                            <h4>@libertyart</h4>
+                        </div>
+                    </div>
+                    <hr>
+                    <table>
+                        <tr>
+                            <td>Current Bid</td>
+                            <td>Ends In</td>
+                        </tr>
+                        <tr>
+                            <th>2.03 ETH</th>
+                            <th id="nmber">4D 08H 15M 42S</th>
+                        </tr>
+                        <tr>
+                            <td>($8,240.50)</td>
+                            <td>April 11th, 2023</td>
+                        </tr>
+                    </table>
+                    <h4>View Item Details</h4>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/market-01.jpg"
+                    alt="">
+                <div class="card-text-container">
+                    <h3>Virtual Currency Art One</h3>
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/author.jpg"
+                            alt="">
+                        <div>
+                            <p>Liberty Artist</p>
+                            <h4>@libertyart</h4>
+                        </div>
+                    </div>
+                    <hr>
+                    <table>
+                        <tr>
+                            <td>Current Bid</td>
+                            <td>Ends In</td>
+                        </tr>
+                        <tr>
+                            <th>2.03 ETH</th>
+                            <th id="nuber">4D 08H 15M 42S</th>
+                        </tr>
+                        <tr>
+                            <td>($8,240.50)</td>
+                            <td>April 11th, 2023</td>
+                        </tr>
+                    </table>
+                    <h4>View Item Details</h4>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/market-01.jpg"
+                    alt="">
+                <div class="card-text-container">
+                    <h3>Digital Art Item Arts One</h3>
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/author.jpg"
+                            alt="">
+                        <div>
+                            <p>Liberty Artist</p>
+                            <h4>@libertyart</h4>
+                        </div>
+                    </div>
+                    <hr>
+                    <table cellpadding="10">
+                        <tr>
+                            <td>Current Bid</td>
+                            <td>Ends In</td>
+                        </tr>
+                        <tr>
+                            <th>2.03 ETH</th>
+                            <th id="nuber">4D 08H 15M 42S</th>
+                        </tr>
+                        <tr>
+                            <td>($8,240.50)</td>
+                            <td>April 11th, 2023</td>
+                        </tr>
+                    </table>
+                    <h4>View Item Details</h4>
+                </div>
+            </div>
+            <div class="card">
+                <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/market-01.jpg"
+                    alt="">
+                <div class="card-text-container">
+                    <h3>Blackchain Music Design</h3>
+                    <div>
+                        <img src="https://templatemo.com/templates/templatemo_577_liberty_market/assets/images/author.jpg"
+                            alt="">
+                        <div>
+                            <p>Liberty Artist</p>
+                            <h4>@libertyart</h4>
+                        </div>
+                    </div>
+                    <hr>
+                    <table>
+                        <tr>
+                            <td>Current Bid</td>
+                            <td>Ends In</td>
+                        </tr>
+                        <tr>
+                            <th>2.03 ETH</th>
+                            <th id="nuber">4D 08H 15M 42S</th>
+                        </tr>
+                        <tr>
+                            <td>($8,240.50)</td>
+                            <td>April 11th, 2023</td>
+                        </tr>
+                    </table>
+                    <h4>View Item Details</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <p>Copyright @ 2022 Liberty NTF Marketplace Co., Ltd. All rights reserved. <label>Designed by Bhaskar
+                Antony</label></p>
+    </footer>
+
+    <script src="asstes/fontawesome-free-6.4.0-web/js/all.js"></script>
+    <script>
+        let navigation = document.getElementById("nav");
+        let click = false;
+
+        function sathish(x) {
+            if (click == false) {
+                x.classList.toggle("fa-xmark");
+                navigation.style.display = "block";
+                click = true;
+            } else {
+                x.classList.toggle("fa-bars");
+                navigation.style.display = "none";
+                click = false;
+            }
+
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event-Listeners</title>
+</head>
+<body>
+    <center>
+        <h1>REMOVE EVENT LISTENERS FROM THE ELEMENTS</h1>
+        <p>Removing Event listeners</p>
+    </center>
+    <hr>
+    <button id="myBtn">Click Me</button>
+    <script>
+        //declaring function
+        function greetWorld(){
+            alert("this is event listeners from  the button");
+        }
+
+        //selcting button elements from html
+        let btn = document.getElementById("myBtn");
+
+        //adding event listeners to our button
+        btn.addEventListener("click", greetWorld);
+
+        //removing event listeners from elements
+        btn.removeEventListener("click", greetWorld);
+
+        //in above example we will not get the proper response because at the same time we are adding event and we are removing event 
+        
+    </script>
+    
+</body>
+</html>

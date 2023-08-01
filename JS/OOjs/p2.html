@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <center>
+        <h1>by creating instance of object directly(using new keyword)</h1>
+    </center>
+    <hr>
+    <strong>SYNTAX</strong>
+    <pre>
+        let objectName= new constructoMethod()
+    </pre>
+    <hr>
+    <script>
+        let employeDetails = Object();
+        document.write(typeof employeDetails + "<br>")
+
+        employeDetails.firstName = "Bhaskar";
+        employeDetails.lastName = "Antony";
+        employeDetails.fullName = function(){
+            return this.firstName + " " + this.lastName;
+        }
+        document.write(employeDetails.firstName + "<br>");
+        document.write(employeDetails.lastName+ "<br>");
+        document.write(employeDetails.fullName()+ "<br>");
+    </script>
+    <hr>
+    <center>
+        <h1>By using an Object Constructor (using new keyword)</h1>
+    </center>
+    <script>
+        function studentInfo(firstName,lastName){
+            document.write(`<h3>First parameter value is: ${firstName}</h3>`);
+            document.write(`<h3>second parameter value is: ${lastName}</h3>`);
+            let fn, ln;
+            fn = firstName;
+            ln = lastName;
+            document.write(`<h3>First variable value is: ${fn}</h3>`);
+            document.write(`<h3>second variable value is: ${ln}</h3>`);
+
+            let fname, lname; //internal property
+            fname = fn;
+            lname = ln;
+            document.write(`<h3>First variable value is: ${fname}</h3>`);
+            document.write(`<h3>second variable value is: ${lname}</h3>`);
+            console.log(typeof fn)
+        }
+        studentInfo("Bhaskar", "Antony");
+        let stud = new studentInfo("Bhaskar", "Antony");
+        console.log("STUD: ", typeof stud);
+        console.log("STUD: ",  stud);
+
+        document.write(`<h3>First variable value is: ${stud, fname}</h3>`);
+        document.write(`<h3>second variable value is: ${stud, lname}</h3>`);
+    </script>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d31100.744337727458!2d77.52754580000001!3d12.9978608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1683118531163!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+</body>
+</html>

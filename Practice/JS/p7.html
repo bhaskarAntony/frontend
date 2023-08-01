@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //graph algorithms
+        // const depthFirsstPrint = (graph, source)=>{
+        //     const stack = [source];
+
+        //     while(stack.length>0){
+        //         const current = stack.pop();
+        //         console.log(current);
+
+        //         for(let neighbor of graph[current]){
+        //             stack.push(neighbor);
+        //         }
+        //     }
+        // }
+        // const graph = {
+        //     a:["b", "c"], 
+        //     b:["d"],
+        //     c:["e"],
+        //     d:["f"],
+        //     e:[],
+        //     f:[]
+        // };
+        // depthFirsstPrint(graph, "a");
+
+        //example 2 for graph algoriths
+        // const depthFirsstPrint2 = (graph2, source2)=>{
+        //     console.log(source2);
+        //     for(let neighbor of graph2[source2]){
+        //         document.write(neighbor);
+        //         depthFirsstPrint2(graph2, neighbor);
+        //     }
+        // };
+        // const graph2 = {
+        //     a:["c", "b"], 
+        //     b:["d"],
+        //     c:["e"],
+        //     d:["f"],
+        //     e:[],
+        //     f:[]
+        // };
+        // depthFirsstPrint2(graph2, "a");//calling a function
+
+        // const friends = (names, me)=>{
+        //     console.log(me);
+        //     for(let neighbor of names[me]){
+        //         friends(names, neighbor);
+        //     }
+        // }
+        // const names = {
+        //     bhaskar:["pramodh", "akhil"],
+        //     naveen:["nagesh", "aadhi"],
+        //     aadhi:["naveen"],
+        //     akhil:["nagesh"],
+        //     nagesh:[],
+        //     pramodh:["giflin"],
+        //     giflin:[]
+        // }
+        // friends(names, "bhaskar");
+
+        //bread first print
+        const breadFirstPrint = (graph3, source3) =>{
+            const queue = [source3];
+            while(queue.length>0){
+                const current3 = queue.shift();
+                console.log(current3);
+                for(let neighbor3 of graph3[current3]){
+                    queue.push(neighbor3);
+                }
+            }
+        };
+          const graph3 = {
+            a:["c", "b"], 
+            b:["d"],
+            c:["e"],
+            d:["f"],
+            e:[],
+            f:[]
+        };
+        breadFirstPrint(graph3, "a"); //calling a function
+
+
+    </script>
+</body>
+</html>

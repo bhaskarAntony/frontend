@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <script>
+        function getView(){
+            alert("You've accessed " + history.length + " Webpages in the session.");
+        }
+    </script>
+    <button type="button" onclick="getView()">Get legnth Of pages</button>
+    
+    <a href="p5.html">P5.html</a>
+    <script>
+        function goForword(){
+            window.history.forword();
+        }
+    </script>
+        <button type="button" onclick="goForword()">Go forword</button>
+
+</body>
+</html>

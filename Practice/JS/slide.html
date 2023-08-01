@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="holder">
+            <button id="back">back</button>
+            <button id="next">next</button>
+            <div class="img" id="img-hold"></div>
+        </div>
+    </div>
+    <script>
+        let next = document.getElementById("next");
+        let back = document.getElementById("back");
+        let hold = document.getElementById("img-hold");
+        let images = [
+            "https://avatars.githubusercontent.com/u/1?v=4",
+            "https://avatars.githubusercontent.com/u/2?v=4",
+            "https://avatars.githubusercontent.com/u/3?v=4",
+            "https://avatars.githubusercontent.com/u/4?v=4"
+        ]
+        let present = 1;
+        let profile = document.createElement("img");
+        profile.src=images[0];
+        hold.append(profile);
+       next.addEventListener("click", ()=>{
+        if(present<images.length){
+        console.log(present);
+        profile.src=images[present];
+        present +=1;
+        }
+        else if(present==images.length){
+            next.style.display="none";
+            back.style.display="block";
+        }
+       });
+       back.addEventListener("click", ()=>{
+        if(present>=0||present<images.length){
+        console.log(present);
+        profile.src=images[present];
+        present=present-1;
+        }
+        else if(present<=0){
+            next.style.display="block";
+            back.style.display="none";
+        }
+       });
+    </script>
+
+</body>
+</html>

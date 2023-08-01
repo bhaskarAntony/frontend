@@ -1,0 +1,199 @@
+{
+  "furnitures": [
+    {
+      "name": "sofa",
+      "cost": "80677",
+      "description": "",
+      "diliverytype": "Free Delivery",
+      "productimage": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlfGVufDB8fDB8fHww&w=1000&q=80",
+      "productotherimages": [
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlfGVufDB8fDB8fHww&w=1000&q=80",
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlfGVufDB8fDB8fHww&w=1000&q=80",
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlfGVufDB8fDB8fHww&w=1000&q=80",
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlfGVufDB8fDB8fHww&w=1000&q=80"
+      ],
+      "id": 1
+    }
+  ],
+  "mobiles": [
+    {
+      "name": "one plus",
+      "cost": "25599",
+      "description": "super mobile",
+      "diliverytype": "Free Delivery",
+      "productimage": "https://m.media-amazon.com/images/I/61QRgOgBx0L._SX679_.jpg",
+      "productotherimages": [
+        "https://m.media-amazon.com/images/I/61QRgOgBx0L._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/61QRgOgBx0L._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/61QRgOgBx0L._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/61QRgOgBx0L._SX679_.jpg"
+      ],
+      "id": 1
+    }
+  ],
+  "bags": [],
+  "laptaps": [
+    {
+      "name": "Lenovo",
+      "cost": "41635",
+      "description": "12th Gen 15.6\" (39.62cm) FHD Thin",
+      "diliverytype": "Free Delivery",
+      "productimage": "https://m.media-amazon.com/images/I/41mKVo5fjcL._SX300_SY300_QL70_FMwebp_.jpg",
+      "productotherimages": [
+        "https://m.media-amazon.com/images/I/61jJs02OHEL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/61KE2FuXV1L._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/51qo1M9M2pL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/711kzp899OL._SX569_.jpg"
+      ],
+      "id": 1
+    },
+    {
+      "name": "Lenovo",
+      "cost": "41635",
+      "description": "12th Gen 15.6\" (39.62cm) FHD Thin",
+      "diliverytype": "Free Delivery",
+      "productimage": "https://m.media-amazon.com/images/I/41mKVo5fjcL._SX300_SY300_QL70_FMwebp_.jpg",
+      "productotherimages": [
+        "https://m.media-amazon.com/images/I/61jJs02OHEL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/61KE2FuXV1L._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/51qo1M9M2pL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/711kzp899OL._SX569_.jpg"
+      ],
+      "id": 2
+    },
+    {
+      "name": "Lenovo",
+      "cost": "41635",
+      "description": "12th Gen 15.6\" (39.62cm) FHD Thin",
+      "diliverytype": "Free Delivery",
+      "productimage": "https://m.media-amazon.com/images/I/41mKVo5fjcL._SX300_SY300_QL70_FMwebp_.jpg",
+      "productotherimages": [
+        "https://m.media-amazon.com/images/I/61jJs02OHEL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/61KE2FuXV1L._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/51qo1M9M2pL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/711kzp899OL._SX569_.jpg"
+      ],
+      "id": 3
+    },
+    {
+      "name": "Hp i3 pro",
+      "cost": "67999",
+      "description": "best coding laptap",
+      "diliverytype": "Free Delivery",
+      "productimage": "https://m.media-amazon.com/images/I/91oF9q-jE5L.jpg",
+      "productotherimages": [
+        "https://www.laptop.lk/wp-content/uploads/2023/03/HP-15S-Fq5786Tu.jpg",
+        "https://point.com.ec/wp-content/uploads/2023/04/HP-15DY2503LA-3.jpg",
+        "https://home.ripley.cl/store/Attachment/WOP/D113/2000389329745/2000389329745-1.jpg",
+        "https://home.ripley.cl/store/Attachment/WOP/D113/2000389329745/2000389329745-1.jpg"
+      ],
+      "id": 4
+    },
+    {
+      "name": "Lenovo",
+      "cost": "41635",
+      "description": "12th Gen 15.6\" (39.62cm) FHD Thin",
+      "diliverytype": "Free Delivery",
+      "productimage": "https://m.media-amazon.com/images/I/41mKVo5fjcL._SX300_SY300_QL70_FMwebp_.jpg",
+      "productotherimages": [
+        "https://m.media-amazon.com/images/I/61jJs02OHEL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/61KE2FuXV1L._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/51qo1M9M2pL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/711kzp899OL._SX569_.jpg"
+      ],
+      "id": 5
+    },
+    {
+      "name": "Lenovo",
+      "cost": "41635",
+      "description": "12th Gen 15.6\" (39.62cm) FHD Thin",
+      "diliverytype": "Free Delivery",
+      "productimage": "https://m.media-amazon.com/images/I/41mKVo5fjcL._SX300_SY300_QL70_FMwebp_.jpg",
+      "productotherimages": [
+        "https://m.media-amazon.com/images/I/61jJs02OHEL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/61KE2FuXV1L._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/51qo1M9M2pL._SX569_.jpg",
+        "https://m.media-amazon.com/images/I/711kzp899OL._SX569_.jpg"
+      ],
+      "id": 6
+    },
+    {
+      "name": "Hp i3 pro",
+      "cost": "67999",
+      "description": "best coding laptap",
+      "diliverytype": "Free Delivery",
+      "productimage": "https://m.media-amazon.com/images/I/91oF9q-jE5L.jpg",
+      "productotherimages": [
+        "https://www.laptop.lk/wp-content/uploads/2023/03/HP-15S-Fq5786Tu.jpg",
+        "https://point.com.ec/wp-content/uploads/2023/04/HP-15DY2503LA-3.jpg",
+        "https://home.ripley.cl/store/Attachment/WOP/D113/2000389329745/2000389329745-1.jpg",
+        "https://home.ripley.cl/store/Attachment/WOP/D113/2000389329745/2000389329745-1.jpg"
+      ],
+      "id": 2
+    },
+    {
+      "name": "Hp i3 pro",
+      "cost": "67999",
+      "description": "best coding laptap",
+      "diliverytype": "Free Delivery",
+      "productimage": "https://m.media-amazon.com/images/I/91oF9q-jE5L.jpg",
+      "productotherimages": [
+        "https://www.laptop.lk/wp-content/uploads/2023/03/HP-15S-Fq5786Tu.jpg",
+        "https://point.com.ec/wp-content/uploads/2023/04/HP-15DY2503LA-3.jpg",
+        "https://home.ripley.cl/store/Attachment/WOP/D113/2000389329745/2000389329745-1.jpg",
+        "https://home.ripley.cl/store/Attachment/WOP/D113/2000389329745/2000389329745-1.jpg"
+      ],
+      "id": 2
+    }
+  ],
+  "wears": [
+    {
+      "name": "Combo towels",
+      "cost": "399",
+      "description": "towels for all seasons",
+      "diliverytype": "Payable Dilivery",
+      "productimage": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmz2AUsM2z90DE3nZA9e1Z_pDPnt-Rw2PU1Q&usqp=CAU",
+      "productotherimages": [
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5oy41nsbewK8ptYBZaOVz_ZmGLrWDW-MSjA&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQbtBEaFGfFBK_h1dQQgSGuiDoYqFlEU13C3Q&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS8h3jxAKpxd7PA1r4g77oEdNBnnbEw4R1f9g&usqp=CAU",
+        "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2I5EPVyNKhSk4LJYsy_XXlszxEdM_plAjqQ&usqp=CAU"
+      ],
+      "id": 1
+    }
+  ],
+  "shoes": [],
+  "favorate": [
+    {
+      "name": "one plus",
+      "cost": "25599",
+      "description": "super mobile",
+      "diliverytype": "Free Delivery",
+      "productimage": "https://m.media-amazon.com/images/I/61QRgOgBx0L._SX679_.jpg",
+      "productotherimages": [
+        "https://m.media-amazon.com/images/I/61QRgOgBx0L._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/61QRgOgBx0L._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/61QRgOgBx0L._SX679_.jpg",
+        "https://m.media-amazon.com/images/I/61QRgOgBx0L._SX679_.jpg"
+      ],
+      "id": 1
+    }
+  ],
+  "cart": [
+    {
+      "name": "sofa",
+      "cost": 80677,
+      "description": "",
+      "diliverytype": "Free Delivery",
+      "productimage": "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlfGVufDB8fDB8fHww&w=1000&q=80",
+      "productotherimages": [
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlfGVufDB8fDB8fHww&w=1000&q=80",
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlfGVufDB8fDB8fHww&w=1000&q=80",
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlfGVufDB8fDB8fHww&w=1000&q=80",
+        "https://images.unsplash.com/photo-1555041469-a586c61ea9bc?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8ZnVybml0dXJlfGVufDB8fDB8fHww&w=1000&q=80"
+      ],
+      "count": "1",
+      "id": 2
+    }
+  ]
+}

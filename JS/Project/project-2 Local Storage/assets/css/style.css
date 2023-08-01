@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+.main-wrapper{
+    margin: 50px;
+}
+.container{
+    display: flex;
+    width: 100%;
+}
+.left-pannel, .right-pannel{
+    width:50%;
+}
+.cardbox{
+    margin: 25px;
+    padding: 25px;
+    box-shadow: 0px 0px 30px #bdbbbb;
+    border-radius: 10px;
+    min-height: 150px;
+    max-height: fit-content;
+}
+.left-pannel>.input-wrapper{
+    width: 100%;
+    margin: 20px;
+}
+input{
+    outline: none;
+    border: 1px solid #bdbbbb;
+    padding: 6px;
+    font-size: 1em;
+    border-radius: 5px;
+    letter-spacing: 1.5px;
+}
+input:focus{
+    border-color: #7d13ee;
+}
+button{
+    border: none;
+    padding: 10px 20px;
+    background-color: #7d13ee;
+    color: #fff;
+    border-radius: 5px;
+    margin-top: 10px;
+    transition: 0.6s;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+}
+.cardbox button:hover{
+    background-color: #ceacf2;
+    color: #7d13ee;
+}
+#btnAllDelete, #btnDeletKey{
+    background-color: #df3745;
+}
+#btnAllDelete:hover, #btnDeletKey:hover{
+    background-color: #eda3aa;
+    color: #df3745;
+}
+#autoFill, #autoFill2{
+    color: #ceacf2;
+}
+.output{
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+.output label{
+    color: #df3745;
+    font-weight: 900;
+}
+.output p{
+    color: #656363;
+}
+@media (max-width:900px){
+    .left-pannel{
+        width:100%;
+        margin: 0;
+    }
+    .right-pannel{
+        width:100%;
+        margin: 0;
+    }
+    input{
+        width:100%;
+        margin-bottom: 10px;
+    }
+    .container{
+        flex-direction: column;
+        gap: 20px;
+        padding: 5px;
+    }
+    .main-wrapper{
+        margin: 0;
+    }
+    .cardbox{
+        margin: 0;
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}

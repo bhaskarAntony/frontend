@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>users</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Rubik&family=Work+Sans:wght@300&display=swap" rel="stylesheet">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Rubik', sans-serif;
+        }
+        .container{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            flex-basis: 50px;
+            gap: 20px;
+            background-color: #040304;
+        }
+        .card{
+            display: flex;
+            gap: 10px;
+            min-width: 400px;
+            max-width: 400px;
+            background: linear-gradient(50deg, #c953d6, #2c0353);
+            padding: 10px;
+            color: #cdcbcb;
+            border-radius: 10px;
+        }
+        label{
+            color: #fff30b;
+        }
+        img{
+            width:70px;
+            height:70px;
+            border-radius: 50px;
+            margin-bottom: 20px;
+        }
+        .left{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-width: 200px;
+            background-color: #984be1;
+            box-shadow: 2px 2px 10px #0e0229;
+            border-radius: 10px;
+            color: #fff;
+            overflow: hidden;
+        }
+        p{
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="container">
+
+    </div>
+
+    <script>
+        fetch("https://jsonplaceholder.typicode.com/users")
+        .then(loadData=>loadData.json())
+        .then(displayData=>{
+
+            displayData.forEach(element => {
+                let container = document.querySelector("#container")
+                let card = document.createElement("div");
+                card.classList.add("card");
+                container.appendChild(card);
+
+                let left = document.createElement("div");
+                left.classList.add("left")   ;
+                card.appendChild(left);           
+
+                let profile = document.createElement("img");
+                profile.src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHXi6kWCo1P3qJAuOnEAs6jWS1Dg1BqRkk8Q&usqp=CAU";
+                left.appendChild(profile);
+
+                let username = document.createElement("h4");
+                username.innerHTML = element.username;
+                left.appendChild(username);
+
+                let email = document.createElement("p");
+                email.innerHTML =  element.email;
+                left.appendChild(email);
+
+                let right = document.createElement("div");
+                right.classList.add("right");
+                card.appendChild(right);
+
+                let phoneLabel = document.createElement("label");
+                phoneLabel.innerHTML = "Phone Number";
+                right.appendChild(phoneLabel);
+
+                let phone = document.createElement("p");
+                phone.innerHTML = element.phone;
+                right.appendChild(phone);
+
+                let addressLabel = document.createElement("label");
+                addressLabel.innerHTML = "address";
+                right.appendChild(addressLabel);
+
+                let address = document.createElement("p");
+                address.innerHTML = element.address.street + " "+element.address.city + " "+element.address.suite + " "+element.address.zipcode;
+                right.appendChild(address);
+
+                let companyLabel = document.createElement("label");
+                companyLabel.innerHTML = "Company";
+                right.appendChild(companyLabel);
+
+                let company = document.createElement("p");
+                company.innerHTML = element.company.name;
+                right.appendChild(company);
+
+            });
+        })
+        .catch()
+    </script>
+    
+</body>
+</html>

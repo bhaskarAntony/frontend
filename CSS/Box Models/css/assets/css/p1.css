@@ -1,0 +1,105 @@
+.jumb{
+    background-color: blueviolet;
+    padding:20px;
+    margin:20px;
+    color:#fff;
+    border-radius:30px;
+    text-align: center;
+    font-size:1.4em;
+}
+.padding, .padding2{
+    text-align: center;
+}
+.padding h1, .border h1,.padding2 h1{
+    background-color: rgb(70, 4, 80);
+    color:#fff;
+    border-radius:20px;
+    padding:20px;
+    width:fit-content;
+    display: inline-block;
+
+}
+.padding h1:nth-child(1){
+    padding:25px;
+}
+.padding h1:nth-child(2){
+    padding:50px 40px;
+}
+.padding h1:nth-child(3){
+    padding:25px 40px 50px;
+}
+.padding h1:nth-child(4){
+    padding:75px 50px 75px 100px;
+}
+.padding h1:nth-child(5){
+    padding:100px 50px 75px 100px;
+}
+.border h1:nth-child(1){
+    border:15px solid #b0082a;
+}
+.border h1:nth-child(2){
+    border:15px;
+    border-color: chartreuse #b0082a;
+    border-style:groove;
+    background-color: #014e0c;
+}
+.border h1:nth-child(3){
+    border:15px;
+    border-color: rgb(9, 59, 224) #e0c600 #975907;
+    border-style:ridge;
+    background-color: #031c26;
+}
+.border h1:nth-child(4){
+    border:15px;
+    border-color: rgb(226, 0, 79) #e0c600 #975907 #014e0c;
+    border-style:ridge;
+    background-color: #65001b;
+}
+.border h1:nth-child(5){
+    border:15px;
+    border-color: rgb(119, 4, 125) #e0c600 #975907;
+    border-style:ridge;
+    background-color: #110054;
+}
+.padding2 h1:nth-child(1){
+    margin:50px;
+}
+.padding2 h1:nth-child(2){
+    margin:50px 25px;
+}
+.padding2 h1:nth-child(3){
+    margin:50px 75px 100px;
+}
+.padding2 h1:nth-child(4){
+    margin:50px 50px 100px 100px;
+}
+.padding2 h1:nth-child(5){
+    margin:50px 100px 50px 100px;
+}
+
+body{
+    padding:0;
+    margin:0;
+}
+.box{
+    background-color: #de0030;
+    padding:20px;
+    color:#fff;
+    font-size:1.3em;
+
+}
+.box2{
+    background-color: #240143;
+    padding:20px;
+    margin: 20px;
+    border: 15px solid #480051;
+    color:#fff;
+    font-size:1.3em;
+}
+.box2 h3{
+    letter-spacing: 7px;
+}
+.box2 p{
+    letter-spacing: 2px;
+    line-height: 35px;
+}

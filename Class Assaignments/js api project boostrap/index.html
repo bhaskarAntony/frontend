@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/media.css">
+</head>
+<body>
+    <div class="container-fluid">
+        <div class="row top-contact align-items-center d-flex bg-primary text-white">
+            <div class="col-sm-4 text-center">
+                <p><i class="fa fa-phone"></i>+91 9606729320</p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <p>Get 50% off on selected items | Shop Now</p>
+            </div>
+            <div class="col-sm-4 text-center">
+                <select name="lang" id="lang" class="bg-transparent text-white border-0">
+                    <option value="English">English</option>
+                    <option value="Kannada">Kannada</option>
+                    <option value="Telugu">Telugu</option>
+                    <option value="Tamil">Tamil</option>
+                </select>
+                <select name="location" id="location" class="bg-transparent text-white border-0">
+                    <option value="Karnataka">Karnataka</option>
+                    <option value="Tamilunadu">Tamilunadu</option>
+                    <option value="Telangana">Telangana</option>
+                    <option value="Maharastra">Maharastra</option>
+                </select>
+            </div>
+        </div>
+    </div>
+    
+
+
+<nav class="navbar navbar-expand-lg  navigation bg-light p-4">
+    <div class="container-fluid">
+     <h3><i class="fa fa-shopping-basket text-primary"></i>World Shop</h3>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse d-flex text-center main-nav" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="create-product.html">Create Product</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              More 
+            </a>
+            <ul class="dropdown-menu p-2">
+              <li><a class="dropdown-item" href="product-view.html?product=mobiles">Mobiles</a></li>
+              <li><a class="dropdown-item" href="product-view.html?product=laptaps">Laptaps</a></li>
+              <li><a class="dropdown-item" href="product-view.html?product=shoes">Shoes</a></li>
+              <li><a class="dropdown-item" href="product-view.html?product=bags">Bags</a></li>
+              <li><a class="dropdown-item" href="product-view.html?product=wears">Wears</a></li>
+              <li><a class="dropdown-item" href="product-view.html?product=furnitures">Furnitures</a></li>
+              <li><hr class="dropdown-divider"></li>
+              <li><a class="dropdown-item" href="product-view.html?product=bags">Explore All</a></li>
+            </ul>
+          </li>
+        </ul>
+        <form class="d-flex align-items-center gap-2 search" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <i class="fa fa-search bg-primary text-white rounded-1"></i>
+          <a href="selected-cart.html"> <i class="fa fa-cart-plus bg-primary text-white rounded-1"></i></a>
+          <i class="fa fa-user bg-primary text-white rounded-1"></i>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <div class="home">
+    <div class="home-text bg-primary p-3 text-center">
+        <div class="col-sm-12">
+            <h2>World Best <label class="text-white"> <i class="fa fa-cart-arrow-down"></i>  Shop Website</label></h2>
+            <h3>Get Upto 50% Discount From Our Website</h3>
+            <button type="button" class="bg-white text-primary border-0 p-2 px-5 mt-4 rounded-5 fs-4">
+              <i class="fa fa-cart-plus"></i> Shop Now</button>
+        </div>
+    </div>
+  </div>
+  <div class="categories container-fluid py-5">
+    <div class="category-heading">
+      <h2>Our Top <label class="text-primary">Categories</label></h2>
+      <div class="category-icons">
+        <i class="fa fa-table active" id="grid"></i>
+        <i class="fa fa-list" id="list"></i>
+      </div>
+    </div>
+
+      <div class="category-row" id="category-row1">
+        <div class="category-card bg-primary-subtle">
+          <img src="https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?cs=srgb&dl=pexels-martin-p%C3%A9chy-1866149.jpg&fm=jpg" alt="">
+          <div class="category-text">
+            <h2>Furniture</h2>
+            <p>100+ designs Available</p>
+            <a href="product-view.html?product=furnitures" class="bg-primary"><i class="fa fa-eye"></i> View This One</a>
+          </div>
+        </div>
+
+        <div class="category-card bg-primary-subtle">
+          <img src="https://media.wired.com/photos/6154ba291b38af32f7638ffd/1:1/w_1800,h_1800,c_limit/Gear-Barefoot-Shoes-Freet-Tanga-SOURCE-Freet.jpg" alt="">
+          <div class="category-text">
+            <h2>Shoes</h2>
+            <p>500+ designs Available</p>
+            <a href="product-view.html?product=shoes" class="bg-primary"><i class="fa fa-eye"></i> View This One</a>
+          </div>
+        </div>
+      </div>
+      <div class="category-row" id="category-row2">
+        <div class="category-card bg-primary-subtle">
+          <img src="https://thumbs.dreamstime.com/b/set-leather-handbags-24710262.jpg" alt="">
+          <div class="category-text">
+            <h2>Bags</h2>
+            <p>50+ designs Available</p>
+            <a href="product-view.html?product=bags" class="bg-primary"><i class="fa fa-eye"></i> View This One</a>
+          </div>
+        </div>
+
+        <div class="category-card bg-primary-subtle">
+          <img src="https://kddi-h.assetsadobe3.com/is/image/content/dam/au-com/mobile/mb_img_58.jpg?scl=1" alt="">
+          <div class="category-text">
+            <h2>Mobiles</h2>
+            <p>30+ Brands Available</p>
+            <a href="product-view.html?product=mobiles" class="bg-primary"><i class="fa fa-eye"></i> View This One</a>
+          </div>
+        </div>
+      </div>
+      <div class="category-row" id="category-row3">
+        <div class="category-card bg-primary-subtle">
+          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9RUo90VSb8xUZEAud-_KyMypssiYML7_S3CmbMDX4tcZYYOuiUJJtP1Cf_FdsfpFCKxI&usqp=CAU" alt="">
+          <div class="category-text">
+            <h2>laptaps</h2>
+            <p>100+ designs Available</p>
+            <a href="product-view.html?product=laptaps" class="bg-primary"><i class="fa fa-eye"></i> View This One</a>
+          </div>
+        </div>
+
+        <div class="category-card bg-primary-subtle">
+          <img src="https://scx2.b-cdn.net/gfx/news/hires/2022/clothes-shopping.jpg" alt="">
+          <div class="category-text">
+            <h2>Wears</h2>
+            <p>1000+ designs Available</p>
+            <a href="product-view.html?product=wears" class="bg-primary"><i class="fa fa-eye"></i> View This One</a>
+          </div>
+        </div>
+      </div>
+  </div>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="/assets/js/index.js"></script>
+</body>
+</html>

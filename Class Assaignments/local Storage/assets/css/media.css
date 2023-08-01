@@ -1,0 +1,15 @@
+@media (max-width:600px){
+    header{
+        flex-direction: column;
+        gap: 20px;
+    }
+    .card, .text{
+        width: 100%;
+    }
+    .create{
+        padding: 10px;
+    }
+    .contact_card{
+        width:100%
+    }
+}

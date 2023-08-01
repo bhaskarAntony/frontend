@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <input type="text" name="acnumber" id="acnumber" placeholder="Account Number"><br>
+        <button onclick="pay();">Make Payment</button>
+        <p id="payment"></p>
+
+    <!-- <script>
+        let randomNumber = Math.random()*60;
+        randomNumber = Math.floor(randomNumber);
+        document.write(randomNumber);
+
+        let strig = "bhaskar";
+        let result = "";
+        let legnth = strig.length;
+        for(let i = 0; i<=legnth; i++){
+            let formula = Math.floor(Math.random()*legnth);
+            document.write("<br>", formula)
+            document.write("<br>")
+            result+=strig.charAt(formula); //
+            document.write(result)
+        }
+    </script> -->
+    <br>
+    <script>
+        function pay(){
+         let accountNumber = "AC5643672278";
+         let result = document.getElementById("payment");
+         let protect = "";
+         let accountLegnth = accountNumber.length;
+         for(let i = 0; i<accountLegnth; i++){
+            if(accountNumber.charAt(i)==" "){
+                accountNumber.charAt(i).value ="";
+            }
+            if(i==(accountLegnth-accountLegnth)+1||i==(accountLegnth-accountLegnth)||i==accountLegnth-2||i==accountLegnth-1){
+                protect+=accountNumber.charAt(i);
+            } 
+            else if(accountNumber.charAt(i)==" "){
+                accountNumber.charAt(i).value ="";
+            }
+            else {
+                protect+="*";
+            }
+         }
+         
+        result.innerHTML = protect;
+    }
+// program to generate fibonacci series up to n terms
+
+// take input from the user
+const number = parseInt(prompt('Enter the number of terms: '));
+let n1 = 0, n2 = 1, nextTerm;
+
+console.log('Fibonacci Series:');
+
+for (let i = 1; i <= number; i++) {
+    console.log(n1);
+    nextTerm = n1 + n2;
+    n1 = n2;
+    n2 = nextTerm;
+}
+   
+    </script>
+</body>
+</html>

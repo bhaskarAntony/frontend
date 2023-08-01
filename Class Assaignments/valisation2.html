@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validation</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .card{
+            width: 300px;
+            box-shadow: 0px 0px 30px #d8d6d6;
+            padding: 20px 10px;
+            border-radius: 10px;
+        }
+        input, select{
+            width: 100%;
+            outline: none;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #767575;
+            border-radius: 20px;
+        }
+        .gender-div{
+            display: flex;
+            width:100%;
+        }
+        button{
+            border: none;
+            padding: 10px 20px;
+            color: #fff;
+            background:linear-gradient(45deg, #ef0f38, #f05883);
+            letter-spacing: 1.3px;
+            border-radius: 20px;
+        }
+        button:last-child{
+            background: #9a9a9a60;
+            color: #010101;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <div class="card">
+            <form>
+            <label>User name</label>
+            <input type="text" id="name" placeholder="Username">
+            <p id="nameError"></p>
+
+            <label>Mobile Number</label>
+            <input type="number" id="phone" placeholder="mobile number">
+            <p id="phoneError"></p>
+
+            <label>Email address</label>
+            <input type="email" id="email" placeholder="Email Address">
+            <p id="emailError"></p>
+
+            <select name="city" id="city">
+                <option value="">Select Your city</option>
+                <option value="chikkaballapur">chikkaballapur</option>
+                <option value="Bangalore">Bangalore</option>
+                <option value="udapi">udapi</option>
+                <option value="mangalore">mangalore</option>
+                <option value="davanagere">.davanagere</option>
+            </select>
+            <p id="cityError"></p>
+
+            <div class="gender-div">
+           <label>Male</label><input type="radio" id="male" name="gender">
+           <label>Female</label><input type="radio" id="female" name="gender">
+            <p id="genderError"></p>
+        </div>
+        <button type="button" onclick="validater()">submit</button>
+        <button type="reset">cancel</button>
+    </form>
+        </div>
+    </div>
+
+    <script>
+        let names = document.getElementById("name").value;
+        let nameError = document.getElementById("nameError");
+
+        let phone = document.getElementById("phone").value;
+        let phoneError = document.getElementById("phoneError");
+
+        let email = document.getElementById("email").value;
+        let emailError = document.getElementById("emailError");
+
+        let city = document.getElementById("city").value;
+        let cityError = document.getElementById("cityError");
+
+        let male = document.getElementById("male");
+        let female = document.getElementById("female");
+        let genderError = document.getElementById("genderError");
+
+        function validater(){
+            if(
+                names==""||
+                phone==""||
+                email==""||
+                city==""
+                ){
+                    nameError.style.color="red";
+                    phoneError.style.color="red";
+                    emailError.style.color="red";
+                    cityError.style.color="red";
+                    if(names==""){
+                        nameError.innerHTML="please fill name field"
+                    }
+                     if(phone==""){
+                        phoneError.innerHTML="please enter phone number"
+                    }
+                    if(email==""){
+                        emailError.innerHTML="please fill email field"
+                    }
+                    if(city==""){
+                        cityError.innerHTML="please select your city"
+                    }
+
+
+
+            }
+        }
+    </script>
+</body>
+</html>

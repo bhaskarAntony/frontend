@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <center>
+        <h1>DOM</h1>
+    </center>
+    <hr>
+    <p id="pp" style="color:red; font-size: 20px;">This is paragraph.</p>
+    <p>This is pragraph.</p>
+
+
+    <script>
+        //selecting elements
+        var element = document.getElementById("pp");
+
+        //getting style information from element
+        alert(element.style.color); //output:red
+        alert(element.style.fontSize); //output: 20px
+        alert(element.style.fontStyle); //output: nothing
+
+        //getting computed style information
+        var styles = window.getComputedStyle(element);
+        
+        alert(styles.getPropertyValue("color")); //output: rgb(255, 0, 0);
+        alert(styles.getPropertyValue("font-size")); //Output:20px
+        alert(styles.getPropertyValue("font-weight")); //output:700
+        alert(styles.getPropertyValue("font-style")); //output: normal
+    </script>
+</body>
+</html>

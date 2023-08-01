@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        function twoSum(values, target){
+            for(let i = 0; i<values.length; i++){
+                for(let j = 0; j<values.length; j++){
+                    var add = values[i] + values[j];
+                    if(add==target){
+                        if(i==j){
+                            continue;
+                        }
+                        else{
+                            let output=[]
+                        console.log(add, i, j);
+                        output.push(i, j);
+                        return output;
+                        }
+                        
+                    }
+                    // else{
+                    //     return false;
+                    // }
+                }
+            }
+        }
+        nums = [3,3];
+        console.log(twoSum(nums, 6));
+    </script>
+</body>
+</html>
