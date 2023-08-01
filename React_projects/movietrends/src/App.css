@@ -1,0 +1,184 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px;
+  background-color: rgb(12, 12, 12);
+}
+ul{
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  align-items: center;
+}
+nav h1{
+  font-size: 3em;
+  color: rgb(232, 14, 39);
+}
+nav ul li a{
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: 1s;
+}
+nav ul li a:hover{
+  transform: scale(1.2);
+  color: #df0626;
+}
+nav ul li button{
+  border: none;
+  padding: 10px;
+  font-size: 1.2em;
+  color: #fff;
+  background:linear-gradient(45deg, #f3070f, #ec3859);
+  border-radius: 5px;
+}
+nav ul li button:hover{
+  background: #fcfcfc2d;
+}
+.main-text{
+  color: #fff;
+}
+.home{
+  min-height: 100vh;
+  background: url(https://www.justwatch.com/appassets/img/home/global-home-bg-comp.png) no-repeat center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  text-align: center;
+}
+.home h1{
+  font-size: 4em;
+}
+.btns{
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 20px;
+  padding-top: 30px;
+}
+.home button{
+  border:0;
+  padding: 20px 30px;
+  font-size: 1.3em;
+  color: #fff;
+  background: linear-gradient(45deg, #df0626, #fa405c);
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+.home button:hover{
+  transform: translate(10px);
+}
+.home button:nth-child(2){
+  background: rgba(240, 248, 255, 0.186);
+  backdrop-filter: blur(10px);
+}
+.home h3{
+  font-weight: 400;
+  color: #f6b2bc;
+}
+.footer-text{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  padding: 10px;
+}
+.footer{
+  background: #000;
+  /* text-align: center; */
+  color: #ffff;
+  padding: 5%;
+}
+.footer-child{
+    min-height: 300px;
+    background: url(https://www.justwatch.com/images/backdrop/305224208/s1440/.webp) no-repeat center;
+    background-size: cover;
+    border-radius: 30px;
+    overflow: hidden;
+    transition: 1s;
+}
+.footer-child:hover{
+  transform: scale(0.9);
+}
+.footer-child h1{
+  font-size: 3em;
+}
+.footer-blur{
+  backdrop-filter: blur(10px);
+  width: 100%;
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2em;
+}
+.footer-header{
+  margin-bottom: 20px;
+}
+.category-container{
+  display: flex;
+  gap: 20px;
+  padding: 5%;
+  background-color: #000;
+}
+.category1, .category2{
+  flex: 1;
+  min-height: 400px;
+  background-size: cover;
+  overflow: hidden;
+  border-radius: 40px;
+  color: #fff;
+  font-size: 1.2em;
+
+}
+.category1 h1, .category2 h1{
+  font-size: 3em;
+  color: #000;
+}
+.category-container button{
+  outline: none;
+  border: none;
+  padding: 20px 10%;
+  font-size: 1.3em;
+  color: #0a0a0a;
+  background: linear-gradient(45deg, #000000, #232020);
+  background: #fff;
+  width: fit-content;
+  border-radius: 100px;
+  margin-left: -40px;
+  margin-bottom: -20px;
+  transition: 1s;
+  cursor: pointer;
+}
+.category-container button:hover{
+  margin-bottom: 0;
+  margin-left: 0px;
+}
+.category1{
+  background: url(https://www.justwatch.com/images/backdrop/306097044/s1440/.webp) no-repeat center;
+}
+.category2{
+  background: url(https://www.justwatch.com/images/backdrop/162398451/s1440/.webp) no-repeat center;
+}
+.blur{
+  backdrop-filter: blur(10px);
+  height: 100%;
+  padding: 3%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between
+}
+.category{
+  background-color: #000;
+  color: #fff;
+  padding: 10%;
+}
