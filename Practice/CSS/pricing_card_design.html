@@ -70,6 +70,19 @@
         .card:hover ul li, .card:hover h3{
             color: #fff;
         }
+        @media (max-width:768px){
+            .container{
+                flex-direction: column;
+                gap: 20px;
+                padding: 10px;
+            }
+            .card{
+                width:100%
+            }
+            .card:hover{
+                transform: scale(0.9);
+            }
+        }
     </style>
 </head>
 <body>
