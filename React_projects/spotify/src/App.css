@@ -1,0 +1,15 @@
+.pnf{
+  min-height: 100vh;
+  background-color: black;
+}
+.pnf-card{
+  text-align: center;
+  color: #fff;
+}
+[class*="bi-cloud"]{
+  font-size: 5em;
+}
+nav{}
+.nav-link{
+  color: #035910;
+}
