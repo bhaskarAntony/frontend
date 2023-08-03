@@ -1,0 +1,25 @@
+.artist-card{
+    background: linear-gradient(5deg, #1f1e1e53, #92909070);
+    min-width: 230px;
+    max-width: 230px;
+    min-height: 300px;
+    padding: 10px;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+}
+.artist-card:hover{
+    background: linear-gradient(5deg, #41404027, #9290902d);
+}
+marquee{
+    color: #f198a1;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+@media (max-width:250px){
+    .artist-card{
+        width: 100%;
+    }
+}
