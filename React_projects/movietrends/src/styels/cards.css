@@ -1,0 +1,16 @@
+.votes{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+.card{
+  display: flex;
+  align-items: center;
+  min-height: 350px;
+  max-height: fit-content;
+}
+.bottom{
+    display: flex;
+    gap: 20px;
+}

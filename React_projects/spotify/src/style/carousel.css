@@ -1,0 +1,9 @@
+.artist-profile img{
+    width: 150px;
+    height: 150px;
+    border-radius: 100px;
+}
+.artist-profile{
+    text-align: center;
+    position: relative;
+}

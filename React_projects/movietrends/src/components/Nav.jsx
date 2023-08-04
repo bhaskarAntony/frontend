@@ -1,35 +1,26 @@
 import React from 'react'
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
-import Regester from '../pages/Regester'
-import Home from '../pages/Home'
-import Movies from '../pages/Movies';
-import Trending from '../pages/Trending';
-import Company from '../pages/Company';
+import { NavLink } from 'react-router-dom';
 
 function Nav() {
   return (
    <div>
-    <Router>
     <nav>
-        <h1>MOVIE<span className='main-text'> TRENDS</span></h1>
+       <NavLink to="/" className="link"> <h1>MOVIE<span className='main-text'> TRENDS</span></h1></NavLink>
         <ul>
-          <li><Link to="/">Home</Link></li>
-          <li><Link to="/movies">Movies</Link></li>
-          <li><Link to="/trending">Popular</Link></li>
-          <li><Link to="/company">Company</Link></li>
-          <li><button type='button'><Link to="/regester">Regester</Link></button></li>
+          <li><NavLink to="/company">Company</NavLink></li>
+          {
+            localStorage.getItem("isUser") ? (
+             <>
+              <li><NavLink to="/">Home</NavLink></li>
+             <li><NavLink to="/movies">Movies</NavLink></li>
+             <li><button type='button'><NavLink to="/login">Login</NavLink></button></li></>
+            ) : (
+              <li><button type='button'><NavLink to="/register">Register</NavLink></button></li>
+            )
+          }
         </ul>
       </nav>
-      <Routes>
-      <Route path="/" element={<Home />} />
-      <Route path='/regester' element={<Regester/>}/>
-      <Route path='/trending' element={<Trending/>}/>
-      <Route path='/movies' element={<Movies/>}/>
-      <Route path='/company' element={<Company/>}/>
 
-
-      </Routes>
-    </Router>
    </div>
   )
 }

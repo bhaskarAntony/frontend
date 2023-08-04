@@ -1,24 +1,23 @@
 import React, { useState } from 'react';
 import '../styels/login.css'
 import Home from './Home';
+import { useNavigate } from 'react-router-dom';
 
 function Regester() {
-  const [currentPage, setCurrentPage] = useState('home');
-  const handleNavigation = (page) => {
-    setCurrentPage(page);
-    setCurrentPage("home")
-  };
-  const upload = (e) =>{
+  const navigate = useNavigate();
+  const [isUser, setIsUser] = useState(false)
+  const submitHandler = (e) =>{
     e.preventDefault();
-    localStorage.setItem("key", "true");
-    alert("uploaded successfully")
-    
+    localStorage.setItem("isUser", "false");
+    alert("regestered is Successfully")  ;
+    setIsUser(true);
+    navigate('/login')
 }
   return (
-    <div className='container' onSubmit={upload}>
-    <div className="card">
-      <h1>Regester</h1>
-      <form >
+    <div className='container-login'>
+    <div className="cards">
+      <h1>Register</h1>
+      <form onSubmit={submitHandler}>
           <label>Username</label>
           <input type="text" placeholder='Enter name'/>
           <label>Email</label>
@@ -27,10 +26,9 @@ function Regester() {
           <input type="text" placeholder='Enter Password' />
           <label>ConfirmPassword</label>
           <input type="text" placeholder='Re-enter Password' />
-          <button type="submit">Regester</button>
+          <button type="submit">Register</button>
       </form>
     </div>
-    {currentPage === 'home' && <Home />}
   </div>
   )
 }

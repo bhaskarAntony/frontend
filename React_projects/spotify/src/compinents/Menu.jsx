@@ -18,9 +18,6 @@ function Menu() {
                     <NavLink to={'/'} className="nav-link fs-4">Home</NavLink>
                 </li>
                 <li className="nav-item">
-                    <NavLink to={'/music'}  className="nav-link fs-4">Music</NavLink>
-                </li>
-                <li className="nav-item">
                     <NavLink to={'/contact'}  className="nav-link fs-4">Contact</NavLink>
                 </li>
                 <li className="nav-item">
