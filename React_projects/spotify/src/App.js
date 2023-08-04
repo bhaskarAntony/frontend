@@ -6,6 +6,8 @@ import {BrowserRouter, Routes, Route} from 'react-router-dom'
 import {ToastContainer} from 'react-toastify'
 import Music from './compinents/Music';
 import Contact from './compinents/Contact';
+import Search from './compinents/Search';
+import Albums from './compinents/Albums';
 
 function App() {
   return (
@@ -15,7 +17,9 @@ function App() {
     <Routes>
       <Route path={'/'} element={<Home/>}/>
       <Route path={'/music/artist/:artistId'} element={<Music/>}/>
+      <Route path={'/albums'} element={<Albums/>}/>
       <Route path={'/contact'} element={<Contact/>}/>
+      <Route path={'/search'} element={<Search/>}/>
       <Route path={'/*'} element={<Pnf/>}/>
     </Routes>
    </BrowserRouter>

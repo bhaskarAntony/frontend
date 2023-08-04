@@ -32,9 +32,8 @@
 }
 .bi-search{
   color: #fff;
-  font-size: 1.8em;
+  font-size: 1.2em;
   border-radius: 100px;
-  color: #ff0d4e;
   font-weight: bold;
   cursor: pointer;
 }
@@ -102,4 +101,9 @@
   flex-flow: row wrap;
   gap: 20px;
   justify-content: center;
+}
+.nav-item{
+  align-items: center;
+  display: flex;
+  cursor: pointer;
 }

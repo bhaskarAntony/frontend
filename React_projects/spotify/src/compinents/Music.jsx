@@ -3,6 +3,7 @@ import { useParams } from "react-router-dom";
 import { toast } from "react-toastify";
 import key from "../config/token";
 import SongItem from "./SongItem";
+import '../style/song.css'
 const URL = 'https://api.spotify.com'
 
 function Music(props){
@@ -29,11 +30,9 @@ function Music(props){
     },[])
 
     return(
-        <div className="container">
-            <div className="row mt-5">
-                <div className="col-md-12 text-center">
-                    <h3 className="display-3 text-success">Music</h3>
-                </div>
+        <div className="container-fluid music p-4">
+            <div className="section-header text-white">
+                <h1>Tracks</h1>
             </div>
             <div className="row">
                 {

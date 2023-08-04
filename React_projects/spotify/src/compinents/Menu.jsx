@@ -1,6 +1,5 @@
 import React from 'react'
 import { NavLink} from 'react-router-dom'
-
 function Menu() {
   return (
    <nav className="navbar navbar-expand-md navbar-dark bg-dark p-3 sticky-top">
@@ -18,11 +17,13 @@ function Menu() {
                     <NavLink to={'/'} className="nav-link fs-4">Home</NavLink>
                 </li>
                 <li className="nav-item">
+                    <NavLink to={'/albums'}  className="nav-link fs-4">Albums</NavLink>
+                </li>
+                <li className="nav-item">
                     <NavLink to={'/contact'}  className="nav-link fs-4">Contact</NavLink>
                 </li>
                 <li className="nav-item">
-                    <input type="text" name="search" id='search' placeholder='search here' className='border-0 search rounded-5 p-2 fs-5 mx-3' />
-                    <i class="bi bi-search"></i>
+                     <NavLink to={'/search'}  className="nav-link fs-4">Search  <i class="bi bi-search"></i></NavLink>
                 </li>
             </ul>
         </div>

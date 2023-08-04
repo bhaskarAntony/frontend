@@ -1,6 +1,53 @@
 .track{
     padding: 10px;
+    background: linear-gradient(#a1a0a037, #2f2d2d4d);
+    height: 250px;
+    overflow: hidden;
+    color: #ffffff;
+    font-weight: bolder;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-radius: 10px;
+    transition: 0.4s;
+    cursor: pointer;
 }
-.track-info{
-    
+.track:hover{
+    background: linear-gradient(#a1a0a065, #6a67676d);
+}
+.track:hover .play1{
+    visibility: visible;
+    transform: translateY(0px) scale(1);
+}
+.track img{
+    width: 100%;
+    box-shadow: 0px 10px 20px #000;
+}
+.music{
+    background-color: #000;
+    min-height: 100vh;
+}
+.track-img{
+    min-height: 150px;
+    background-color: #837c7c61;
+    border-radius: 20px;
+    position: relative;
+}
+.play1{
+    width: 50px;
+    height: 50px;
+    background-color: #d2001f;
+    border-radius: 100px;
+    position: absolute;
+    bottom:10px;
+    right: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+     visibility: hidden;
+     transition: 0.5s;
+     transform: translateY(20px) scale(0.7);
+}
+.play1 a{
+    color: #fff;
 }
