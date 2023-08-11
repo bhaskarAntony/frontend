@@ -4,6 +4,8 @@ import key from '../config/token'
 import Artists from './Artists'
 import Contact from './Contact'
 import '../style/albums.css'
+import AlImage from './AlImage'
+import Search from './Search'
 
 const URL = 'https://api.spotify.com'
 
@@ -26,7 +28,7 @@ function Albums() {
       }).catch(err =>toast.error(err.message))
     }
   
-    const searchAlbum = async(albumname, type, limit) => {
+    const searchAlbum = async(albumname, type, limitssssssssss) => {
       await fetch(`${URL}/v1/search?q=${albumname}&type=${type}&limit=${limit}`, {
         method:"GET",
         headers: {
@@ -45,11 +47,14 @@ function Albums() {
     }, [])
   return (
     <div>
+      <Search sArtist={searchArtist}/>
       <div className="artists-images">
       {
           artist && artist.map((item, index) =>{
             return (
+             <>
               <Artists key={index} {...item}/>
+              </>
             )
           })
         }

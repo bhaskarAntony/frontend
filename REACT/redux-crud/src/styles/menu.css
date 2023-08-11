@@ -1,0 +1,7 @@
+#menu ul li a{
+    text-decoration: none;
+}
+.navbar{
+    position: fixed;
+    top: 0;
+}

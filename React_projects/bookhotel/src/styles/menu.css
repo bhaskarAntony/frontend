@@ -1,0 +1,33 @@
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 20px;
+    box-shadow: 0px 5px 10px #e7e4e4;
+    position: sticky;
+    top: 0;
+    background-color: #fff;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    gap: 20px;  
+}
+nav span a{
+    font-size: 2em;
+    color: #DF5E5E;
+    font-weight: bolder;
+}
+nav  a{
+    text-decoration: none;
+    font-size: 1.3em;
+    color: #000;
+}
+.logout{
+    border: none;
+    padding: 10px 20px;
+    font-size: 1.2em;
+    color: #fff;
+    background-color: #DF5E5E;
+    border-radius: 5px;
+}

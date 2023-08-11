@@ -1,0 +1,11 @@
+.container{
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+[class*="bi-"]{
+  cursor: pointer;
+  font-size: 6em;
+  color: #c9052f;
+}

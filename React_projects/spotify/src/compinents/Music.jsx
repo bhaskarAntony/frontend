@@ -8,6 +8,10 @@ const URL = 'https://api.spotify.com'
 
 function Music(props){
     const [songs,setSongs] = useState([])
+    const [audio, setAudio] = useState(null) //audio player
+    const [preUrl, setPreUrl] = useState(false) //url
+    const [playing, setPlaying] = useState(false)//play or pause the song
+
 
     const params = useParams()
 
@@ -29,6 +33,47 @@ function Music(props){
         searchTracks()
     },[])
 
+
+    //generating icons
+    const setIcon = (url) => {
+      if(!url)
+        return(
+            <i class="bi bi-bell-slash-fill"></i>
+          )
+      if(playing && preUrl === url)
+         return (
+            <i class="bi bi-pause-fill"></i>
+        )
+      return(
+        <i class="bi bi-play-fill"></i>
+      )
+    }
+
+    //play and pause lagic
+    const playAudio = (url) =>{
+      const myAudio = new Audio(url);
+    if(!playing){
+        //intial play
+        myAudio.play();
+        setPlaying(true);
+        setAudio(myAudio);
+        setPreUrl(url)
+    }
+    else{
+      //pause
+      audio.pause()
+      if(preUrl === url){
+        setPlaying(false)
+      }
+      else{
+         //pause to play
+         myAudio.play()
+        //  setPlaying(true);
+         setAudio(myAudio);
+         setPreUrl(url)
+      }
+    }
+    }
     return(
         <div className="container-fluid music p-4">
             <div className="section-header text-white">
@@ -38,7 +83,7 @@ function Music(props){
                 {
                     songs && songs.map((item,index)=> {
                         return(
-                            <SongItem key={index} {...item} />
+                            <SongItem key={index} {...item} iconHandler={setIcon} songHandler={playAudio} />
                         )
                     })
                 }
