@@ -1,0 +1,4 @@
+hai this is our  output we are created successfully new file: 
+ this content of text file name p1.txt 
+
+ this content of text file name p2.txt
